@@ -1,3 +1,3 @@
 # cinder
 
-No thing interesting yet, come back later
+Nothing interesting yet, come back later

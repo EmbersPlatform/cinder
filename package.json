@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "postcss src --dir dist",
+    "css:build": "postcss src --dir dist",
+    "css:watch": "postcss src --dir dist --watch",
     "docs:start": "npx @11ty/eleventy --serve",
+    "dev": "concurrently \"npm run css:watch\" \"npm run docs:start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +23,7 @@
   "homepage": "https://github.com/EmbersPlatform/cinder#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
+    "concurrently": "^6.0.0",
     "postcss": "^8.2.8",
     "postcss-cli": "^8.3.1",
     "postcss-cssnext": "^3.1.0",
