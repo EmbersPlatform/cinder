@@ -1,4 +1,1 @@
----
-layout: base
----
 # Hello docs!
