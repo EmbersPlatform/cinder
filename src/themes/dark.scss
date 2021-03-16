@@ -1,0 +1,195 @@
+@import "./colors/dark.scss";
+
+@include color-mode-theme(dark, dark, true) {
+  @each $hue, $colors in $hue-maps {
+    @each $variant, $value in $colors {
+      --color-scale-#{$hue}-#{$variant}: #{$value};
+    }
+  }
+
+  @include custom-properties((color: (
+    text: (
+      primary: $gray-1,
+      secondary: $gray-3,
+      tertiary: $gray-0,
+      placeholder: $gray-5,
+      disabled: $gray-5,
+      inverse: $gray-9,
+      link: $orange-3,
+      danger: $red-4,
+      success: $green-2,
+      warning: $yellow-2,
+      white: $white,
+    ),
+
+    border: (
+      primary: $gray-9,
+      secondary: $gray-8,
+      tertiary: $gray-7,
+      overlay: $gray-6,
+      inverse: $white,
+      info: rgba($blue-4, 0.4),
+      danger: rgba($red-4, 0.4),
+      success: rgba($green-3, 0.4),
+      warning: rgba($yellow-4, 0.4),
+    ),
+
+    bg: (
+      canvas: $gray-6,
+      canvas-mobile: $black,
+      canvas-inverse: $gray-0,
+      canvas-inset: #06090F,
+      primary: $gray-7,
+      secondary: $gray-8,
+      tertiary: $gray-6,
+      overlay: $gray-7,
+      backdrop: rgba($black, 0.8),
+      info: rgba($blue-4, 0.1),
+      info-inverse: $blue-4,
+      danger: rgba($red-4, 0.1),
+      danger-inverse: $red-5,
+      success: rgba($green-4, 0.1),
+      success-inverse: $green-4,
+      warning: rgba($yellow-4, 0.1),
+      warning-inverse: $yellow-4,
+    ),
+
+    btn: (
+      text: $gray-1,
+      bg: $gray-7,
+      border: $gray-5,
+      shadow: 0 0 transparent,
+      inset-shadow: 0 0 transparent,
+
+      hover-bg: $gray-6,
+      hover-border: $gray-3,
+
+      selected-bg: $gray-8,
+
+      focus-bg: $gray-7,
+      focus-border: $gray-3,
+      focus-shadow: 0 0 0 3px rgba($gray-3, 0.3),
+
+      /* states */
+
+      primary: (
+        text: #fff,
+        bg: $orange-5,
+        border: $orange-4,
+        shadow: 0 0 transparent,
+        inset-shadow: 0 0 transparent,
+
+        hover-bg: $orange-4,
+        hover-border: $orange-3,
+
+        selected-bg: $orange-5,
+        selected-shadow: 0 0 transparent,
+
+        disabled-text: rgba($white, 0.5),
+        disabled-bg: rgba($orange-5, 0.6),
+        disabled-border: transparent,
+
+        focus-bg: $orange-5,
+        focus-border: $orange-3,
+        focus-shadow: 0 0 0 3px rgba(#eb3d2d, 0.4),
+
+        icon: $white,
+        counter-bg: rgba($white, 0.2),
+      ),
+
+      outline: (
+        text: $orange-3,
+
+        hover-text: $orange-3,
+        hover-bg: $gray-6,
+        hover-border: $orange-3,
+        hover-shadow: 0 1px 0 $black-fade-1,
+        hover-inset-shadow: inset 0 1px 0 rgba($white, 0.03),
+        hover-counter-bg: rgba($white, 0.2),
+
+        selected-text: $white,
+        selected-bg: $orange-7,
+        selected-border: $white-fade-1,
+        selected-shadow: 0 0 transparent,
+
+        disabled-text: rgba($orange-3, 0.5),
+        disabled-bg: $gray-9,
+        disabled-counter-bg: rgba($orange-5, 0.05),
+
+        focus-border: $orange-3,
+        focus-shadow: 0 0 0 3px rgba($orange-6, 0.4),
+
+        counter-bg: rgba($orange-5, 0.1),
+      ),
+
+      danger: (
+        text: $red-4,
+        border: $red-5,
+
+        hover-text: #fff,
+        hover-bg: $red-5,
+        hover-border: $red-4,
+        hover-shadow: 0 0 transparent,
+        hover-inset-shadow: 0 0 transparent,
+        hover-counter-bg: rgba(#fff, 0.2),
+
+        selected-text: #fff,
+        selected-bg: $red-6,
+        selected-border: $white-fade-1,
+        selected-shadow: 0 0 transparent,
+
+        disabled-text: rgba($red-4, 0.5),
+        disabled-bg: $gray-9,
+        disabled-counter-bg: rgba($red-5, 0.05),
+
+        focus-border: $red-4,
+        focus-shadow: 0 0 0 3px rgba($red-6, 0.4),
+
+        counter-bg: rgba($red-5, 0.1),
+
+        icon: $red-4,
+        hover-icon: $white,
+      ),
+
+      success: (
+        text: #fff,
+        bg: $green-5,
+        border: $green-4,
+        shadow: 0 0 transparent,
+        inset-shadow: 0 0 transparent,
+
+        hover-bg: $green-4,
+        hover-border: $green-3,
+
+        selected-bg: $green-5,
+        selected-shadow: 0 0 transparent,
+
+        disabled-text: rgba($white, 0.5),
+        disabled-bg: rgba($green-5, 0.6),
+        disabled-border: transparent,
+
+        focus-bg: $green-5,
+        focus-border: $green-3,
+        focus-shadow: 0 0 0 3px rgba(#28a745, 0.4),
+
+        icon: $white,
+        counter-bg: rgba($white, 0.2),
+      ),
+
+      counter-bg: $gray-6,
+    ),
+
+    header: (
+      text: $white-fade-7,
+      bg: $gray-8,
+      logo: $gray-0,
+    ),
+
+    menu: (
+      heading-text: $gray-0,
+      border-active: $orange-5,
+      bg-active: transparent,
+    ),
+
+  )));
+}

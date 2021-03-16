@@ -1,0 +1,29 @@
+.h1 {
+  font-size: $h1-size-mobile !important;
+
+  @include breakpoint(md) { font-size: $h1-size !important; }
+}
+
+.h2 {
+  font-size: $h2-size-mobile !important;
+
+  @include breakpoint(md) { font-size: $h2-size !important; }
+}
+
+.h3 {
+  font-size: $h3-size-mobile !important;
+
+  @include breakpoint(md) { font-size: $h3-size !important; }
+}
+
+.h4 { font-size: $h4-size !important; }
+.h5 { font-size: $h5-size !important; }
+.h6 { font-size: $h6-size !important; }
+
+// Heading utilities
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 { font-weight: $font-weight-bold !important; }

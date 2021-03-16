@@ -1,0 +1,44 @@
+// Display
+.d-block { display: block; }
+.d-inline-block { display: inline-block; }
+.d-inline { display: inline; }
+.d-flex { display: flex; }
+.d-flex-inline { display: inline-flex; }
+
+/* Position */
+@each $breakpoint, $variant in $responsive-variants {
+  @include breakpoint($breakpoint) {
+    @each $position in $responsive-positions {
+      .position#{$variant}-#{$position} {
+        position: $position !important;
+      }
+    }
+  }
+}
+
+// Width and height utilities, helpful in combination
+// with display-table utilities and images
+/* Max width 100% */
+.width-fit   { max-width: 100% !important; }
+/* Set the width to 100% */
+.width-full  { width: 100% !important; }
+/* Max height 100% */
+.height-fit  { max-height: 100% !important; }
+/* Set the height to 100% */
+.height-full { height: 100% !important; }
+
+/* Remove min-width from element */
+.min-width-0 { min-width: 0 !important; }
+
+@each $breakpoint, $variant in $responsive-variants {
+  @include breakpoint($breakpoint) {
+
+    // Auto variants
+    .width#{$variant}-auto { width: auto !important; }
+
+    /* Set the direction to rtl */
+    .direction#{$variant}-rtl { direction: rtl !important; }
+    /* Set the direction to ltr */
+    .direction#{$variant}-ltr { direction: ltr !important; }
+  }
+}

@@ -1,0 +1,100 @@
+// Box
+
+.Box {
+  background-color: var(--color-bg-primary);
+  border-color: var(--color-border-primary);
+  border-style: $border-style;
+  border-width: $border-width;
+  border-radius: $border-radius;
+}
+
+// Box padding density options
+.Box--condensed {
+  line-height: $lh-condensed;
+
+  .Box-header {
+    padding: $spacer-2 $spacer-3;
+  }
+
+  .Box-body {
+    padding: $spacer-2 $spacer-3;
+  }
+
+  .Box-footer {
+    padding: $spacer-2 $spacer-3;
+  }
+
+  .Box-btn-octicon {
+    &.btn-octicon {
+      padding: $spacer-2 $spacer-3;
+      // stylelint-disable-next-line primer/spacing
+      margin: (-$spacer-2) (-$spacer-3);
+      line-height: $lh-condensed;
+    }
+  }
+
+  .Box-row {
+    padding: $spacer-2 $spacer-3;
+  }
+}
+
+.Box--spacious {
+  .Box-header {
+    padding: $spacer-4;
+    line-height: $lh-condensed;
+  }
+
+  .Box-title {
+    font-size: $h3-size;
+  }
+
+  .Box-body {
+    padding: $spacer-4;
+  }
+
+  .Box-footer {
+    padding: $spacer-4;
+  }
+
+  .Box-btn-octicon {
+    &.btn-octicon {
+      padding: $spacer-4;
+      // stylelint-disable-next-line primer/spacing
+      margin: (-$spacer-4) (-$spacer-4);
+    }
+  }
+
+  .Box-row {
+    padding: $spacer-4;
+  }
+}
+
+.Box-header {
+  padding: $spacer-3;
+  // stylelint-disable-next-line primer/spacing
+  margin: (-$border-width) (-$border-width) 0;
+  background-color: var(--color-bg-tertiary);
+  border-color: var(--color-border-primary);
+  border-style: $border-style;
+  border-width: $border-width;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+}
+
+.Box-title {
+  font-size: $body-font-size;
+  font-weight: $font-weight-bold;
+}
+
+.Box-body {
+  padding: $spacer-3;
+  border-bottom: $border-width $border-style var(--color-border-primary);
+
+  // Ensures bottom-border doesn't poke out when .Box-body used without box-footer
+  &:last-of-type {
+    // stylelint-disable-next-line primer/spacing
+    margin-bottom: -$border-width;
+    border-bottom-right-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+  }
+}

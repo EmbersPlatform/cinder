@@ -1,0 +1,253 @@
+$black: #1b1f23;
+$white: #fff;
+
+/* -------- Grays -------- */
+$gray-0:        #dddede;
+$gray-1:        #d2d2d3;
+$gray-2:        #bcbcbd;
+$gray-3:        #848486;
+$gray-4:        #6d6e70;
+$gray-5:        #3b3b3f;
+$gray-6:        #26272b;
+$gray-7:        #1f2023;
+$gray-8:        #1a1a1d;
+$gray-9:        #151517;
+
+/* -------- Blue -------- */
+$blue-0:        #f1f8ff;
+$blue-1:        #dbedff;
+$blue-2:        #c8e1ff;
+$blue-3:        #79b8ff;
+$blue-4:        #2188ff;
+$blue-5:        #0366d6;
+$blue-6:        #005cc5;
+$blue-7:        #044289;
+$blue-8:        #032f62;
+$blue-9:        #05264c;
+
+/* -------- Green -------- */
+$green-0:       #f0fff4;
+$green-1:       #dcffe4;
+$green-2:       #bef5cb;
+$green-3:       #85e89d;
+$green-4:       #34d058;
+$green-5:       #28a745;
+$green-6:       #22863a;
+$green-7:       #176f2c;
+$green-8:       #165c26;
+$green-9:       #144620;
+
+/* -------- Yellow -------- */
+$yellow-0:      #fffdef;
+$yellow-1:      #fffbdd;
+$yellow-2:      #fff5b1;
+$yellow-3:      #ffea7f;
+$yellow-4:      #ffdf5d;
+$yellow-5:      #ffd33d;
+$yellow-6:      #f9c513;
+$yellow-7:      #dbab09;
+$yellow-8:      #b08800;
+$yellow-9:      #735c0f;
+
+/* -------- Orange -------- */
+$orange-0:      #f9c5c0;
+$orange-1:      #f6a8a1;
+$orange-2:      #f38b81;
+$orange-3:      #fd7d71;
+$orange-4:      #ee5a4d;
+$orange-5:      #eb3d2d;
+$orange-6:      #d43729;
+$orange-7:      #bc3124;
+$orange-8:      #a52b1f;
+$orange-9:      #8d251b;
+
+/* -------- Red -------- */
+$red-0:         #ffeef0;
+$red-1:         #ffdce0;
+$red-2:         #fdaeb7;
+$red-3:         #f97583;
+$red-4:         #ea4a5a;
+$red-5:         #d73a49;
+$red-6:         #cb2431;
+$red-7:         #b31d28;
+$red-8:         #9e1c23;
+$red-9:         #86181d;
+
+/* -------- Purple -------- */
+$purple-0:      #f5f0ff;
+$purple-1:      #e6dcfd;
+$purple-2:      #d1bcf9;
+$purple-3:      #b392f0;
+$purple-4:      #8a63d2;
+$purple-5:      #6f42c1;
+$purple-6:      #5a32a3;
+$purple-7:      #4c2889;
+$purple-8:      #3a1d6e;
+$purple-9:      #29134e;
+
+/* -------- Pink -------- */
+$pink-0:      #ffeef8;
+$pink-1:      #fedbf0;
+$pink-2:      #f9b3dd;
+$pink-3:      #f692ce;
+$pink-4:      #ec6cb9;
+$pink-5:      #ea4aaa;
+$pink-6:      #d03592;
+$pink-7:      #b93a86;
+$pink-8:      #99306f;
+$pink-9:      #6d224f;
+
+/* -------- Fades -------- */
+$black-fade-1:      rgba($black, 0.15);
+$black-fade-3:      rgba($black, 0.3);
+$black-fade-5:      rgba($black, 0.5);
+$black-fade-7:      rgba($black, 0.7);
+$black-fade-8:      rgba($black, 0.85);
+
+$white-fade-1:      rgba($white, 0.15);
+$white-fade-3:      rgba($white, 0.3);
+$white-fade-5:      rgba($white, 0.5);
+$white-fade-7:      rgba($white, 0.7);
+$white-fade-8:      rgba($white, 0.85);
+
+/* -------- Color defaults -------- */
+$red:         $red-5;
+$purple:      $purple-5;
+$blue:        $blue-5;
+$green:       $green-5;
+$yellow:      $yellow-5;
+// $orange:      $orange-5;
+
+$gray-dark:   $gray-9;
+$gray-light:  $gray-4;
+$gray:        $gray-5;
+
+// -------- Fades --------
+$black-fade-15:      rgba($black, 0.15) !default;
+$black-fade-30:      rgba($black, 0.3) !default;
+$black-fade-50:      rgba($black, 0.5) !default;
+$black-fade-70:      rgba($black, 0.7) !default;
+$black-fade-85:      rgba($black, 0.85) !default;
+
+$white-fade-15:      rgba($white, 0.15) !default;
+$white-fade-30:      rgba($white, 0.3) !default;
+$white-fade-50:      rgba($white, 0.5) !default;
+$white-fade-70:      rgba($white, 0.7) !default;
+$white-fade-85:      rgba($white, 0.85) !default;
+
+// -------- Color gradient maps --------
+
+$grays: (
+  0: $gray-0,
+  1: $gray-1,
+  2: $gray-2,
+  3: $gray-3,
+  4: $gray-4,
+  5: $gray-5,
+  6: $gray-6,
+  7: $gray-7,
+  8: $gray-8,
+  9: $gray-9,
+) !default;
+
+$blues: (
+  0: $blue-0,
+  1: $blue-1,
+  2: $blue-2,
+  3: $blue-3,
+  4: $blue-4,
+  5: $blue-5,
+  6: $blue-6,
+  7: $blue-7,
+  8: $blue-8,
+  9: $blue-9,
+) !default;
+
+$greens: (
+  0: $green-0,
+  1: $green-1,
+  2: $green-2,
+  3: $green-3,
+  4: $green-4,
+  5: $green-5,
+  6: $green-6,
+  7: $green-7,
+  8: $green-8,
+  9: $green-9,
+) !default;
+
+$yellows: (
+  0: $yellow-0,
+  1: $yellow-1,
+  2: $yellow-2,
+  3: $yellow-3,
+  4: $yellow-4,
+  5: $yellow-5,
+  6: $yellow-6,
+  7: $yellow-7,
+  8: $yellow-8,
+  9: $yellow-9,
+) !default;
+
+$oranges: (
+  0: $orange-0,
+  1: $orange-1,
+  2: $orange-2,
+  3: $orange-3,
+  4: $orange-4,
+  5: $orange-5,
+  6: $orange-6,
+  7: $orange-7,
+  8: $orange-8,
+  9: $orange-9,
+) !default;
+
+$reds: (
+  0: $red-0,
+  1: $red-1,
+  2: $red-2,
+  3: $red-3,
+  4: $red-4,
+  5: $red-5,
+  6: $red-6,
+  7: $red-7,
+  8: $red-8,
+  9: $red-9,
+) !default;
+
+$purples: (
+  0: $purple-0,
+  1: $purple-1,
+  2: $purple-2,
+  3: $purple-3,
+  4: $purple-4,
+  5: $purple-5,
+  6: $purple-6,
+  7: $purple-7,
+  8: $purple-8,
+  9: $purple-9,
+) !default;
+
+$pinks: (
+  0: $pink-0,
+  1: $pink-1,
+  2: $pink-2,
+  3: $pink-3,
+  4: $pink-4,
+  5: $pink-5,
+  6: $pink-6,
+  7: $pink-7,
+  8: $pink-8,
+  9: $pink-9,
+) !default;
+
+$hue-maps: (
+  "gray": $grays,
+  "blue": $blues,
+  "green": $greens,
+  "yellow": $yellows,
+  "orange": $oranges,
+  "red": $reds,
+  "purple": $purples,
+  "pink": $pinks,
+) !default;

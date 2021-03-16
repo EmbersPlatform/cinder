@@ -1,6 +1,8 @@
 module.exports = {
+  syntax: 'postcss-scss',
   plugins: [
-    require('postcss-import')({}),
-    require('postcss-cssnext')({}),
+    require('postcss-node-sass')({
+    //  outputStyle: 'compressed'
+    }),
   ],
 }

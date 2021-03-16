@@ -1,0 +1,45 @@
+
+@function generate-mid-tones($color) {
+  @return (
+    "000": darken($color, 50%),
+    100: darken($color, 40%),
+    200: darken($color, 30%),
+    300: darken($color, 20%),
+    400: darken($color, 10%),
+    500: $color,
+    600: lighten($color, 10%),
+    700: lighten($color, 20%),
+    800: lighten($color, 30%),
+    900: lighten($color, 40%)
+  )
+}
+
+@function generate-shades($color) {
+  @return (
+    "000": darken($color, 90%),
+    100: darken($color, 80%),
+    200: darken($color, 70%),
+    300: darken($color, 60%),
+    400: darken($color, 50%),
+    500: darken($color, 40%),
+    600: darken($color, 30%),
+    700: darken($color, 20%),
+    800: darken($color, 10%),
+    900: $color,
+  )
+}
+
+@function generate-tints($color) {
+  @return (
+    "000": $color,
+    100: lighten($color, 10%),
+    200: lighten($color, 20%),
+    300: lighten($color, 30%),
+    400: lighten($color, 40%),
+    500: lighten($color, 50%),
+    600: lighten($color, 60%),
+    700: lighten($color, 70%),
+    800: lighten($color, 80%),
+    900: lighten($color, 90%),
+  )
+}

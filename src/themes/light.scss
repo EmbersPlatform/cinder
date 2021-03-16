@@ -1,0 +1,198 @@
+@import "./colors/light.scss";
+
+@include color-mode-theme(light, light) {
+  @each $hue, $colors in $hue-maps {
+    @each $variant, $value in $colors {
+      --color-scale-#{$hue}-#{$variant}: #{$value};
+    }
+  }
+
+  @include custom-properties((color: (
+    text: (
+      primary: $gray-8,
+      secondary: $gray-7,
+      tertiary: $gray-9,
+      placeholder: $gray-5,
+      disabled: $gray-5,
+      inverse: $gray-9,
+      link: $orange-9,
+      danger: $red-4,
+      success: $green-2,
+      warning: $yellow-2,
+      white: $white,
+    ),
+
+    border: (
+      primary: $gray-3,
+      secondary: $gray-2,
+      tertiary: $gray-4,
+      overlay: $gray-6,
+      inverse: $white,
+      info: rgba($blue-4, 0.4),
+      danger: rgba($red-4, 0.4),
+      success: rgba($green-3, 0.4),
+      warning: rgba($yellow-4, 0.4),
+    ),
+
+    bg: (
+      canvas: $gray-0,
+      canvas-mobile: $black,
+      canvas-inverse: $gray-0,
+      canvas-inset: #06090F,
+      primary: $white,
+      secondary: $gray-1,
+      tertiary: $gray-0,
+      overlay: $gray-7,
+      backdrop: rgba($black, 0.8),
+      info: rgba($blue-4, 0.1),
+      info-inverse: $blue-4,
+      danger: rgba($red-4, 0.1),
+      danger-inverse: $red-5,
+      success: rgba($green-4, 0.1),
+      success-inverse: $green-4,
+      warning: rgba($yellow-4, 0.1),
+      warning-inverse: $yellow-4,
+    ),
+
+    btn: (
+      text: $gray-9,
+      bg: $gray-0,
+      border: $black-fade-1,
+      shadow: 0 1px 0 rgba($black, 0.04),
+      inset-shadow: inset 0 1px 0 rgba($white, 0.25), // top highlight
+
+      hover-bg: $gray-1,
+      hover-border: $black-fade-1,
+
+      selected-bg: darken(#f3f4f6, 2%),
+
+      focus-bg: $gray-0,
+      focus-border: $black-fade-1,
+      focus-shadow: 0 0 0 3px rgba($orange-5, 0.3),
+
+      shadow-active: inset 0 0.15em 0.3em $black-fade-1, // TODO: Deprecate? Not used in Primer CSS
+      shadow-input-focus: 0 0 0 0.2em rgba($blue, 0.3), // TODO: Deprecate?
+
+      /* states */
+
+      primary: (
+        text: $white,
+        bg: $orange-5,
+        border: $black-fade-1,
+        shadow: 0 1px 0 $black-fade-1,
+        inset-shadow: inset 0 1px 0 rgba($white, 0.03),
+
+        hover-bg: $orange-4,
+        hover-border: $black-fade-1,
+
+        selected-bg: darken($orange-5, 2%),
+        selected-shadow: inset 0 1px 0 rgba($green-9, 0.2),
+
+        disabled-text: rgba($white, 0.8),
+        disabled-bg: $orange-3,
+        disabled-border: $black-fade-1,
+
+        focus-bg: $orange-5,
+        focus-border: $black-fade-1,
+        focus-shadow: 0 0 0 3px rgba($orange-5, 0.4),
+
+        icon: rgba($white, 0.8),
+        counter-bg: rgba($white, 0.2),
+      ),
+
+      outline: (
+        text: $orange-9,
+
+        hover-text: $white,
+        hover-bg: $orange-5,
+        hover-border: $black-fade-1,
+        hover-shadow: 0 1px 0 $black-fade-1,
+        hover-inset-shadow: inset 0 1px 0 rgba($white, 0.03),
+        hover-counter-bg: rgba($white, 0.2),
+
+        selected-text: $white,
+        selected-bg: darken($orange-5, 3%),
+        selected-border: $black-fade-1,
+        selected-shadow: inset 0 1px 0 rgba($orange-9, 0.2),
+
+        disabled-text: rgba($orange-5, 0.5),
+        disabled-bg: $gray-0,
+        disabled-counter-bg: rgba($orange-5, 0.05),
+
+        focus-border: $black-fade-1,
+        focus-shadow: 0 0 0 3px rgba($orange-6, 0.4),
+
+        counter-bg: rgba($orange-5, 0.1),
+      ),
+
+      danger: (
+        text: $red-8,
+        border: $red-7,
+
+        hover-text: $white,
+        hover-bg: $red-6,
+        hover-border: $black-fade-1,
+        hover-shadow: 0 1px 0 $black-fade-1,
+        hover-inset-shadow: inset 0 1px 0 rgba($white, 0.03),
+        hover-counter-bg: rgba($white, 0.2),
+
+        selected-text: $white,
+        selected-bg: darken($red-5, 3%),
+        selected-border: $black-fade-1,
+        selected-shadow: inset 0 1px 0 rgba($red-9, 0.2),
+
+        disabled-text: rgba($red-5, 0.5),
+        disabled-bg: $gray-0,
+        disabled-counter-bg: rgba($red-5, 0.05),
+
+        focus-border: $black-fade-1,
+        focus-shadow: 0 0 0 3px rgba($red-6, 0.4),
+
+        counter-bg: rgba($red-5, 0.1),
+
+        icon: $red-5,
+        hover-icon: $white,
+      ),
+
+      success: (
+        text: #fff,
+        bg: $green-5,
+        border: $green-6,
+        shadow: 0 0 transparent,
+        inset-shadow: 0 0 transparent,
+
+        hover-bg: $green-4,
+        hover-border: $green-5,
+
+        selected-bg: $green-6,
+        selected-shadow: 0 0 transparent,
+
+        disabled-text: rgba($white, 0.5),
+        disabled-bg: rgba($green-3, 0.6),
+        disabled-border: transparent,
+
+        focus-bg: $green-5,
+        focus-border: $green-3,
+        focus-shadow: 0 0 0 3px rgba(#28a745, 0.4),
+
+        icon: $white,
+        counter-bg: rgba($white, 0.2),
+      ),
+
+      counter-bg: rgba($black, 0.08), // Darken for just a tad more contrast against the button background
+    ),
+
+    header: (
+      text: $white,
+      bg: $orange-5,
+      logo: $gray-0,
+    ),
+
+    menu: (
+      heading-text: $gray-9,
+      border-active: $orange-5,
+      bg-active: transparent,
+    ),
+
+  )));
+}
