@@ -6,8 +6,9 @@
   "scripts": {
     "css:build": "postcss src/index.scss src/**/index.scss --base src --dir dist --ext .css",
     "css:watch": "npm run css:build -- --watch",
-    "docs:start": "npx @11ty/eleventy --serve",
-    "dev": "concurrently \"npm run css:watch\" \"npm run docs:start\" --restart-tries 5 --restart-after 100",
+    "docs:build": "snowpack build",
+    "docs:dev": "snowpack dev --watch",
+    "dev": "concurrently \"npm run css:watch\" \"npm run docs:dev\" --restart-tries 5 --restart-after 100",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,21 +24,19 @@
   "homepage": "https://github.com/EmbersPlatform/cinder#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.0",
+    "@snowpack/plugin-run-script": "^2.3.0",
     "autoprefixer": "^9.8.6",
     "concurrently": "^6.0.0",
+    "highlight.js": "^10.6.0",
+    "markdown-it": "^12.0.0",
     "postcss": "^8.2.8",
-    "postcss-advanced-variables": "^3.0.1",
-    "postcss-calc": "^8.0.0",
     "postcss-cli": "^8.3.1",
-    "postcss-each": "^1.0.0",
-    "postcss-import": "^14.0.0",
-    "postcss-map-get": "^0.3.0",
-    "postcss-mixins": "^7.0.3",
-    "postcss-nested": "^5.0.5",
     "postcss-node-sass": "^2.1.8",
-    "postcss-preset-env": "^6.7.0",
     "postcss-scss": "^3.0.5",
-    "postcss-simple-vars": "^6.0.3"
+    "snowpack": "^3.0.13"
+  },
+  "dependencies": {
+    "@dorgandash/untitled": "^0.2.1",
+    "uce-loader": "^2.0.0"
   }
 }

@@ -5,7 +5,7 @@ tags: components
 
 # Menu
 
-{% example %}
+```html live
 <nav class="menu">
   <a href="/" class="menu-item">Home</a>
   <div class="menu-heading">Components</div>
@@ -13,4 +13,4 @@ tags: components
     <a href="{{ post.url }}" class="menu-item">{{ post.data.title }}</a>
   {%- endfor -%}
 </nav>
-{% endexample %}
+```
