@@ -5,7 +5,8 @@
 module.exports = {
   mount: {
     '_site': { url: '/' },
-    'assets': { url: '/assets' }
+    'assets': { url: '/assets' },
+    'dist': {url: '/dist', static: true, resolve: false}
   },
   plugins: [
     [
@@ -17,10 +18,17 @@ module.exports = {
     [
       '@snowpack/plugin-run-script',
       {
+        cmd: 'postcss src/index.scss src/**/index.scss --base src --dir dist --ext .css',
+        watch: '$1 --watch'
+      }
+    ],
+    [
+      '@snowpack/plugin-run-script',
+      {
         cmd: 'eleventy',
         watch: '$1 --watch',
       },
-    ],
+    ]
   ],
   devOptions: {
     /* ... */

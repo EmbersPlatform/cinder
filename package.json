@@ -4,11 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "css:build": "postcss src/index.scss src/**/index.scss --base src --dir dist --ext .css",
-    "css:watch": "npm run css:build -- --watch",
-    "docs:build": "snowpack build",
-    "docs:dev": "snowpack dev --watch",
-    "dev": "concurrently \"npm run css:watch\" \"npm run docs:dev\" --restart-tries 5 --restart-after 100",
+    "build": "snowpack build",
+    "dev": "snowpack dev --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -40,7 +37,6 @@
   },
   "dependencies": {
     "@dorgandash/untitled": "^0.2.1",
-    "uce-loader": "^2.0.0",
-    "uhtml-ssr": "^0.5.0"
+    "uce-loader": "^2.0.0"
   }
 }

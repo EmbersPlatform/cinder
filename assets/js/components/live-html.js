@@ -25,11 +25,8 @@ define("cinder-live-html", class extends Component() {
     this.frame.dataset.colorMode = global_state().theme;
   }
 
-  handle_click(event) {
+  handle_click = (event) => {
     const action = event.target.dataset.action;
-
-    console.log(event)
-
     if(action) this[action]();
   }
 
@@ -39,5 +36,10 @@ define("cinder-live-html", class extends Component() {
     } else {
       global_state.update({theme: "light"});
     }
+  }
+
+  copy_source = () => {
+    const source = this.querySelector('[live-code-source]');
+    navigator.clipboard.writeText(source.value);
   }
 })
