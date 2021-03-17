@@ -1,0 +1,81 @@
+/* Heading sizes - mobile */
+/* h4-h6 remain the same size on both mobile & desktop */
+/* Heading sizes - desktop */
+/* Font weights */
+/* Line heights */
+/* Font stacks */
+/* Monospace font stack */
+/* The base body size */
+/* These are our margin and padding utility spacers. The default step size we */
+/* use is 8px. This gives us a key of: */
+/*    0 => 0px */
+/*    1 => 4px */
+/*    2 => 8px */
+/*    3 => 16px */
+/*    4 => 24px */
+/*    5 => 32px */
+/*    6 => 40px */
+/* Our spacing scale */
+/* 0 */
+/* 4px */
+/* 8px */
+/* 16px */
+/* 24px */
+/* 32px */
+/* 40px */
+/* The list of spacer values */
+/* And the map of spacers, for easier looping: */
+/* @each $scale, $length in $spacer-map { ... } */
+/* Em spacer variables */
+/* 1/16 */
+/* 1/8 */
+/* 1/4 */
+/* 3/8 */
+/* 1/2 */
+/* 3/4 */
+/* Size scale */
+/* Used for buttons, inputs, labels, avatars etc. */
+/* 16px */
+/* 20px */
+/* 24px */
+/* 28px */
+/* 32px */
+/* 40px */
+/* 48px */
+/* 64px */
+/* Fixed-width container variables */
+/* Breakpoint widths */
+/* Small screen / phone */
+/* Medium screen / tablet */
+/* Large screen / desktop (980 + (16 * 2)) <= container + gutters */
+/* Extra large screen / wide desktop */
+/* Responsive container widths */
+/* Breakpoints in the form (name: length) */
+.LiveCode {
+  display: block;
+}
+
+.LiveCode-frame {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  border-color: var(--color-border-primary);
+  border-radius: 4px 4px 0 0;
+}
+
+.LiveCode-source {
+  position: relative;
+  border-radius: 0 0 4px 4px;
+}
+
+.LiveCode-copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+[class^=container] h1:not(:first-child), [class^=container] h2, [class^=container] h3, [class^=container] h4, [class^=container] h5, [class^=container] h6 {
+  margin-top: 24px;
+  border-bottom: 1px solid var(--color-border-secondary);
+  padding-bottom: 4px;
+  margin-bottom: 16px;
+}

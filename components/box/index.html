@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Box - Cinder CSS</title>
+  
+
+  <link href="https://unpkg.com/highlight.js@10.6.0/styles/vs2015.css" rel="stylesheet">
+  <link rel="stylesheet" href="/dist/index.css">
+  <link rel="stylesheet" href="/assets/css/index.css">
+
+  <script type="module" src="/assets/js/index.js"></script>
+</head>
+
+<body>
+  <nav class="Header" style="position: sticky; top: 0;">
+    <h1 class="Header-item h3 mr-3">Cinder</h1>
+    <button class="Header-item  btn" theme-toggler>Toggle dark theme</button>
+  </nav>
+
+  <div class="d-flex">
+    <div class="p-2">
+      <nav class="menu position-sticky" style="width: 250px; top: 72px;">
+        <a href="/" class="menu-item">Home</a>
+
+        <div class="menu-heading">Misc</div>
+        <a href="/test" class="menu-item">Test</a>
+
+        <div class="menu-heading">Components</div><a href="/components/box/" class="menu-item"
+             aria-current="page"
+          >Box</a><a href="/components/buttons/" class="menu-item"
+            
+          >Buttons</a><a href="/components/menu/" class="menu-item"
+            
+          >Menu</a></nav>
+    </div>
+    <div class="flex-1 p-2">
+      <div class="container-lg">
+        <h1>Box</h1>
+<pre style="display: none!important;"></pre>
+          <cinder-live-html class="Box LiveCode">
+            <div class="LiveCode-frame">
+              <div class="pt-2 px-2 d-flex flex-justify-end">
+                <button class="btn" data-action="toggle_theme">Theme</button>
+              </div>
+              <div class="LiveCode-frame-content p-3"><div class="Box mb-2">This is a box</div>
+</div>
+            </div>
+            <textarea live-code-source class="d-none"><div class="Box mb-2">This is a box</div>
+</textarea>
+            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;Box mb-2&quot;</span>&gt;</span>This is a box<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<button class="LiveCode-copy-btn btn" data-action="copy_source">Copy</button></code></pre>
+          </cinder-live-html>
+          
+<h2>Box body</h2>
+<pre style="display: none!important;"></pre>
+          <cinder-live-html class="Box LiveCode">
+            <div class="LiveCode-frame">
+              <div class="pt-2 px-2 d-flex flex-justify-end">
+                <button class="btn" data-action="toggle_theme">Theme</button>
+              </div>
+              <div class="LiveCode-frame-content p-3"><div class="Box mb-2">
+  <div class="Box-body">This is a box with body</div>
+</div>
+</div>
+            </div>
+            <textarea live-code-source class="d-none"><div class="Box mb-2">
+  <div class="Box-body">This is a box with body</div>
+</div>
+</textarea>
+            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;Box mb-2&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;Box-body&quot;</span>&gt;</span>This is a box with body<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<button class="LiveCode-copy-btn btn" data-action="copy_source">Copy</button></code></pre>
+          </cinder-live-html>
+          
+<h2>Condensed</h2>
+<pre style="display: none!important;"></pre>
+          <cinder-live-html class="Box LiveCode">
+            <div class="LiveCode-frame">
+              <div class="pt-2 px-2 d-flex flex-justify-end">
+                <button class="btn" data-action="toggle_theme">Theme</button>
+              </div>
+              <div class="LiveCode-frame-content p-3"><div class="Box Box--condensed mb-2">
+  <div class="Box-body">This is a condensed box with body</div>
+</div>
+</div>
+            </div>
+            <textarea live-code-source class="d-none"><div class="Box Box--condensed mb-2">
+  <div class="Box-body">This is a condensed box with body</div>
+</div>
+</textarea>
+            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;Box Box--condensed mb-2&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;Box-body&quot;</span>&gt;</span>This is a condensed box with body<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<button class="LiveCode-copy-btn btn" data-action="copy_source">Copy</button></code></pre>
+          </cinder-live-html>
+          
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

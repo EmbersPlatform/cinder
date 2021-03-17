@@ -1,0 +1,21 @@
+.LiveCode {
+  display: block;
+}
+
+.LiveCode-frame {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  border-color: var(--color-border-primary);
+  border-radius: $border-radius $border-radius 0 0;
+}
+
+.LiveCode-source {
+  position: relative;
+  border-radius: 0 0 $border-radius $border-radius;
+}
+
+.LiveCode-copy-btn {
+  position: absolute;
+  top: $spacer-2;
+  right: $spacer-2;
+}

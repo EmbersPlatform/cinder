@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "@dorgandash/untitled": "./@dorgandash/untitled.js",
+    "uce-loader": "./uce-loader.js"
+  }
+}
