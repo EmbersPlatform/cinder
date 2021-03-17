@@ -13,26 +13,15 @@
 
   <link href="https://unpkg.com/highlight.js@10.6.0/styles/vs2015.css" rel="stylesheet">
   <link rel="stylesheet" href="/dist/index.css">
+  <link rel="stylesheet" href="/assets/css/index.css">
 
   <script type="module" src="/assets/js/index.js"></script>
-
-  <script>
-    const html = document.documentElement;
-
-    function toggle_theme() {
-      if (html.dataset.colorMode == "dark") {
-        html.dataset.colorMode = "light";
-      } else {
-        html.dataset.colorMode = "dark";
-      }
-    }
-  </script>
 </head>
 
 <body>
   <nav class="Header" style="position: sticky; top: 0;">
     <h1 class="Header-item h3 mr-3">Cinder</h1>
-    <button class="Header-item  btn" onclick="toggle_theme()">Toggle dark theme</button>
+    <button class="Header-item  btn" theme-toggler>Toggle dark theme</button>
   </nav>
 
   <div class="d-flex">

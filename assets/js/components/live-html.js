@@ -1,29 +1,36 @@
-import { define, Component, html, css, ref, store } from "@dorgandash/untitled";
+import { define, Component, html, css, store } from "@dorgandash/untitled";
+import { environment } from "../index";
 
 const global_state = store({
-  theme: document.documentElement.dataset.colorMode
+  theme: environment().theme
+})
+
+environment.map(({theme}) => {
+  global_state.update({theme});
 })
 
 define("cinder-live-html", class extends Component() {
-  connected() {
+  ready() {
     this.content = [].slice.call(this.children);
     this.useStore(global_state);
-    this.dataset.colorMode = document.documentElement.dataset.colorMode;
-    this.dataset.lightTheme = "light";
-    this.dataset.darkTheme = "dark";
+    this.frame = this.querySelector(".LiveCode-frame");
+    this.frame.dataset.colorMode = document.documentElement.dataset.colorMode;
+    this.frame.dataset.lightTheme = "light";
+    this.frame.dataset.darkTheme = "dark";
+
+    this.addEventListener("click", this);
   }
 
   update() {
-    this.dataset.colorMode = global_state().theme;
+    this.frame.dataset.colorMode = global_state().theme;
   }
 
-  render() {
-    return html`
-      <div class="pt-2 px-2 d-flex flex-justify-end">
-        <button class="btn" onclick=${this.toggle_theme}>Theme</button>
-      </div>
-      ${this.content}
-    `
+  handle_click(event) {
+    const action = event.target.dataset.action;
+
+    console.log(event)
+
+    if(action) this[action]();
   }
 
   toggle_theme = () => {
@@ -32,13 +39,5 @@ define("cinder-live-html", class extends Component() {
     } else {
       global_state.update({theme: "light"});
     }
-  }
-
-  static css(self) {
-    return css`
-    ${self} {
-      display: block;
-    }
-    `
   }
 })

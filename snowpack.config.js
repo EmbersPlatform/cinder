@@ -9,6 +9,12 @@ module.exports = {
   },
   plugins: [
     [
+      '@snowpack/plugin-sass',
+      {
+        input: ['.scss']
+      }
+    ],
+    [
       '@snowpack/plugin-run-script',
       {
         cmd: 'eleventy',
@@ -16,9 +22,6 @@ module.exports = {
       },
     ],
   ],
-  packageOptions: {
-    knownEntryPoints: ["uce-loader", "@dorgandash/untitled"]
-  },
   devOptions: {
     /* ... */
   },
