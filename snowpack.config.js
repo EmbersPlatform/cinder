@@ -25,7 +25,7 @@ module.exports = {
     [
       '@snowpack/plugin-run-script',
       {
-        cmd: 'eleventy',
+        cmd: `eleventy --pathprefix=${process.env.DOCS_BASE_PATH || "/"}`,
         watch: '$1 --watch',
       },
     ]
