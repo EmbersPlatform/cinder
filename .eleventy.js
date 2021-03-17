@@ -36,9 +36,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setLibrary("md", markdown);
 
   return {
+    pathPrefix: process.env.BASE_PATH || "/",
     dir: {
       input: "doc",
-    },
+    }
   };
 }
 

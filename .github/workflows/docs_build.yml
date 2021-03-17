@@ -19,6 +19,8 @@ jobs:
       - run: npm ci
 
       - run: npm run build
+        with:
+          base_path: ${{ secrets.DOCS_BASE_PATH }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
