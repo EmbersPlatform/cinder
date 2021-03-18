@@ -88,16 +88,16 @@ $size-8: $size-7 + 16px;  /* 64px */
 $container-width: 980px;
 $grid-gutter:     10px;
 
-/* Breakpoint widths */
-$width-xs: 0;
-/* Small screen / phone */
-$width-sm: 544px;
-/* Medium screen / tablet */
-$width-md: 768px;
-/* Large screen / desktop (980 + (16 * 2)) <= container + gutters */
-$width-lg: 1012px;
-/* Extra large screen / wide desktop */
-$width-xl: 1280px;
+// Breakpoint widths
+$width-xs: 0 !default;
+// Small screen / phone
+$width-sm: 544px !default;
+// Medium screen / tablet
+$width-md: 768px !default;
+// Large screen / desktop (980 + (16 * 2)) <= container + gutters
+$width-lg: 1012px !default;
+// Extra large screen / wide desktop
+$width-xl: 1280px !default;
 
 /* Responsive container widths */
 $container-sm: $width-sm;
