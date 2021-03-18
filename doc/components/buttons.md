@@ -1,6 +1,5 @@
 ---
 title: "Buttons"
-tags: components
 ---
 
 # Buttons

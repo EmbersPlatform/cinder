@@ -1,6 +1,5 @@
 ---
 title: "Menu"
-tags: components
 ---
 
 # Menu

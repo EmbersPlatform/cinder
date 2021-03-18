@@ -1,6 +1,5 @@
 ---
 title: "Box"
-tags: components
 ---
 
 # Box
