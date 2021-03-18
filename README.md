@@ -9,16 +9,12 @@ Yyou can build the project after installing dependencies with `npm install`.
 
 # Building
 
-Run `npm run css:build`.
-You can find the compiled css in the `dist` folder.
-
-# Building the docs
-
-Run `npm run docs:build`.
-You can find the docs files in the `build` folder.
+Run `npm run build`.
+You can find the compiled css in the `dist` folder and the documentation in the
+`docs` folder.
 
 # Development
 
 Run `npm run dev`.
-This will combine the css and docs build pipelines and start a server in the
-`8080` port.
+This will build the css and documentation, watch for changes and set up a dev
+server at the `8080` port.
