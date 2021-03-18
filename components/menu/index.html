@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+<html lang="en" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark">
 
 <head>
   <meta charset="UTF-8">
@@ -21,14 +21,13 @@
     <h1 class="Header-item h3 mr-3">Cinder</h1>
     <button class="Header-item  btn" theme-toggler>Toggle dark theme</button>
   </nav>
-
   <div class="d-flex">
-    <div class="p-2">
-      <nav class="menu position-sticky" style="width: 250px; top: 72px;">
-        <a href="/cinder/" class="menu-item">Home</a>
+    <div class="p-2 col-12 col-md-4 col-lg-3 hide-md">
+      <nav class="menu position-sticky" style="top: 72px;">
+        <a href="/cinder/" class="menu-item" >Home</a>
 
         <div class="menu-heading">Misc</div>
-        <a href="/cinder/test" class="menu-item">Test</a>
+        <a href="/cinder/test" class="menu-item" >Test</a>
 
         <div class="menu-heading">Components</div><a href="/cinder/components/box/" class="menu-item"
             
@@ -38,14 +37,26 @@
              aria-current="page"
           >Menu</a></nav>
     </div>
-    <div class="flex-1 p-2">
-      <div class="container-lg">
-        <h1>Menu</h1>
+    <div class="flex-1 p-2 container-lg col-12 col-md-8 col-lg-6">
+      <nav class="menu d-md-none">
+        <a href="/cinder/" class="menu-item" >Home</a>
+
+        <div class="menu-heading">Misc</div>
+        <a href="/cinder/test" class="menu-item" >Test</a>
+
+        <div class="menu-heading">Components</div><a href="/cinder/components/box/" class="menu-item"
+            
+          >Box</a><a href="/cinder/components/buttons/" class="menu-item"
+            
+          >Buttons</a><a href="/cinder/components/menu/" class="menu-item"
+             aria-current="page"
+          >Menu</a></nav>
+      <h1>Menu</h1>
 <pre style="display: none!important;"></pre>
-          <cinder-live-html class="Box LiveCode">
+          <cinder-live-html class="Box LiveCode mb-2">
             <div class="LiveCode-frame">
               <div class="pt-2 px-2 d-flex flex-justify-end">
-                <button class="btn" data-action="toggle_theme">Theme</button>
+                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
               </div>
               <div class="LiveCode-frame-content p-3"><nav class="menu">
   <a href="/" class="menu-item">Home</a>
@@ -59,11 +70,10 @@
             <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;menu&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;menu-heading&quot;</span>&gt;</span>Components<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/components/box/&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span>Box<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/components/buttons/&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span>Buttons<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/components/menu/&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span>Menu<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
-<button class="LiveCode-copy-btn btn" data-action="copy_source">Copy</button></code></pre>
+<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
           </cinder-live-html>
           
 
-      </div>
     </div>
   </div>
 </body>
