@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Typography - Cinder CSS</title>
+  
+
+  <link href="https://unpkg.com/highlight.js@10.6.0/styles/vs2015.css" rel="stylesheet">
+  <link rel="stylesheet" href="/cinder/dist/index.css">
+  <link rel="stylesheet" href="/cinder/assets/css/index.css">
+
+  <script type="module" src="/cinder/assets/js/index.js"></script>
+</head>
+
+<body>
+  <nav class="Header" style="position: sticky; top: 0;">
+    <h1 class="Header-item h3 mr-3">Cinder</h1>
+    <button class="Header-item  btn" theme-toggler>Toggle dark theme</button>
+  </nav>
+  <div class="d-flex flex-wrap">
+    <div class="p-2 col-12 col-md-4 col-lg-3 hide-md hide-sm">
+      <nav class="menu position-sticky" style="top: 72px;">
+        <a href="/cinder/" class="menu-item" >Home</a>
+    <div class="menu-heading">Components</div><a href="/cinder/components/box/" class="menu-item"
+        
+      >Box</a><a href="/cinder/components/buttons/" class="menu-item"
+        
+      >Buttons</a><a href="/cinder/components/menu/" class="menu-item"
+        
+      >Menu</a>
+    <div class="menu-heading">Misc</div><a href="/cinder/misc/test/" class="menu-item"
+        
+      >Test</a>
+    <div class="menu-heading">Utilities</div><a href="/cinder/utilities/margin/" class="menu-item"
+        
+      >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
+        
+      >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
+         aria-current="page"
+      >Typography</a>
+      </nav>
+    </div>
+    <div class="col-12 col-md-8 col-lg-6 flex-1 p-2 container-lg">
+      <nav class="menu d-md-none">
+        <a href="/cinder/" class="menu-item" >Home</a>
+    <div class="menu-heading">Components</div><a href="/cinder/components/box/" class="menu-item"
+        
+      >Box</a><a href="/cinder/components/buttons/" class="menu-item"
+        
+      >Buttons</a><a href="/cinder/components/menu/" class="menu-item"
+        
+      >Menu</a>
+    <div class="menu-heading">Misc</div><a href="/cinder/misc/test/" class="menu-item"
+        
+      >Test</a>
+    <div class="menu-heading">Utilities</div><a href="/cinder/utilities/margin/" class="menu-item"
+        
+      >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
+        
+      >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
+         aria-current="page"
+      >Typography</a>
+      </nav>
+      <div class="markdown-body">
+        <h1>Typography</h1>
+<p>Type utilities are designed to work in combination with line-height utilities so as to result in more sensible numbers wherever possible.</p>
+<p>Font sizes are smaller on mobile and scale up at the <code>md</code> breakpoint to be larger on desktop.</p>
+<table>
+<thead>
+<tr>
+<th>Scale</th>
+<th>Font size: mobile</th>
+<th>Font size: desktop</th>
+<th>1.25 line height</th>
+<th>1.5 line height</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00</td>
+<td>40px</td>
+<td>48px</td>
+<td>60</td>
+<td>72</td>
+</tr>
+<tr>
+<td>0</td>
+<td>32px</td>
+<td>40px</td>
+<td>50</td>
+<td>60</td>
+</tr>
+<tr>
+<td>1</td>
+<td>26px</td>
+<td>32px</td>
+<td>40</td>
+<td>48</td>
+</tr>
+<tr>
+<td>2</td>
+<td>22px</td>
+<td>24px</td>
+<td>30</td>
+<td>36</td>
+</tr>
+<tr>
+<td>3</td>
+<td>18px</td>
+<td>20px</td>
+<td>25</td>
+<td>30</td>
+</tr>
+<tr>
+<td>4</td>
+<td>16px</td>
+<td>16px</td>
+<td>20</td>
+<td>24</td>
+</tr>
+<tr>
+<td>5</td>
+<td>14px</td>
+<td>14px</td>
+<td>17.5</td>
+<td>21</td>
+</tr>
+<tr>
+<td>6</td>
+<td>12px</td>
+<td>12px</td>
+<td>15</td>
+<td>18</td>
+</tr>
+</tbody>
+</table>
+<h2>Heading utilities</h2>
+<p>Use <code>.h1</code> – <code>.h6</code> to change an elements font size and weight to match our heading styles.</p>
+<pre style="display: none!important;"></pre>
+          <cinder-live-html class="Box LiveCode mb-2">
+            <div class="LiveCode-frame">
+              <div class="pt-2 px-2 d-flex flex-justify-end">
+                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+              </div>
+              <div class="LiveCode-frame-content p-3"><p class="h1">Pizza 1</p>
+<p class="h2">Pizza 2</p>
+<p class="h3">Pizza 3</p>
+<p class="h4">Pizza 4</p>
+<p class="h5">Pizza 5</p>
+<p class="h6">Pizza 6</p>
+</div>
+            </div>
+            <textarea live-code-source class="d-none"><p class="h1">Pizza 1</p>
+<p class="h2">Pizza 2</p>
+<p class="h3">Pizza 3</p>
+<p class="h4">Pizza 4</p>
+<p class="h5">Pizza 5</p>
+<p class="h6">Pizza 6</p>
+</textarea>
+            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;h1&quot;</span>&gt;</span>Pizza 1<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;h2&quot;</span>&gt;</span>Pizza 2<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;h3&quot;</span>&gt;</span>Pizza 3<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;h4&quot;</span>&gt;</span>Pizza 4<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;h5&quot;</span>&gt;</span>Pizza 5<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;h6&quot;</span>&gt;</span>Pizza 6<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+          </cinder-live-html>
+          
+<p>These are particularly useful for changing the visual appearance while keeping the markup semantically correct. Be sure you keep the hierarchy appropriate for the page.</p>
+<pre style="display: none!important;"></pre>
+          <cinder-live-html class="Box LiveCode mb-2">
+            <div class="LiveCode-frame">
+              <div class="pt-2 px-2 d-flex flex-justify-end">
+                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+              </div>
+              <div class="LiveCode-frame-content p-3"><h2 class="h1">Looks like a heading 1, semantically a heading 2</h2>
+</div>
+            </div>
+            <textarea live-code-source class="d-none"><h2 class="h1">Looks like a heading 1, semantically a heading 2</h2>
+</textarea>
+            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;h1&quot;</span>&gt;</span>Looks like a heading 1, semantically a heading 2<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+          </cinder-live-html>
+          
+<h2>Type scale utilities</h2>
+<p>Use <code>.f1</code> – <code>.f6</code> to change an elements font size while keeping inline with our type scale.</p>
+<pre style="display: none!important;"></pre>
+          <cinder-live-html class="Box LiveCode mb-2">
+            <div class="LiveCode-frame">
+              <div class="pt-2 px-2 d-flex flex-justify-end">
+                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+              </div>
+              <div class="LiveCode-frame-content p-3"><p class="f1">Focaccia</p>
+<p class="f2">Focaccia</p>
+<p class="f3">Focaccia</p>
+<p class="f4">Focaccia</p>
+<p class="f5">Focaccia</p>
+<p class="f6">Focaccia</p>
+</div>
+            </div>
+            <textarea live-code-source class="d-none"><p class="f1">Focaccia</p>
+<p class="f2">Focaccia</p>
+<p class="f3">Focaccia</p>
+<p class="f4">Focaccia</p>
+<p class="f5">Focaccia</p>
+<p class="f6">Focaccia</p>
+</textarea>
+            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;f1&quot;</span>&gt;</span>Focaccia<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;f2&quot;</span>&gt;</span>Focaccia<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;f3&quot;</span>&gt;</span>Focaccia<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;f4&quot;</span>&gt;</span>Focaccia<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;f5&quot;</span>&gt;</span>Focaccia<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;f6&quot;</span>&gt;</span>Focaccia<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+          </cinder-live-html>
+          
+<p>Lighter font-weight utilities are available in a limited range. Lighter font-weights reduce the legibility of text, particularly at small font sizes, so the scale only goes down to <code>f3</code> at 20px. The larger sizes <code>f0</code> and <code>f00</code> allow for lighter and larger type that is in keeping with our marketing styles.</p>
+<pre style="display: none!important;"></pre>
+          <cinder-live-html class="Box LiveCode mb-2">
+            <div class="LiveCode-frame">
+              <div class="pt-2 px-2 d-flex flex-justify-end">
+                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+              </div>
+              <div class="LiveCode-frame-content p-3"><h1 class="f00-light">Potato chips</h1>
+<h1 class="f0-light">Potato chips</h1>
+<h1 class="f1-light">Potato chips</h1>
+<h1 class="f2-light">Potato chips</h1>
+<h1 class="f3-light">Potato chips</h1>
+</div>
+            </div>
+            <textarea live-code-source class="d-none"><h1 class="f00-light">Potato chips</h1>
+<h1 class="f0-light">Potato chips</h1>
+<h1 class="f1-light">Potato chips</h1>
+<h1 class="f2-light">Potato chips</h1>
+<h1 class="f3-light">Potato chips</h1>
+</textarea>
+            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;f00-light&quot;</span>&gt;</span>Potato chips<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;f0-light&quot;</span>&gt;</span>Potato chips<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;f1-light&quot;</span>&gt;</span>Potato chips<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;f2-light&quot;</span>&gt;</span>Potato chips<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;f3-light&quot;</span>&gt;</span>Potato chips<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+          </cinder-live-html>
+          
+<h2>Line height styles</h2>
+<p>Change the line height density with these utilities. Responsive variants are also available (e.g. <code>.lh-sm-condensed</code>).</p>
+<pre style="display: none!important;"></pre>
+          <cinder-live-html class="Box LiveCode mb-2">
+            <div class="LiveCode-frame">
+              <div class="pt-2 px-2 d-flex flex-justify-end">
+                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+              </div>
+              <div class="LiveCode-frame-content p-3"><p class="lh-default">
+  Bacon ipsum dolor amet tri-tip chicken kielbasa, cow swine beef corned beef ground round prosciutto hamburger porchetta sausage alcatra tail. Jowl chuck biltong flank meatball, beef short ribs. Jowl tenderloin ground round, short loin tri-tip ribeye picanha filet mignon pig chicken kielbasa t-bone fatback. Beef ribs meatball chicken corned beef salami.
+</p>
+<p class="lh-condensed">
+  Bacon ipsum dolor amet tri-tip chicken kielbasa, cow swine beef corned beef ground round prosciutto hamburger porchetta sausage alcatra tail. Jowl chuck biltong flank meatball, beef short ribs. Jowl tenderloin ground round, short loin tri-tip ribeye picanha filet mignon pig chicken kielbasa t-bone fatback. Beef ribs meatball chicken corned beef salami.
+</p>
+<p class="lh-condensed-ultra">
+  Bacon ipsum dolor amet tri-tip chicken kielbasa, cow swine beef corned beef ground round prosciutto hamburger porchetta sausage alcatra tail. Jowl chuck biltong flank meatball, beef short ribs. Jowl tenderloin ground round, short loin tri-tip ribeye picanha filet mignon pig chicken kielbasa t-bone fatback. Beef ribs meatball chicken corned beef salami.
+</p>
+</div>
+            </div>
+            <textarea live-code-source class="d-none"><p class="lh-default">
+  Bacon ipsum dolor amet tri-tip chicken kielbasa, cow swine beef corned beef ground round prosciutto hamburger porchetta sausage alcatra tail. Jowl chuck biltong flank meatball, beef short ribs. Jowl tenderloin ground round, short loin tri-tip ribeye picanha filet mignon pig chicken kielbasa t-bone fatback. Beef ribs meatball chicken corned beef salami.
+</p>
+<p class="lh-condensed">
+  Bacon ipsum dolor amet tri-tip chicken kielbasa, cow swine beef corned beef ground round prosciutto hamburger porchetta sausage alcatra tail. Jowl chuck biltong flank meatball, beef short ribs. Jowl tenderloin ground round, short loin tri-tip ribeye picanha filet mignon pig chicken kielbasa t-bone fatback. Beef ribs meatball chicken corned beef salami.
+</p>
+<p class="lh-condensed-ultra">
+  Bacon ipsum dolor amet tri-tip chicken kielbasa, cow swine beef corned beef ground round prosciutto hamburger porchetta sausage alcatra tail. Jowl chuck biltong flank meatball, beef short ribs. Jowl tenderloin ground round, short loin tri-tip ribeye picanha filet mignon pig chicken kielbasa t-bone fatback. Beef ribs meatball chicken corned beef salami.
+</p>
+</textarea>
+            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;lh-default&quot;</span>&gt;</span>
+  Bacon ipsum dolor amet tri-tip chicken kielbasa, cow swine beef corned beef ground round prosciutto hamburger porchetta sausage alcatra tail. Jowl chuck biltong flank meatball, beef short ribs. Jowl tenderloin ground round, short loin tri-tip ribeye picanha filet mignon pig chicken kielbasa t-bone fatback. Beef ribs meatball chicken corned beef salami.
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;lh-condensed&quot;</span>&gt;</span>
+  Bacon ipsum dolor amet tri-tip chicken kielbasa, cow swine beef corned beef ground round prosciutto hamburger porchetta sausage alcatra tail. Jowl chuck biltong flank meatball, beef short ribs. Jowl tenderloin ground round, short loin tri-tip ribeye picanha filet mignon pig chicken kielbasa t-bone fatback. Beef ribs meatball chicken corned beef salami.
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;lh-condensed-ultra&quot;</span>&gt;</span>
+  Bacon ipsum dolor amet tri-tip chicken kielbasa, cow swine beef corned beef ground round prosciutto hamburger porchetta sausage alcatra tail. Jowl chuck biltong flank meatball, beef short ribs. Jowl tenderloin ground round, short loin tri-tip ribeye picanha filet mignon pig chicken kielbasa t-bone fatback. Beef ribs meatball chicken corned beef salami.
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+          </cinder-live-html>
+          
+<p>The <code>lh-0</code> utility class sets <code>line-height: 0 !important</code>, and can be used to remove vertical spacing from elements that inherit line-height but don't contain any text.</p>
+<h2>Typographic styles</h2>
+<p>Change the font weight, styles, and alignment with these utilities.</p>
+<pre style="display: none!important;"></pre>
+          <cinder-live-html class="Box LiveCode mb-2">
+            <div class="LiveCode-frame">
+              <div class="pt-2 px-2 d-flex flex-justify-end">
+                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+              </div>
+              <div class="LiveCode-frame-content p-3"><p class="text-normal">Normal</p>
+<p class="text-italic">Italic</p>
+<p class="text-bold">Bold</p>
+<p class="text-uppercase">Uppercase</p>
+<p class="no-wrap">No wrap</p>
+<p class="ws-normal">Normal whitespace</p>
+<p class="text-underline">Text underline</p>
+<p class="no-underline">No underline</p>
+<p class="text-emphasized">Emphasized</p>
+<p class="text-small">Small</p>
+<p class="lead">Bacon ipsum dolor amet tri-tip chicken kielbasa, cow swine beef corned beef ground round prosciutto hamburger porchetta sausage alcatra tail.</p>
+<p class="text-mono">Monospace</p>
+<p class="user-select-none">User Select None</p>
+</div>
+            </div>
+            <textarea live-code-source class="d-none"><p class="text-normal">Normal</p>
+<p class="text-italic">Italic</p>
+<p class="text-bold">Bold</p>
+<p class="text-uppercase">Uppercase</p>
+<p class="no-wrap">No wrap</p>
+<p class="ws-normal">Normal whitespace</p>
+<p class="text-underline">Text underline</p>
+<p class="no-underline">No underline</p>
+<p class="text-emphasized">Emphasized</p>
+<p class="text-small">Small</p>
+<p class="lead">Bacon ipsum dolor amet tri-tip chicken kielbasa, cow swine beef corned beef ground round prosciutto hamburger porchetta sausage alcatra tail.</p>
+<p class="text-mono">Monospace</p>
+<p class="user-select-none">User Select None</p>
+</textarea>
+            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-normal&quot;</span>&gt;</span>Normal<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-italic&quot;</span>&gt;</span>Italic<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-bold&quot;</span>&gt;</span>Bold<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-uppercase&quot;</span>&gt;</span>Uppercase<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;no-wrap&quot;</span>&gt;</span>No wrap<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ws-normal&quot;</span>&gt;</span>Normal whitespace<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-underline&quot;</span>&gt;</span>Text underline<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;no-underline&quot;</span>&gt;</span>No underline<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-emphasized&quot;</span>&gt;</span>Emphasized<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-small&quot;</span>&gt;</span>Small<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;lead&quot;</span>&gt;</span>Bacon ipsum dolor amet tri-tip chicken kielbasa, cow swine beef corned beef ground round prosciutto hamburger porchetta sausage alcatra tail.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-mono&quot;</span>&gt;</span>Monospace<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;user-select-none&quot;</span>&gt;</span>User Select None<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+          </cinder-live-html>
+          
+<h2>Word break</h2>
+<p>There are two utilities for adjusting how lines and words of text break when they exceed the width of their containing element:</p>
+<ul>
+<li>
+<p><code>break-word</code> sets <code>word-break: break-word</code> and <code>overflow-wrap: break-word</code>, which will only break words if they would exceed the line length <em>after wrapping</em>.</p>
+</li>
+<li>
+<p><code>wb-break-all</code> sets <code>word-break: break-all</code>, which will force a word to break regardless of whether it's shorter than the line length. See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-break#Values">MDN's <code>word-break</code> docs</a> for more info.</p>
+</li>
+</ul>
+<pre style="display: none!important;"></pre>
+          <cinder-live-html class="Box LiveCode mb-2">
+            <div class="LiveCode-frame">
+              <div class="pt-2 px-2 d-flex flex-justify-end">
+                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+              </div>
+              <div class="LiveCode-frame-content p-3"><p class="break-word p-2 bg-gray col-3 border-right">.break-word will only break long words that exceed the line length, such as supercalifragilisticexpialidocious. Long words like "exceedingly" will simply break to the next line.</p>
+<p class="wb-break-all p-2 bg-gray col-3 border-right">.wb-break-all will break any word that meets the end its line, and should be used sparingly. As you can see here, it's not particularly nice to read text that breaks in weird places.</p>
+</div>
+            </div>
+            <textarea live-code-source class="d-none"><p class="break-word p-2 bg-gray col-3 border-right">.break-word will only break long words that exceed the line length, such as supercalifragilisticexpialidocious. Long words like "exceedingly" will simply break to the next line.</p>
+<p class="wb-break-all p-2 bg-gray col-3 border-right">.wb-break-all will break any word that meets the end its line, and should be used sparingly. As you can see here, it's not particularly nice to read text that breaks in weird places.</p>
+</textarea>
+            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;break-word p-2 bg-gray col-3 border-right&quot;</span>&gt;</span>.break-word will only break long words that exceed the line length, such as supercalifragilisticexpialidocious. Long words like &quot;exceedingly&quot; will simply break to the next line.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;wb-break-all p-2 bg-gray col-3 border-right&quot;</span>&gt;</span>.wb-break-all will break any word that meets the end its line, and should be used sparingly. As you can see here, it&#x27;s not particularly nice to read text that breaks in weird places.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+          </cinder-live-html>
+          
+<h2>Text alignment</h2>
+<p>Use text alignment utilities to left align, center, or right align text.</p>
+<pre style="display: none!important;"></pre>
+          <cinder-live-html class="Box LiveCode mb-2">
+            <div class="LiveCode-frame">
+              <div class="pt-2 px-2 d-flex flex-justify-end">
+                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+              </div>
+              <div class="LiveCode-frame-content p-3"><p class="text-left">Left align</p>
+<p class="text-center">Center</p>
+<p class="text-right">Right align</p>
+</div>
+            </div>
+            <textarea live-code-source class="d-none"><p class="text-left">Left align</p>
+<p class="text-center">Center</p>
+<p class="text-right">Right align</p>
+</textarea>
+            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-left&quot;</span>&gt;</span>Left align<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-center&quot;</span>&gt;</span>Center<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-right&quot;</span>&gt;</span>Right align<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+          </cinder-live-html>
+          
+<h2>Responsive alignment</h2>
+<p>Use the following formula to make a text alignment utility responsive: <code>.text-[breakpoint]-[alignment]</code></p>
+<pre style="display: none!important;"></pre>
+          <cinder-live-html class="Box LiveCode mb-2">
+            <div class="LiveCode-frame">
+              <div class="pt-2 px-2 d-flex flex-justify-end">
+                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+              </div>
+              <div class="LiveCode-frame-content p-3"><p class="text-left text-sm-center text-lg-right">Left in a small viewport, centered in mid-sized viewports, and right aligned in larger viewports</p>
+</div>
+            </div>
+            <textarea live-code-source class="d-none"><p class="text-left text-sm-center text-lg-right">Left in a small viewport, centered in mid-sized viewports, and right aligned in larger viewports</p>
+</textarea>
+            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-left text-sm-center text-lg-right&quot;</span>&gt;</span>Left in a small viewport, centered in mid-sized viewports, and right aligned in larger viewports<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+          </cinder-live-html>
+          
+<h2>List styles</h2>
+<p>Remove bullets from an unordered list or numbers from an ordered list by applying <code>.list-style-none</code> to the <code>&lt;ul&gt;</code>.</p>
+<pre style="display: none!important;"></pre>
+          <cinder-live-html class="Box LiveCode mb-2">
+            <div class="LiveCode-frame">
+              <div class="pt-2 px-2 d-flex flex-justify-end">
+                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+              </div>
+              <div class="LiveCode-frame-content p-3"><ul class="list-style-none">
+  <li>First list item</li>
+  <li>Second list item</li>
+  <li>Third list item</li>
+</ul>
+</div>
+            </div>
+            <textarea live-code-source class="d-none"><ul class="list-style-none">
+  <li>First list item</li>
+  <li>Second list item</li>
+  <li>Third list item</li>
+</ul>
+</textarea>
+            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;list-style-none&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>First list item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Second list item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Third list item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+          </cinder-live-html>
+          
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

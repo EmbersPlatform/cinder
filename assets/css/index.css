@@ -60,6 +60,7 @@
 .LiveCode-source {
   position: relative;
   border-radius: 0 0 4px 4px;
+  margin-bottom: 0 !important;
 }
 
 .LiveCode-copy-btn {

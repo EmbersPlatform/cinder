@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Padding - Cinder CSS</title>
+  
+
+  <link href="https://unpkg.com/highlight.js@10.6.0/styles/vs2015.css" rel="stylesheet">
+  <link rel="stylesheet" href="/cinder/dist/index.css">
+  <link rel="stylesheet" href="/cinder/assets/css/index.css">
+
+  <script type="module" src="/cinder/assets/js/index.js"></script>
+</head>
+
+<body>
+  <nav class="Header" style="position: sticky; top: 0;">
+    <h1 class="Header-item h3 mr-3">Cinder</h1>
+    <button class="Header-item  btn" theme-toggler>Toggle dark theme</button>
+  </nav>
+  <div class="d-flex flex-wrap">
+    <div class="p-2 col-12 col-md-4 col-lg-3 hide-md hide-sm">
+      <nav class="menu position-sticky" style="top: 72px;">
+        <a href="/cinder/" class="menu-item" >Home</a>
+    <div class="menu-heading">Components</div><a href="/cinder/components/box/" class="menu-item"
+        
+      >Box</a><a href="/cinder/components/buttons/" class="menu-item"
+        
+      >Buttons</a><a href="/cinder/components/menu/" class="menu-item"
+        
+      >Menu</a>
+    <div class="menu-heading">Misc</div><a href="/cinder/misc/test/" class="menu-item"
+        
+      >Test</a>
+    <div class="menu-heading">Utilities</div><a href="/cinder/utilities/margin/" class="menu-item"
+        
+      >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
+         aria-current="page"
+      >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
+        
+      >Typography</a>
+      </nav>
+    </div>
+    <div class="col-12 col-md-8 col-lg-6 flex-1 p-2 container-lg">
+      <nav class="menu d-md-none">
+        <a href="/cinder/" class="menu-item" >Home</a>
+    <div class="menu-heading">Components</div><a href="/cinder/components/box/" class="menu-item"
+        
+      >Box</a><a href="/cinder/components/buttons/" class="menu-item"
+        
+      >Buttons</a><a href="/cinder/components/menu/" class="menu-item"
+        
+      >Menu</a>
+    <div class="menu-heading">Misc</div><a href="/cinder/misc/test/" class="menu-item"
+        
+      >Test</a>
+    <div class="menu-heading">Utilities</div><a href="/cinder/utilities/margin/" class="menu-item"
+        
+      >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
+         aria-current="page"
+      >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
+        
+      >Typography</a>
+      </nav>
+      <div class="markdown-body">
+        <h1>Padding</h1>
+<p>Padding utilities are based on a global spacing scale which helps keep horizontal and vertical spacing consistent. These utilities help us reduce the amount of custom CSS that could share the same properties, and allows to achieve many different page layouts using the same styles.</p>
+<h2>Shorthand</h2>
+<p>Since padding utilities have many variations and will be used in many places, we use a shorthand naming convention to help keep class names succinct.</p>
+<table>
+<thead>
+<tr>
+<th>Shorthand</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p</td>
+<td>padding</td>
+</tr>
+<tr>
+<td>t</td>
+<td>top</td>
+</tr>
+<tr>
+<td>r</td>
+<td>right</td>
+</tr>
+<tr>
+<td>b</td>
+<td>bottom</td>
+</tr>
+<tr>
+<td>l</td>
+<td>left</td>
+</tr>
+<tr>
+<td>x</td>
+<td>horizontal, left &amp; right</td>
+</tr>
+<tr>
+<td>y</td>
+<td>vertical, top &amp; bottom</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>4px</td>
+</tr>
+<tr>
+<td>2</td>
+<td>8px</td>
+</tr>
+<tr>
+<td>3</td>
+<td>16px</td>
+</tr>
+<tr>
+<td>4</td>
+<td>24px</td>
+</tr>
+<tr>
+<td>5</td>
+<td>32px</td>
+</tr>
+<tr>
+<td>6</td>
+<td>40px</td>
+</tr>
+</tbody>
+</table>
+<p><em><strong>Note:</strong> The blue in the examples below represents the element, and the green represents the padding.</em></p>
+<h2>Uniform padding</h2>
+<p>Use uniform spacing utilities to apply equal padding to all sides of an element. These utilities can be used with a spacing scale from 0-6.</p>
+<pre style="display: none!important;"></pre>
+          <cinder-live-html class="Box LiveCode mb-2">
+            <div class="LiveCode-frame">
+              <div class="pt-2 px-2 d-flex flex-justify-end">
+                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+              </div>
+              <div class="LiveCode-frame-content p-3"><div class="p-0 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.p-0</div></div>
+<div class="p-1 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.p-1</div></div>
+<div class="p-2 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.p-2</div></div>
+<div class="p-3 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.p-3</div></div>
+<div class="p-4 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.p-4</div></div>
+<div class="p-5 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.p-5</div></div>
+<div class="p-6 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.p-6</div></div>
+</div>
+            </div>
+            <textarea live-code-source class="d-none"><div class="p-0 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.p-0</div></div>
+<div class="p-1 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.p-1</div></div>
+<div class="p-2 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.p-2</div></div>
+<div class="p-3 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.p-3</div></div>
+<div class="p-4 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.p-4</div></div>
+<div class="p-5 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.p-5</div></div>
+<div class="p-6 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.p-6</div></div>
+</textarea>
+            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;p-0 mr-3 bg-yellow d-inline-block&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-gray p-1&quot;</span>&gt;</span>.p-0<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;p-1 mr-3 bg-yellow d-inline-block&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-gray p-1&quot;</span>&gt;</span>.p-1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;p-2 mr-3 bg-yellow d-inline-block&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-gray p-1&quot;</span>&gt;</span>.p-2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;p-3 mr-3 bg-yellow d-inline-block&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-gray p-1&quot;</span>&gt;</span>.p-3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;p-4 mr-3 bg-yellow d-inline-block&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-gray p-1&quot;</span>&gt;</span>.p-4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;p-5 mr-3 bg-yellow d-inline-block&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-gray p-1&quot;</span>&gt;</span>.p-5<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;p-6 mr-3 bg-yellow d-inline-block&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-gray p-1&quot;</span>&gt;</span>.p-6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+          </cinder-live-html>
+          
+<h2>Directional padding</h2>
+<p>Use directional utilities to apply padding to an individual side, or the X and Y axis of an element. Directional utilities can change or override default padding, and can be used with a spacing scale of 0-6.</p>
+<pre style="display: none!important;"></pre>
+          <cinder-live-html class="Box LiveCode mb-2">
+            <div class="LiveCode-frame">
+              <div class="pt-2 px-2 d-flex flex-justify-end">
+                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+              </div>
+              <div class="LiveCode-frame-content p-3"><div class="pt-3 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.pt-3</div></div>
+<div class="pr-3 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.pr-3</div></div>
+<div class="pb-3 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.pb-3</div></div>
+<div class="pl-3 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.pl-3</div></div>
+<div class="py-3 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.py-3</div></div>
+<div class="px-3 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.px-3</div></div>
+</div>
+            </div>
+            <textarea live-code-source class="d-none"><div class="pt-3 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.pt-3</div></div>
+<div class="pr-3 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.pr-3</div></div>
+<div class="pb-3 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.pb-3</div></div>
+<div class="pl-3 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.pl-3</div></div>
+<div class="py-3 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.py-3</div></div>
+<div class="px-3 mr-3 bg-yellow d-inline-block"><div class="bg-gray p-1">.px-3</div></div>
+</textarea>
+            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;pt-3 mr-3 bg-yellow d-inline-block&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-gray p-1&quot;</span>&gt;</span>.pt-3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;pr-3 mr-3 bg-yellow d-inline-block&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-gray p-1&quot;</span>&gt;</span>.pr-3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;pb-3 mr-3 bg-yellow d-inline-block&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-gray p-1&quot;</span>&gt;</span>.pb-3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;pl-3 mr-3 bg-yellow d-inline-block&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-gray p-1&quot;</span>&gt;</span>.pl-3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;py-3 mr-3 bg-yellow d-inline-block&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-gray p-1&quot;</span>&gt;</span>.py-3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;px-3 mr-3 bg-yellow d-inline-block&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-gray p-1&quot;</span>&gt;</span>.px-3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+          </cinder-live-html>
+          
+<h2>Responsive padding</h2>
+<p>All padding utilities can be adjusted per breakpoint using the following formula: <br /> <code>p-[direction]-[breakpoint]-[spacer]</code>. Each responsive style is applied to the specified breakpoint and up.</p>
+<pre style="display: none!important;"></pre>
+          <cinder-live-html class="Box LiveCode mb-2">
+            <div class="LiveCode-frame">
+              <div class="pt-2 px-2 d-flex flex-justify-end">
+                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+              </div>
+              <div class="LiveCode-frame-content p-3"><div class="px-sm-2 px-md-4 bg-yellow d-inline-block">
+  <div class="bg-gray p-1">.px-sm-2 .px-md-4</div>
+</div>
+</div>
+            </div>
+            <textarea live-code-source class="d-none"><div class="px-sm-2 px-md-4 bg-yellow d-inline-block">
+  <div class="bg-gray p-1">.px-sm-2 .px-md-4</div>
+</div>
+</textarea>
+            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;px-sm-2 px-md-4 bg-yellow d-inline-block&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-gray p-1&quot;</span>&gt;</span>.px-sm-2 .px-md-4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+          </cinder-live-html>
+          
+<h2>Responsive container padding</h2>
+<p><code>.p-responsive</code> is a padding class that adds padding on the left and right sides of an element. It is intended to be used with container styles.</p>
+<ul>
+<li>On <strong>0 to sm</strong> screens, it gives the element padding of <code>$spacer-3</code></li>
+<li>On <strong>sm to lg</strong> screens it gives the element padding of <code>$spacer-6</code></li>
+<li>On <strong>lg and wider</strong> screens, it gives the element padding of <code>$spacer-3</code></li>
+</ul>
+<p>It's the equvilent of adding the <code>.px-3 .px-sm-6 .px-lg-3</code> utility classes.</p>
+<pre style="display: none!important;"></pre>
+          <cinder-live-html class="Box LiveCode mb-2">
+            <div class="LiveCode-frame">
+              <div class="pt-2 px-2 d-flex flex-justify-end">
+                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+              </div>
+              <div class="LiveCode-frame-content p-3"><div class="p-responsive bg-yellow">
+  <div class="bg-gray p-1">.p-responsive</div>
+</div>
+</div>
+            </div>
+            <textarea live-code-source class="d-none"><div class="p-responsive bg-yellow">
+  <div class="bg-gray p-1">.p-responsive</div>
+</div>
+</textarea>
+            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;p-responsive bg-yellow&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-gray p-1&quot;</span>&gt;</span>.p-responsive<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+          </cinder-live-html>
+          
+<blockquote>
+<p>Note: Since the example is shown in an <code>iframe</code> it won't show the change to <code>$spacer-3</code> for the <code>lg</code> breakpoint.</p>
+</blockquote>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

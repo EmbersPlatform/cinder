@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Margin - Cinder CSS</title>
+  
+
+  <link href="https://unpkg.com/highlight.js@10.6.0/styles/vs2015.css" rel="stylesheet">
+  <link rel="stylesheet" href="/cinder/dist/index.css">
+  <link rel="stylesheet" href="/cinder/assets/css/index.css">
+
+  <script type="module" src="/cinder/assets/js/index.js"></script>
+</head>
+
+<body>
+  <nav class="Header" style="position: sticky; top: 0;">
+    <h1 class="Header-item h3 mr-3">Cinder</h1>
+    <button class="Header-item  btn" theme-toggler>Toggle dark theme</button>
+  </nav>
+  <div class="d-flex flex-wrap">
+    <div class="p-2 col-12 col-md-4 col-lg-3 hide-md hide-sm">
+      <nav class="menu position-sticky" style="top: 72px;">
+        <a href="/cinder/" class="menu-item" >Home</a>
+    <div class="menu-heading">Components</div><a href="/cinder/components/box/" class="menu-item"
+        
+      >Box</a><a href="/cinder/components/buttons/" class="menu-item"
+        
+      >Buttons</a><a href="/cinder/components/menu/" class="menu-item"
+        
+      >Menu</a>
+    <div class="menu-heading">Misc</div><a href="/cinder/misc/test/" class="menu-item"
+        
+      >Test</a>
+    <div class="menu-heading">Utilities</div><a href="/cinder/utilities/margin/" class="menu-item"
+         aria-current="page"
+      >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
+        
+      >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
+        
+      >Typography</a>
+      </nav>
+    </div>
+    <div class="col-12 col-md-8 col-lg-6 flex-1 p-2 container-lg">
+      <nav class="menu d-md-none">
+        <a href="/cinder/" class="menu-item" >Home</a>
+    <div class="menu-heading">Components</div><a href="/cinder/components/box/" class="menu-item"
+        
+      >Box</a><a href="/cinder/components/buttons/" class="menu-item"
+        
+      >Buttons</a><a href="/cinder/components/menu/" class="menu-item"
+        
+      >Menu</a>
+    <div class="menu-heading">Misc</div><a href="/cinder/misc/test/" class="menu-item"
+        
+      >Test</a>
+    <div class="menu-heading">Utilities</div><a href="/cinder/utilities/margin/" class="menu-item"
+         aria-current="page"
+      >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
+        
+      >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
+        
+      >Typography</a>
+      </nav>
+      <div class="markdown-body">
+        <h1>Margin</h1>
+<p>Margin utilities are based on a global spacing scale which helps keep horizontal and vertical spacing consistent. These utilities help us reduce the amount of custom CSS that share the same properties, and allows to achieve many different page layouts using the same styles.</p>
+<h2>Naming convention</h2>
+<p>Since margin utilities have many variations and will be used in many places, we use a shorthand naming convention to help keep class names succinct.</p>
+<table>
+<thead>
+<tr>
+<th>Shorthand</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>m</td>
+<td>margin</td>
+</tr>
+<tr>
+<td>t</td>
+<td>top</td>
+</tr>
+<tr>
+<td>r</td>
+<td>right</td>
+</tr>
+<tr>
+<td>b</td>
+<td>bottom</td>
+</tr>
+<tr>
+<td>l</td>
+<td>left</td>
+</tr>
+<tr>
+<td>x</td>
+<td>horizontal, left &amp; right</td>
+</tr>
+<tr>
+<td>y</td>
+<td>vertical, top &amp; bottom</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>4px</td>
+</tr>
+<tr>
+<td>2</td>
+<td>8px</td>
+</tr>
+<tr>
+<td>3</td>
+<td>16px</td>
+</tr>
+<tr>
+<td>4</td>
+<td>24px</td>
+</tr>
+<tr>
+<td>5</td>
+<td>32px</td>
+</tr>
+<tr>
+<td>6</td>
+<td>40px</td>
+</tr>
+</tbody>
+</table>
+<h2>Uniform margins</h2>
+<p>Use uniform spacing utilities to apply equal margin to all sides of an element. These utilities can change or override default margins, and can be used with a spacing scale from 0-6.</p>
+<pre style="display: none!important;"></pre>
+          <cinder-live-html class="Box LiveCode mb-2">
+            <div class="LiveCode-frame">
+              <div class="pt-2 px-2 d-flex flex-justify-end">
+                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+              </div>
+              <div class="LiveCode-frame-content p-3"><div class="d-flex flex-items-baseline flex-justify-around">
+  <div class="bg-yellow"><div class="m-0 p-1 bg-gray">.m-0</div></div>
+  <div class="bg-yellow"><div class="m-1 p-1 bg-gray">.m-1</div></div>
+  <div class="bg-yellow"><div class="m-2 p-1 bg-gray">.m-2</div></div>
+  <div class="bg-yellow"><div class="m-3 p-1 bg-gray">.m-3</div></div>
+  <div class="bg-yellow"><div class="m-4 p-1 bg-gray">.m-4</div></div>
+  <div class="bg-yellow"><div class="m-5 p-1 bg-gray">.m-5</div></div>
+  <div class="bg-yellow"><div class="m-6 p-1 bg-gray">.m-6</div></div>
+</div>
+</div>
+            </div>
+            <textarea live-code-source class="d-none"><div class="d-flex flex-items-baseline flex-justify-around">
+  <div class="bg-yellow"><div class="m-0 p-1 bg-gray">.m-0</div></div>
+  <div class="bg-yellow"><div class="m-1 p-1 bg-gray">.m-1</div></div>
+  <div class="bg-yellow"><div class="m-2 p-1 bg-gray">.m-2</div></div>
+  <div class="bg-yellow"><div class="m-3 p-1 bg-gray">.m-3</div></div>
+  <div class="bg-yellow"><div class="m-4 p-1 bg-gray">.m-4</div></div>
+  <div class="bg-yellow"><div class="m-5 p-1 bg-gray">.m-5</div></div>
+  <div class="bg-yellow"><div class="m-6 p-1 bg-gray">.m-6</div></div>
+</div>
+</textarea>
+            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;d-flex flex-items-baseline flex-justify-around&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-yellow&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;m-0 p-1 bg-gray&quot;</span>&gt;</span>.m-0<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-yellow&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;m-1 p-1 bg-gray&quot;</span>&gt;</span>.m-1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-yellow&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;m-2 p-1 bg-gray&quot;</span>&gt;</span>.m-2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-yellow&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;m-3 p-1 bg-gray&quot;</span>&gt;</span>.m-3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-yellow&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;m-4 p-1 bg-gray&quot;</span>&gt;</span>.m-4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-yellow&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;m-5 p-1 bg-gray&quot;</span>&gt;</span>.m-5<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-yellow&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;m-6 p-1 bg-gray&quot;</span>&gt;</span>.m-6<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+          </cinder-live-html>
+          
+<h2>Directional margins</h2>
+<p>Use directional utilities to apply margin to an individual side, or the X and Y axis of an element. Directional utilities can change or override default margins, and can be used with a spacing scale of 0-6.</p>
+<pre style="display: none!important;"></pre>
+          <cinder-live-html class="Box LiveCode mb-2">
+            <div class="LiveCode-frame">
+              <div class="pt-2 px-2 d-flex flex-justify-end">
+                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+              </div>
+              <div class="LiveCode-frame-content p-3"><div class="d-flex flex-items-baseline flex-justify-around">
+  <div class="bg-yellow"><div class="mt-3 p-1 bg-gray">.mt-3</div></div>
+  <div class="bg-yellow"><div class="mr-3 p-1 bg-gray">.mr-3</div></div>
+  <div class="bg-yellow"><div class="mb-3 p-1 bg-gray">.mb-3</div></div>
+  <div class="bg-yellow"><div class="ml-3 p-1 bg-gray">.ml-3</div></div>
+  <div class="bg-yellow"><div class="mx-3 p-1 bg-gray">.mx-3</div></div>
+  <div class="bg-yellow"><div class="my-3 p-1 bg-gray">.my-3</div></div>
+</div>
+</div>
+            </div>
+            <textarea live-code-source class="d-none"><div class="d-flex flex-items-baseline flex-justify-around">
+  <div class="bg-yellow"><div class="mt-3 p-1 bg-gray">.mt-3</div></div>
+  <div class="bg-yellow"><div class="mr-3 p-1 bg-gray">.mr-3</div></div>
+  <div class="bg-yellow"><div class="mb-3 p-1 bg-gray">.mb-3</div></div>
+  <div class="bg-yellow"><div class="ml-3 p-1 bg-gray">.ml-3</div></div>
+  <div class="bg-yellow"><div class="mx-3 p-1 bg-gray">.mx-3</div></div>
+  <div class="bg-yellow"><div class="my-3 p-1 bg-gray">.my-3</div></div>
+</div>
+</textarea>
+            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;d-flex flex-items-baseline flex-justify-around&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-yellow&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mt-3 p-1 bg-gray&quot;</span>&gt;</span>.mt-3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-yellow&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mr-3 p-1 bg-gray&quot;</span>&gt;</span>.mr-3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-yellow&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mb-3 p-1 bg-gray&quot;</span>&gt;</span>.mb-3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-yellow&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;ml-3 p-1 bg-gray&quot;</span>&gt;</span>.ml-3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-yellow&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mx-3 p-1 bg-gray&quot;</span>&gt;</span>.mx-3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-yellow&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;my-3 p-1 bg-gray&quot;</span>&gt;</span>.my-3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+          </cinder-live-html>
+          
+<h2>Center elements</h2>
+<p>Use <code>mx-auto</code>to center block elements with a set width.</p>
+<pre style="display: none!important;"></pre>
+          <cinder-live-html class="Box LiveCode mb-2">
+            <div class="LiveCode-frame">
+              <div class="pt-2 px-2 d-flex flex-justify-end">
+                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+              </div>
+              <div class="LiveCode-frame-content p-3"><div class="bg-yellow">
+  <div class="mx-auto bg-gray text-center" style="max-width: 500px;">.mx-auto</div>
+</div>
+</div>
+            </div>
+            <textarea live-code-source class="d-none"><div class="bg-yellow">
+  <div class="mx-auto bg-gray text-center" style="max-width: 500px;">.mx-auto</div>
+</div>
+</textarea>
+            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-yellow&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mx-auto bg-gray text-center&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;max-width: 500px;&quot;</span>&gt;</span>.mx-auto<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+          </cinder-live-html>
+          
+<h2>Reset margins</h2>
+<p>Reset margins built into typography elements or other components with <code>m-0</code>, <code>mt-0</code>, <code>mr-0</code>, <code>mb-0</code>, <code>ml-0</code>, <code>mx-0</code>, and <code>my-0</code>.</p>
+<pre style="display: none!important;"></pre>
+          <cinder-live-html class="Box LiveCode mb-2">
+            <div class="LiveCode-frame">
+              <div class="pt-2 px-2 d-flex flex-justify-end">
+                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+              </div>
+              <div class="LiveCode-frame-content p-3"><div class="bg-yellow border">
+  <p class="mb-0 bg-gray p-1">No bottom margin on this paragraph.</p>
+</div>
+</div>
+            </div>
+            <textarea live-code-source class="d-none"><div class="bg-yellow border">
+  <p class="mb-0 bg-gray p-1">No bottom margin on this paragraph.</p>
+</div>
+</textarea>
+            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-yellow border&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mb-0 bg-gray p-1&quot;</span>&gt;</span>No bottom margin on this paragraph.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+          </cinder-live-html>
+          
+<h2>Responsive margins</h2>
+<p>All margin utilities can be adjusted per breakpoint using the following formula: <code>m[direction]-[breakpoint]-[spacer]</code>. Each responsive style is applied to the specified breakpoint and up.</p>
+<pre style="display: none!important;"></pre>
+          <cinder-live-html class="Box LiveCode mb-2">
+            <div class="LiveCode-frame">
+              <div class="pt-2 px-2 d-flex flex-justify-end">
+                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+              </div>
+              <div class="LiveCode-frame-content p-3"><div class="bg-yellow d-inline-block">
+  <div class="mx-sm-2 mx-md-4 bg-gray p-1">
+    .mx-sm-2 .mx-md-4
+  </div>
+</div>
+</div>
+            </div>
+            <textarea live-code-source class="d-none"><div class="bg-yellow d-inline-block">
+  <div class="mx-sm-2 mx-md-4 bg-gray p-1">
+    .mx-sm-2 .mx-md-4
+  </div>
+</div>
+</textarea>
+            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-yellow d-inline-block&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mx-sm-2 mx-md-4 bg-gray p-1&quot;</span>&gt;</span>
+    .mx-sm-2 .mx-md-4
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+          </cinder-live-html>
+          
+<h2>Negative margins</h2>
+<p>You can add negative margins to the top, right, bottom, or left of an item by adding a negative margin utility. The formula for this is: <code>m[direction]-n[spacer]</code>. This also works responsively, with the following formula: <code>m[direction]-[breakpoint]-n[spacer]</code>.</p>
+<pre style="display: none!important;"></pre>
+          <cinder-live-html class="Box LiveCode mb-2">
+            <div class="LiveCode-frame">
+              <div class="pt-2 px-2 d-flex flex-justify-end">
+                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+              </div>
+              <div class="LiveCode-frame-content p-3"><div class="d-flex flex-justify-center">
+  <div class="bg-yellow">
+    <div class="m-3 ml-n4 ml-md-n6 border-left border-red bg-gray p-2">
+      .m-3 .ml-n4 .ml-md-n6
+    </div>
+  </div>
+</div>
+</div>
+            </div>
+            <textarea live-code-source class="d-none"><div class="d-flex flex-justify-center">
+  <div class="bg-yellow">
+    <div class="m-3 ml-n4 ml-md-n6 border-left border-red bg-gray p-2">
+      .m-3 .ml-n4 .ml-md-n6
+    </div>
+  </div>
+</div>
+</textarea>
+            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;d-flex flex-justify-center&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;bg-yellow&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;m-3 ml-n4 ml-md-n6 border-left border-red bg-gray p-2&quot;</span>&gt;</span>
+      .m-3 .ml-n4 .ml-md-n6
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+          </cinder-live-html>
+          
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
