@@ -1,6 +1,9 @@
 // Snowpack Configuration File
 // See all supported options: https://www.snowpack.dev/reference/configuration
 
+const path_prefix = process.env.PATH_PREFIX || "/";
+process.env.SNOWPACK_PUBLIC_PATH_PREFIX = path_prefix;
+
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
@@ -25,7 +28,7 @@ module.exports = {
     [
       '@snowpack/plugin-run-script',
       {
-        cmd: `eleventy --pathprefix=${process.env.DOCS_BASE_PATH || "/"}`,
+        cmd: `eleventy --pathprefix=${path_prefix}`,
         watch: '$1 --watch',
       },
     ]
@@ -33,7 +36,10 @@ module.exports = {
   devOptions: {
     /* ... */
   },
+  packageOptions: {
+    polyfillNode: true,
+  },
   buildOptions: {
     out: 'docs',
-  },
+  }
 };

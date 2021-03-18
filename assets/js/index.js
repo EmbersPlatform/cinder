@@ -1,5 +1,6 @@
 import loader from "uce-loader";
 import {store} from "@dorgandash/untitled";
+import path from "path";
 
 const html = document.documentElement;
 
@@ -30,7 +31,7 @@ loader({
 
     const js = document.createElement('script');
     js.type = "module";
-    js.src = `/assets/js/components/${tagName}.js`;
+    js.src = path.join(import.meta.env.SNOWPACK_PUBLIC_PATH_PREFIX, `/assets/js/components/${tagName}.js`);
     document.head.appendChild(js);
   }
 });
