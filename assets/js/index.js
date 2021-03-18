@@ -1,5 +1,8 @@
+import * as __SNOWPACK_ENV__ from '../../_snowpack/env.js';
+
 import loader from "../../_snowpack/pkg/uce-loader.js";
 import {store} from "../../_snowpack/pkg/@dorgandash/untitled.js";
+import path from "../../_snowpack/pkg/path.js";
 
 const html = document.documentElement;
 
@@ -30,7 +33,7 @@ loader({
 
     const js = document.createElement('script');
     js.type = "module";
-    js.src = `/assets/js/components/${tagName}.js`;
+    js.src = path.join(__SNOWPACK_ENV__.SNOWPACK_PUBLIC_PATH_PREFIX, `/assets/js/components/${tagName}.js`);
     document.head.appendChild(js);
   }
 });
