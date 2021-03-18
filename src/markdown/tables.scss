@@ -1,0 +1,32 @@
+.markdown-body {
+  // Tables
+  table {
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    overflow: auto;
+
+    th {
+      font-weight: $font-weight-bold;
+    }
+
+    th,
+    td {
+      padding: 6px 13px;
+      border: $border-width $border-style var(--color-markdown-table-border);
+    }
+
+    tr {
+      background-color: var(--color-bg-primary);
+      border-top: $border-width $border-style var(--color-markdown-table-tr-border);
+
+      &:nth-child(2n) {
+        background-color: var(--color-bg-tertiary);
+      }
+    }
+
+    img {
+      background-color: transparent;
+    }
+  }
+}

@@ -33,7 +33,9 @@
       <nav class="menu d-md-none">
         {% include "_nav_menu_links.njk" %}
       </nav>
-      {{ content | safe }}
+      <div class="markdown-body">
+        {{ content | safe }}
+      </div>
     </div>
   </div>
 </body>
