@@ -1,11 +1,11 @@
-# cinder
+# Cinder
 
 Nothing interesting yet, come back later
 
 Note: this is currently heavily based on GitHub's Primer. Embers' unique styles
 are yet to be incorporated.
 
-Yyou can build the project after installing dependencies with `npm install`.
+You can build the project after installing dependencies with `npm install`.
 
 # Building
 
