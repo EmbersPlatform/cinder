@@ -12,17 +12,17 @@ module.exports = function(eleventyConfig) {
       if(lang == "html" && attrs == "live") {
         try {
           return `<pre style="display: none!important;"></pre>
-          <cinder-live-html class="Box LiveCode">
+          <cinder-live-html class="Box LiveCode mb-2">
             <div class="LiveCode-frame">
               <div class="pt-2 px-2 d-flex flex-justify-end">
-                <button class="btn" data-action="toggle_theme">Theme</button>
+                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
               </div>
               <div class="LiveCode-frame-content p-3">${str}</div>
             </div>
             <textarea live-code-source class="d-none">${str}</textarea>
             <pre class="LiveCode-source hljs p-3"><code>` +
               hljs.highlight(lang, str, true).value +
-              `<button class="LiveCode-copy-btn btn" data-action="copy_source">Copy</button>` +
+              `<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>` +
             `</code></pre>
           </cinder-live-html>
           `;

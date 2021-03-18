@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "@dorgandash/untitled": "^0.2.1",
-    "uce-loader": "^2.0.0"
+    "uce-loader": "^2.0.0",
+    "uhtml": "^2.6.0"
   }
 }
