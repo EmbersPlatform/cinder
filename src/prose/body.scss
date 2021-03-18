@@ -1,9 +1,9 @@
 // All of our block level items should have the same margin
 
 // This is styling for generic markdownized text. Anything you put in a
-// container with .markdown-body on it should render generally well. It also
+// container with .Prose on it should render generally well. It also
 // includes some GitHub Flavored Markdown specific styling (like @mentions)
-.markdown-body {
+.Prose {
   font-family: $body-font;
   font-size: $h4-size;
   line-height: $body-line-height;

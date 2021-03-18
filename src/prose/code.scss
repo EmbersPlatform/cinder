@@ -1,4 +1,4 @@
-.markdown-body {
+.Prose {
   // Inline code snippets
   code,
   tt {
@@ -43,8 +43,8 @@
     overflow: auto;
     font-size: 85%;
     line-height: 1.45;
-    background-color: var(--color-bg-tertiary);
     border-radius: $border-radius;
+    border: $border;
   }
 
   pre code,

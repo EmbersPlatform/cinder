@@ -191,5 +191,58 @@
       bg-active: transparent,
     ),
 
+    highlight: (
+      bg: #1E1E1E,
+      fg: #DCDCDC,
+      keyword: #569CD6,
+      literal: #569CD6,
+      symbol: #569CD6,
+      name: #569CD6,
+    
+      link: #569CD6,
+    
+      built_in: #4EC9B0,
+      type: #4EC9B0,
+    
+      number: #B8D7A3,
+      class: #B8D7A3,
+      string: #D69D85,
+      regexp: #9A5334,
+      template-tag: #9A5334,
+      subst: #DCDCDC,
+      function: #DCDCDC,
+      title: #DCDCDC,
+      params: #DCDCDC,
+      formula: #DCDCDC,
+    
+      comment: #57A64A,
+      quote: #57A64A,
+    
+      doctag: #608B4E,
+    
+      meta: #9B9B9B,
+      meta-keyword: #9B9B9B,
+      tag: #9B9B9B,
+    
+      variable: #BD63C5,
+      template-variable: #BD63C5,
+    
+      attr: #9CDCFE,
+      attribute: #9CDCFE,
+      builtin-name: #9CDCFE,
+    
+      section: gold,
+    
+      bullet: #D7Ba7D,
+      selector-tag: #D7Ba7D,
+      selector-id: #D7Ba7D,
+      selector-class: #D7Ba7D,
+      selector-attr: #D7Ba7D,
+      selector-pseudo: #D7Ba7D,
+    
+      addition: #144212,
+      deletion: #600
+    )    
+
   )));
 }

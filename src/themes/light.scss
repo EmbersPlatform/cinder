@@ -194,5 +194,50 @@
       bg-active: transparent,
     ),
 
+    highlight: (
+      bg: $white,
+      fg: #333333,
+      keyword: #a71d5d,
+      literal: #0086b3,
+      symbol: #0086b3,
+      name: #63a35c,
+      type: #a71d5d,
+      number: #795da3,
+      class: #795da3,
+      string: #df5000,
+      regexp: #9A5334,
+      template-tag: #9A5334,
+      subst: #795da3,
+      function: #795da3,
+      title: #795da3,
+      params: #795da3,
+      formula: #795da3,
+      comment: #608B4E,
+      quote: #608B4E,
+      strong: #df5000,
+      emphasis: #df5000,
+      doctag: #608B4E,
+      meta: #608B4E,
+      meta-keyword: #608B4E,
+      tag: #333333,
+      variable: #df5000,
+      template-variable: #df5000,
+      attr: #795da3,
+      attribute: #0086b3,
+      builtin-name: #0086b3,
+
+      section: #63a35c,
+
+      bullet: #0086b3,
+      selector-tag: #a71d5d,
+      selector-id: #795da3,
+      selector-class: #795da3,
+      selector-attr: #795da3,
+      selector-pseudo: #795da3,
+
+      addition: #55a532,
+      deletion: #bd2c00
+    )
+
   )));
 }
