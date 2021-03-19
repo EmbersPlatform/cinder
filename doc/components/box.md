@@ -2,8 +2,6 @@
 title: "Box"
 ---
 
-# Box
-
 A `.Box` is a container with a background, a border, and rounded corners. By default there are no additional styles such as padding, these can be added as needed with utility classes. Other styles and layouts can be achieved with box elements and modifiers shown in the documentation below.
 
 ```html live

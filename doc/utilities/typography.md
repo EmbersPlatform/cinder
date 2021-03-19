@@ -2,8 +2,6 @@
 title: "Typography"
 ---
 
-# Typography
-
 Type utilities are designed to work in combination with line-height utilities so as to result in more sensible numbers wherever possible.
 
 Font sizes are smaller on mobile and scale up at the `md` breakpoint to be larger on desktop.
