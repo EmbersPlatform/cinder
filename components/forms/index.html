@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Forms - Cinder CSS</title>
+  
+
+  <link rel="stylesheet" href="/cinder/dist/index.css">
+  <link rel="stylesheet" href="/cinder/assets/css/index.css">
+
+  <script type="module" src="/cinder/assets/js/index.js"></script>
+</head>
+
+<body>
+  <nav class="Header" style="position: sticky; top: 0;">
+    <h1 class="Header-item h3 mr-3">Cinder</h1>
+    <button class="Header-item  btn" theme-toggler>Toggle dark theme</button>
+  </nav>
+  <div class="d-flex flex-wrap">
+    <div class="p-2 col-12 col-md-4 col-lg-3 hide-md hide-sm">
+      <nav class="menu position-sticky" style="top: 72px;">
+        <a href="/cinder/" class="menu-item" >Home</a>
+    <div class="menu-heading">Components</div><a href="/cinder/components/box/" class="menu-item"
+        
+      >Box</a><a href="/cinder/components/buttons/" class="menu-item"
+        
+      >Buttons</a><a href="/cinder/components/forms/" class="menu-item"
+         aria-current="page"
+      >Forms</a><a href="/cinder/components/navigation/" class="menu-item"
+        
+      >Navigation</a><a href="/cinder/components/subheads/" class="menu-item"
+        
+      >Subheads</a>
+    <div class="menu-heading">Misc</div><a href="/cinder/misc/markdown_test/" class="menu-item"
+        
+      >Markdown test</a>
+    <div class="menu-heading">Utilities</div><a href="/cinder/utilities/margin/" class="menu-item"
+        
+      >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
+        
+      >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
+        
+      >Typography</a>
+      </nav>
+    </div>
+    <div class="col-12 col-md-8 col-lg-6 flex-1 p-4 container-lg">
+      <nav class="menu d-md-none">
+        <a href="/cinder/" class="menu-item" >Home</a>
+    <div class="menu-heading">Components</div><a href="/cinder/components/box/" class="menu-item"
+        
+      >Box</a><a href="/cinder/components/buttons/" class="menu-item"
+        
+      >Buttons</a><a href="/cinder/components/forms/" class="menu-item"
+         aria-current="page"
+      >Forms</a><a href="/cinder/components/navigation/" class="menu-item"
+        
+      >Navigation</a><a href="/cinder/components/subheads/" class="menu-item"
+        
+      >Subheads</a>
+    <div class="menu-heading">Misc</div><a href="/cinder/misc/markdown_test/" class="menu-item"
+        
+      >Markdown test</a>
+    <div class="menu-heading">Utilities</div><a href="/cinder/utilities/margin/" class="menu-item"
+        
+      >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
+        
+      >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
+        
+      >Typography</a>
+      </nav>
+      <div class="Prose">
+  <h1>Forms</h1>
+  <p>Style individual form controls and utilize common layouts.</p>
+<p>Overview:</p>
+<ul>
+<li>We reset several elements' default styles for cross browser consistency and easier manipulation later. This includes <code>&lt;fieldset&gt;</code>s, WebKit validation bubbles, and most textual <code>&lt;input&gt;</code>s.</li>
+<li>Specific types of textual <code>&lt;input&gt;</code>s are styled automatically, but <code>.form-control</code> is available should you need it.</li>
+<li>Always declare a <code>type</code> on your <code>&lt;button&gt;</code>s.</li>
+<li>Form layouts rely on form groups.</li>
+</ul>
+<h2 id="kitchen-sink"><a class="anchor" href="#kitchen-sink"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Kitchen sink</h2>
+<p>All our inputs and buttons side-by-side for easy testing of sizing and alignment with one another.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;p&gt;
+  &lt;button class=&quot;btn&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
+  &lt;button class=&quot;btn&quot; type=&quot;button&quot; aria-expanded=&quot;false&quot; aria-haspopup=&quot;true&quot;&gt;
+    Select menu
+    &lt;span class=&quot;dropdown-caret&quot;&gt;
+  &lt;/button&gt;
+  &lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Standard input&quot; aria-label=&quot;Repository description&quot; /&gt;
+  &lt;input class=&quot;form-control input-monospace&quot; type=&quot;text&quot; placeholder=&quot;Monospace input&quot; aria-label=&quot;SHA&quot; /&gt;
+  &lt;select class=&quot;form-select&quot; aria-label=&quot;Important decision&quot;&gt;
+    &lt;option&gt;Select&lt;/option&gt;
+    &lt;option value=&quot;option 2&quot;&gt;Option 2&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;button class=&quot;btn btn-sm&quot; type=&quot;button&quot;&gt;Small button&lt;/button&gt;
+  &lt;button class=&quot;btn btn-sm&quot; type=&quot;button&quot; aria-expanded=&quot;false&quot; aria-haspopup=&quot;true&quot;&gt;
+    Select menu
+    &lt;span class=&quot;dropdown-caret&quot;&gt;
+  &lt;/button&gt;
+  &lt;input class=&quot;form-control input-sm&quot; type=&quot;text&quot; placeholder=&quot;Small input&quot; aria-label=&quot;Repository description&quot; /&gt;
+  &lt;select class=&quot;form-select select-sm&quot; aria-label=&quot;Important decision&quot;&gt;
+    &lt;option&gt;Select&lt;/option&gt;
+    &lt;option value=&quot;option 1&quot;&gt;Option 1&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/p&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="example-form"><a class="anchor" href="#example-form"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Example form</h2>
+<p>Form controls have no basic layout specified. You'll need to use <code>&lt;fieldset&gt;</code>s, <code>&lt;div&gt;</code>s, or other elements and styles to rearrange them.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;form&gt;
+  &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
+  &lt;input class=&quot;form-control&quot; type=&quot;text&quot; id=&quot;name&quot; /&gt;
+
+  &lt;label for=&quot;email&quot;&gt;Email address&lt;/label&gt;
+  &lt;input class=&quot;form-control&quot; type=&quot;email&quot; id=&quot;email&quot; /&gt;
+
+  &lt;label&gt; &lt;input type=&quot;checkbox&quot; /&gt; Remember me &lt;/label&gt;
+
+  &lt;label&gt; &lt;input type=&quot;radio&quot; id=&quot;potato&quot; name=&quot;radio-group-example&quot; checked /&gt; Potato &lt;/label&gt;
+  &lt;label&gt; &lt;input type=&quot;radio&quot; id=&quot;tomato&quot; name=&quot;radio-group-example&quot; /&gt; Tomato &lt;/label&gt;
+
+  &lt;button class=&quot;btn&quot; type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="inputs"><a class="anchor" href="#inputs"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Inputs</h2>
+<h3 id="sizing"><a class="anchor" href="#sizing"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Sizing</h3>
+<p>Make inputs smaller, larger, or full-width with an additional class.</p>
+<h4 id="small"><a class="anchor" href="#small"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Small</h4>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;form&gt;
+  &lt;input class=&quot;form-control input-sm&quot; type=&quot;text&quot; placeholder=&quot;Small input&quot; aria-label=&quot;Small input&quot; /&gt;
+&lt;/form&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h4 id="large"><a class="anchor" href="#large"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Large</h4>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;form&gt;
+  &lt;input class=&quot;form-control input-lg&quot; type=&quot;text&quot; placeholder=&quot;Large input&quot; aria-label=&quot;Large input&quot; /&gt;
+&lt;/form&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h4 id="block"><a class="anchor" href="#block"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Block</h4>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;form&gt;
+  &lt;input class=&quot;form-control input-block&quot; type=&quot;text&quot; placeholder=&quot;Full-width input&quot; aria-label=&quot;Full-width input&quot; /&gt;
+&lt;/form&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h3 id="input-group"><a class="anchor" href="#input-group"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Input group</h3>
+<p>Attached an input and button to one another.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;form&gt;
+  &lt;div class=&quot;input-group&quot;&gt;
+    &lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Username&quot; aria-label=&quot;Username&quot;&gt;
+    &lt;span class=&quot;input-group-button&quot;&gt;
+      &lt;button class=&quot;btn&quot; type=&quot;button&quot; aria-label=&quot;Copy to clipboard&quot;&gt;
+        &lt;svg class=&quot;svgicon svgicon-clippy&quot; viewBox=&quot;0 0 14 16&quot; version=&quot;1.1&quot; width=&quot;14&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2v1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1 .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+      &lt;/button&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="customization"><a class="anchor" href="#customization"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Customization</h2>
+<h3 id="form-contrast"><a class="anchor" href="#form-contrast"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Form contrast</h3>
+<p>Textual form controls have a white background by default. You can change this to a light gray with <code>.input-contrast</code>.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;form&gt;
+  &lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Default input&quot; aria-label=&quot;Default input&quot; /&gt;
+  &lt;input class=&quot;form-control input-contrast&quot; type=&quot;text&quot; placeholder=&quot;Input with contrast&quot; aria-label=&quot;Input with contrast&quot; /&gt;
+&lt;/form&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h3 id="disabled-state"><a class="anchor" href="#disabled-state"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Disabled state</h3>
+<p>Add the <code>disabled</code> attribute to make a <code>.form-control</code> appear disabled.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;form&gt;
+  &lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Disabled input&quot; aria-label=&quot;Disabled input&quot; disabled /&gt;
+&lt;/form&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h3 id="dark"><a class="anchor" href="#dark"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Dark</h3>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;div class=&quot;bg-gray-dark p-3 mt-n3 ml-n3 mr-n3&quot;&gt;
+  &lt;input class=&quot;form-control input-dark&quot; type=&quot;text&quot; placeholder=&quot;Dark input&quot; aria-label=&quot;Dark input&quot;&gt;
+  &lt;input class=&quot;form-control input-dark input-sm&quot; type=&quot;text&quot; placeholder=&quot;Dark input small&quot; aria-label=&quot;Dark input&quot;&gt;
+&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h3 id="hide-webkit's-contact-info-autofill-icon"><a class="anchor" href="#hide-webkit's-contact-info-autofill-icon"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Hide WebKit's contact info autofill icon</h3>
+<p>WebKit sometimes gets confused and tries to add an icon/dropdown to autofill contact information on fields that may not be appropriate (such as input for number of users). Use this class to override the display of this icon.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;form&gt;
+  &lt;input
+    class=&quot;form-control input-hide-webkit-autofill&quot;
+    placeholder=&quot;Hide Webkit's contact autofill on this input&quot;
+    type=&quot;text&quot;
+    aria-label=&quot;Hide Webkit's contact autofill on this input&quot;
+  /&gt;
+&lt;/form&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="selects"><a class="anchor" href="#selects"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Selects</h2>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;form&gt;
+  &lt;select class=&quot;form-select&quot; aria-label=&quot;Preference&quot;&gt;
+    &lt;option&gt;Choose an option&lt;/option&gt;
+    &lt;option&gt;Git&lt;/option&gt;
+    &lt;option&gt;Subversion&lt;/option&gt;
+    &lt;option&gt;Social Coding&lt;/option&gt;
+    &lt;option&gt;Beets&lt;/option&gt;
+    &lt;option&gt;Bears&lt;/option&gt;
+    &lt;option&gt;Battlestar Galactica&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/form&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h3 id="small-1"><a class="anchor" href="#small-1"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Small</h3>
+<p>Use the <code>.select-sm</code> class to resize both default and custom <code>&lt;select&gt;</code>s to match the size of <a href="/cinder/components/buttons#sizes">our small buttons</a>.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;select class=&quot;form-select select-sm&quot; aria-label=&quot;Preference&quot;&gt;
+  &lt;option&gt;Choose an option&lt;/option&gt;
+  &lt;option&gt;Git&lt;/option&gt;
+  &lt;option&gt;Subversion&lt;/option&gt;
+  &lt;option&gt;Social Coding&lt;/option&gt;
+  &lt;option&gt;Beets&lt;/option&gt;
+  &lt;option&gt;Bears&lt;/option&gt;
+  &lt;option&gt;Battlestar Galactica&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;button class=&quot;btn btn-sm ml-1&quot;&gt; Small button&lt;/button&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="form-groups"><a class="anchor" href="#form-groups"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Form groups</h2>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;form&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;form-group-header&quot;&gt;
+      &lt;label for=&quot;example-text&quot;&gt;Example Text&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group-body&quot;&gt;
+      &lt;input class=&quot;form-control&quot; type=&quot;text&quot; value=&quot;Example Value&quot; id=&quot;example-text&quot; /&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;form-group-header&quot;&gt;
+      &lt;label for=&quot;example-select&quot;&gt;Example Select&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group-body&quot;&gt;
+      &lt;select class=&quot;form-select&quot; id=&quot;example-select&quot;&gt;
+        &lt;option&gt;Choose an option&lt;/option&gt;
+        &lt;option&gt;Git&lt;/option&gt;
+        &lt;option&gt;Subversion&lt;/option&gt;
+        &lt;option&gt;Social Coding&lt;/option&gt;
+        &lt;option&gt;Beets&lt;/option&gt;
+        &lt;option&gt;Bears&lt;/option&gt;
+        &lt;option&gt;Battlestar Galactica&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;form-group-header&quot;&gt;
+      &lt;label for=&quot;example-textarea&quot;&gt;Example Textarea&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group-body&quot;&gt;
+      &lt;textarea class=&quot;form-control&quot; id=&quot;example-textarea&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="form-group-validation"><a class="anchor" href="#form-group-validation"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Form group validation</h2>
+<p>Convey success, errors and warnings for form groups.</p>
+<h3 id="success"><a class="anchor" href="#success"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Success</h3>
+<p>If the input is <strong>valid</strong>, add the <code>.successed</code> class to the <code>&lt;div class=&quot;form-group&quot;&gt;</code> element. Next add/update a success message to the <code>.note</code> element, as well as the <code>.success</code> class.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;form class=&quot;pb-6&quot;&gt;
+  &lt;div class=&quot;form-group successed&quot;&gt;
+    &lt;div class=&quot;form-group-header&quot;&gt;
+      &lt;label for=&quot;username-input&quot;&gt;Username&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group-body&quot;&gt;
+      &lt;input
+        class=&quot;form-control&quot;
+        type=&quot;text&quot;
+        value=&quot;monalisa&quot;
+        id=&quot;username-input&quot;
+        aria-describedby=&quot;username-input-validation&quot;
+      /&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;note success&quot; id=&quot;username-input-validation&quot;&gt;monalisa is available&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h3 id="error"><a class="anchor" href="#error"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Error</h3>
+<p>If the input is <strong>not valid</strong>, add the <code>.errored</code> class to the <code>&lt;div class=&quot;form-group&quot;&gt;</code> element. Next add/update an error message to the <code>.note</code> element, as well as the <code>.error</code> class.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;form class=&quot;pb-6&quot;&gt;
+  &lt;div class=&quot;form-group errored&quot;&gt;
+    &lt;div class=&quot;form-group-header&quot;&gt;
+      &lt;label for=&quot;username-input&quot;&gt;Username&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group-body&quot;&gt;
+      &lt;input
+        class=&quot;form-control&quot;
+        type=&quot;text&quot;
+        value=&quot;monalisa&quot;
+        id=&quot;username-input&quot;
+        aria-describedby=&quot;username-input-validation&quot;
+      /&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;note error&quot; id=&quot;username-input-validation&quot;&gt;monalisa is not available. monalisa-beep, monalisa-cyber, or monalisa87 are available.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h3 id="warning"><a class="anchor" href="#warning"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Warning</h3>
+<p>If the input should show a <strong>warning</strong>, add the <code>.warn</code> class to the <code>&lt;div class=&quot;form-group&quot;&gt;</code> element. Next add/update a warning message to the <code>.note</code> element, as well as the <code>.warning</code> class.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;form class=&quot;pb-6&quot;&gt;
+&lt;div class=&quot;form-group warn&quot;&gt;
+  &lt;div class=&quot;form-group-header&quot;&gt;
+    &lt;label for=&quot;username-input&quot;&gt;Username&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group-body&quot;&gt;
+    &lt;input
+      class=&quot;form-control&quot;
+      type=&quot;text&quot;
+      value=&quot;monalisa-monalisa-monalisa-monalisa-&quot;
+      id=&quot;username-input&quot;
+      aria-describedby=&quot;username-input-validation&quot;
+    /&gt;
+  &lt;/div&gt;
+  &lt;p class=&quot;note warning&quot; id=&quot;username-input-validation&quot;&gt;36 of maximum 39 characters entered.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/form&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h3 id="form-actions"><a class="anchor" href="#form-actions"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Form actions</h3>
+<p>Align buttons to the right—via <code>float: right</code> on the buttons—in forms with <code>.form-actions</code>. The floats are automatically cleared for you.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;div class=&quot;form-actions&quot;&gt;
+  &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Save changes&lt;/button&gt;
+  &lt;button type=&quot;button&quot; class=&quot;btn&quot;&gt;Cancel&lt;/button&gt;
+&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="checkboxes-and-radios"><a class="anchor" href="#checkboxes-and-radios"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Checkboxes and radios</h2>
+<p>Utilities to control alignment and styling of checkbox and radio controls.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;form&gt;
+  &lt;div class=&quot;form-checkbox&quot;&gt;
+    &lt;label&gt;
+      &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; aria-describedby=&quot;help-text-for-checkbox&quot; /&gt;
+      Available for hire
+    &lt;/label&gt;
+    &lt;p class=&quot;note&quot; id=&quot;help-text-for-checkbox&quot;&gt;
+      This will do insanely &lt;strong&gt;awesome&lt;/strong&gt; and &lt;strong&gt;amazing&lt;/strong&gt; things!
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<p>You may also add emphasis to the label:</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;form&gt;
+  &lt;div class=&quot;form-checkbox&quot;&gt;
+    &lt;label&gt;
+      &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;
+      &lt;em class=&quot;highlight&quot;&gt;Available for hire&lt;/em&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h3 id="toggle-content-visibility-based-on-a-checkbox-or-radio-button-state"><a class="anchor" href="#toggle-content-visibility-based-on-a-checkbox-or-radio-button-state"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Toggle content visibility based on a checkbox or radio button state</h3>
+<p>Content that is hidden by default should only be done so if it is non-essential for the context of the surrounding content. Be sure to use the <code>aria-live=&quot;polite&quot;</code> attribute on the parent label for added content to be announced when displayed.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;form&gt;
+  &lt;div class=&quot;form-checkbox&quot;&gt;
+    &lt;label&gt;
+      &lt;input type=&quot;radio&quot; name=&quot;hireme&quot; /&gt;
+      Not available for hire
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-checkbox&quot;&gt;
+    &lt;label aria-live=&quot;polite&quot;&gt;
+      &lt;input type=&quot;radio&quot; class=&quot;form-checkbox-details-trigger&quot; name=&quot;hireme&quot; /&gt;
+      Available for hire
+      &lt;span class=&quot;form-checkbox-details text-normal&quot;&gt;
+        &lt;span class=&quot;d-block mb-1&quot;&gt;Available hours per week&lt;/span&gt;
+        &lt;input type=&quot;text&quot; name=&quot;&quot; class=&quot;form-control input-contrast&quot; size=&quot;3&quot; /&gt;
+        &lt;span class=&quot;text-small text-gray pl-2&quot;&gt;hours per week&lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="radio-group"><a class="anchor" href="#radio-group"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Radio group</h2>
+<p>Radio groups are tab like controls. Their colored border gives extra emphasis to what is selected.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;form&gt;
+  &lt;div class=&quot;radio-group&quot;&gt;
+    &lt;input class=&quot;radio-input&quot; id=&quot;option-a&quot; type=&quot;radio&quot; name=&quot;options&quot;&gt;
+    &lt;label class=&quot;radio-label&quot; for=&quot;option-a&quot;&gt;Option A&lt;/label&gt;
+    &lt;input class=&quot;radio-input&quot; id=&quot;option-b&quot; type=&quot;radio&quot; name=&quot;options&quot;&gt;
+    &lt;label class=&quot;radio-label&quot; for=&quot;option-b&quot;&gt;Option B&lt;/label&gt;
+    &lt;input class=&quot;radio-input&quot; id=&quot;option-c&quot; type=&quot;radio&quot; name=&quot;options&quot;&gt;
+    &lt;label class=&quot;radio-label&quot; for=&quot;option-c&quot;&gt;Option C&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+
+</div>
+    </div>
+  </div>
+</body>
+
+</html>

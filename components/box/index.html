@@ -28,7 +28,9 @@
          aria-current="page"
       >Box</a><a href="/cinder/components/buttons/" class="menu-item"
         
-      >Buttons</a><a href="/cinder/components/navigation/" class="menu-item"
+      >Buttons</a><a href="/cinder/components/forms/" class="menu-item"
+        
+      >Forms</a><a href="/cinder/components/navigation/" class="menu-item"
         
       >Navigation</a><a href="/cinder/components/subheads/" class="menu-item"
         
@@ -52,7 +54,9 @@
          aria-current="page"
       >Box</a><a href="/cinder/components/buttons/" class="menu-item"
         
-      >Buttons</a><a href="/cinder/components/navigation/" class="menu-item"
+      >Buttons</a><a href="/cinder/components/forms/" class="menu-item"
+        
+      >Forms</a><a href="/cinder/components/navigation/" class="menu-item"
         
       >Navigation</a><a href="/cinder/components/subheads/" class="menu-item"
         
@@ -70,23 +74,22 @@
       </nav>
       <div class="Prose">
   <h1>Box</h1>
-  <h1 id="box"><a class="anchor" href="#box"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Box</h1>
-<p>A <code>.Box</code> is a container with a background, a border, and rounded corners. By default there are no additional styles such as padding, these can be added as needed with utility classes. Other styles and layouts can be achieved with box elements and modifiers shown in the documentation below.</p>
+  <p>A <code>.Box</code> is a container with a background, a border, and rounded corners. By default there are no additional styles such as padding, these can be added as needed with utility classes. Other styles and layouts can be achieved with box elements and modifiers shown in the documentation below.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box mb-2">
+            <textarea live-code-source>&lt;div class=&quot;Box mb-2&quot;&gt;
   This is a box
-</div></textarea>
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h2 id="box-elements"><a class="anchor" href="#box-elements"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Box elements</h2>
+<h2 id="box-elements"><a class="anchor" href="#box-elements"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Box elements</h2>
 <p>Box elements include <code>Box-header</code>, <code>Box-body</code>, and <code>Box-footer</code>. These elements include borders and consistent padding. Optionally, you can include use <code>Box-title</code> which applies a bold font-weight the heading.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
@@ -94,25 +97,25 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box">
-  <div class="Box-header">
-    <h3 class="Box-title">
+            <textarea live-code-source>&lt;div class=&quot;Box&quot;&gt;
+  &lt;div class=&quot;Box-header&quot;&gt;
+    &lt;h3 class=&quot;Box-title&quot;&gt;
       Box title
-    </h3>
-  </div>
-  <div class="Box-body">
+    &lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-body&quot;&gt;
     Box body
-  </div>
-  <div class="Box-footer">
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-footer&quot;&gt;
     Box footer
-  </div>
-</div></textarea>
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h3 id="box-row"><a class="anchor" href="#box-row"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Box row</h3>
+<h3 id="box-row"><a class="anchor" href="#box-row"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Box row</h3>
 <p>Use <code>Box-row</code> to add rows with borders and maintain the same padding. Box rows have a lighter border to give contrast between the header and footer.</p>
 <p><strong>Note:</strong> Box rows have some reliance on markup structure in order to target the first and last rows, therefore using an unordered list is recommended. See <a href="#box-row-markup-structure">box row markup structure</a> for more information.</p>
 <pre style="display: none!important;"></pre>
@@ -121,22 +124,22 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box">
-  <ul>
-    <li class="Box-row">
+            <textarea live-code-source>&lt;div class=&quot;Box&quot;&gt;
+  &lt;ul&gt;
+    &lt;li class=&quot;Box-row&quot;&gt;
       Box row one
-    </li>
-    <li class="Box-row">
+    &lt;/li&gt;
+    &lt;li class=&quot;Box-row&quot;&gt;
       Box row two
-    </li>
-    <li class="Box-row">
+    &lt;/li&gt;
+    &lt;li class=&quot;Box-row&quot;&gt;
       Box row three
-    </li>
-    <li class="Box-row">
+    &lt;/li&gt;
+    &lt;li class=&quot;Box-row&quot;&gt;
       Box row four
-    </li>
-  </ul>
-</div></textarea>
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
@@ -149,37 +152,37 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box">
-  <div class="Box-header">
+            <textarea live-code-source>&lt;div class=&quot;Box&quot;&gt;
+  &lt;div class=&quot;Box-header&quot;&gt;
     Box header
-  </div>
-  <div class="Box-body">
-    <strong>Box body</strong>
-  </div>
-  <ul>
-    <li class="Box-row">
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-body&quot;&gt;
+    &lt;strong&gt;Box body&lt;/strong&gt;
+  &lt;/div&gt;
+  &lt;ul&gt;
+    &lt;li class=&quot;Box-row&quot;&gt;
       Box row one
-    </li>
-    <li class="Box-row">
+    &lt;/li&gt;
+    &lt;li class=&quot;Box-row&quot;&gt;
       Box row two
-    </li>
-    <li class="Box-row">
+    &lt;/li&gt;
+    &lt;li class=&quot;Box-row&quot;&gt;
       Box row three
-    </li>
-    <li class="Box-row">
+    &lt;/li&gt;
+    &lt;li class=&quot;Box-row&quot;&gt;
       Box row four
-    </li>
-  </ul>
-  <div class="Box-footer">
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class=&quot;Box-footer&quot;&gt;
     Box footer
-  </div>
-</div></textarea>
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h3 id="box-row-markup-structure"><a class="anchor" href="#box-row-markup-structure"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Box row markup structure</h3>
+<h3 id="box-row-markup-structure"><a class="anchor" href="#box-row-markup-structure"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Box row markup structure</h3>
 <p>Box rows have some reliance on markup structure in order to target the first and last rows. Box rows are given a top border that is lighter in color than other box elements so the first row is targeted to apply a darker border color. An inner border-radius is applied to the first and last rows that that row corners don't poke outside the <code>Box</code>, this can be particularly noticeable when using a highlight on box rows.</p>
 <p>Using an unordered list is recommended in order to target the first and last rows, however, if you need to use a <code>&lt;div&gt;</code> for your rows, you may want to place your rows inside a parent <code>&lt;div&gt;</code> so that the first and last rows are styled appropriately.</p>
 <pre style="display: none!important;"></pre>
@@ -188,22 +191,22 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box">
-  <div class="Box-header">
+            <textarea live-code-source>&lt;div class=&quot;Box&quot;&gt;
+  &lt;div class=&quot;Box-header&quot;&gt;
     Box header
-  </div>
-  <!-- This wrapping div ensures the first and last rows can be targeted for styling. -->
-  <div>
-    <div class="Box-row">Box row using a div</div>
-    <div class="Box-row">Box row using a div</div>
-  </div>
-</div></textarea>
+  &lt;/div&gt;
+  &lt;!-- This wrapping div ensures the first and last rows can be targeted for styling. --&gt;
+  &lt;div&gt;
+    &lt;div class=&quot;Box-row&quot;&gt;Box row using a div&lt;/div&gt;
+    &lt;div class=&quot;Box-row&quot;&gt;Box row using a div&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h2 id="box-padding-density"><a class="anchor" href="#box-padding-density"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Box padding density</h2>
+<h2 id="box-padding-density"><a class="anchor" href="#box-padding-density"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Box padding density</h2>
 <p>You can changed the padding density of the box component.</p>
 <p>Use <code>Box--condensed</code> to apply a more condensed line-height and reduce the padding on the Y axis.</p>
 <pre style="display: none!important;"></pre>
@@ -212,27 +215,27 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box Box--condensed">
-  <div class="Box-header">
-    <h3 class="Box-title">
+            <textarea live-code-source>&lt;div class=&quot;Box Box--condensed&quot;&gt;
+  &lt;div class=&quot;Box-header&quot;&gt;
+    &lt;h3 class=&quot;Box-title&quot;&gt;
       Box title
-    </h3>
-  </div>
-  <div class="Box-body">
+    &lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-body&quot;&gt;
     Box body
-  </div>
-  <ul>
-    <li class="Box-row">
+  &lt;/div&gt;
+  &lt;ul&gt;
+    &lt;li class=&quot;Box-row&quot;&gt;
       Box row one
-    </li>
-    <li class="Box-row">
+    &lt;/li&gt;
+    &lt;li class=&quot;Box-row&quot;&gt;
       Box row two
-    </li>
-  </ul>
-  <div class="Box-footer">
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class=&quot;Box-footer&quot;&gt;
     Box footer
-  </div>
-</div></textarea>
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
@@ -246,33 +249,33 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box Box--spacious f4">
-  <div class="Box-header">
-    <h3 class="Box-title">
+            <textarea live-code-source>&lt;div class=&quot;Box Box--spacious f4&quot;&gt;
+  &lt;div class=&quot;Box-header&quot;&gt;
+    &lt;h3 class=&quot;Box-title&quot;&gt;
       Box title
-    </h3>
-  </div>
-  <div class="Box-body">
+    &lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-body&quot;&gt;
     Box body
-  </div>
-  <ul>
-    <li class="Box-row">
+  &lt;/div&gt;
+  &lt;ul&gt;
+    &lt;li class=&quot;Box-row&quot;&gt;
       Box row one
-    </li>
-    <li class="Box-row">
+    &lt;/li&gt;
+    &lt;li class=&quot;Box-row&quot;&gt;
       Box row two
-    </li>
-  </ul>
-  <div class="Box-footer">
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class=&quot;Box-footer&quot;&gt;
     Box footer
-  </div>
-</div></textarea>
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h2 id="blue-box-theme"><a class="anchor" href="#blue-box-theme"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Blue box theme</h2>
+<h2 id="blue-box-theme"><a class="anchor" href="#blue-box-theme"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Blue box theme</h2>
 <p>Use <code>Box--blue</code> to style the box borders and box header in blue.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
@@ -280,28 +283,28 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box Box--blue">
-  <div class="Box-header">
+            <textarea live-code-source>&lt;div class=&quot;Box Box--blue&quot;&gt;
+  &lt;div class=&quot;Box-header&quot;&gt;
     Box header
-  </div>
-  <ul>
-    <li class="Box-row">
+  &lt;/div&gt;
+  &lt;ul&gt;
+    &lt;li class=&quot;Box-row&quot;&gt;
       Box row one
-    </li>
-    <li class="Box-row">
+    &lt;/li&gt;
+    &lt;li class=&quot;Box-row&quot;&gt;
       Box row two
-    </li>
-  </ul>
-  <div class="Box-footer">
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class=&quot;Box-footer&quot;&gt;
     Box footer
-  </div>
-</div></textarea>
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h2 id="blue-box-header-theme"><a class="anchor" href="#blue-box-header-theme"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Blue box header theme</h2>
+<h2 id="blue-box-header-theme"><a class="anchor" href="#blue-box-header-theme"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Blue box header theme</h2>
 <p>Use <code>Box-header--blue</code> to add to change the header border and background to blue.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
@@ -309,20 +312,20 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box">
-  <div class="Box-header Box-header--blue">
-    <h3 class="Box-title">Box with blue header</h3>
-  </div>
-  <div class="Box-body">
+            <textarea live-code-source>&lt;div class=&quot;Box&quot;&gt;
+  &lt;div class=&quot;Box-header Box-header--blue&quot;&gt;
+    &lt;h3 class=&quot;Box-title&quot;&gt;Box with blue header&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-body&quot;&gt;
     Box body
-  </div>
-</div></textarea>
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h2 id="box-danger-theme"><a class="anchor" href="#box-danger-theme"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Box danger theme</h2>
+<h2 id="box-danger-theme"><a class="anchor" href="#box-danger-theme"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Box danger theme</h2>
 <p>Use <code>Box--danger</code> to apply a red border to the outside of the box. This theme is helpful for communicating destructive actions.</p>
 <p><strong>Note:</strong> <code>Box-danger</code> only works with either <code>Box-row</code>'s or <code>Box-body</code>.</p>
 <pre style="display: none!important;"></pre>
@@ -331,14 +334,14 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box Box--danger">
-  <div class="Box-row">
+            <textarea live-code-source>&lt;div class=&quot;Box Box--danger&quot;&gt;
+  &lt;div class=&quot;Box-row&quot;&gt;
     Row one
-  </div>
-  <div class="Box-row">
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-row&quot;&gt;
     Row two
-  </div>
-</div></textarea>
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
@@ -351,23 +354,23 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div>
-  <div class="Subhead border-bottom-0">
-    <h2 class="Subhead-heading Subhead-heading--danger">Danger zone</h2>
-  </div>
+            <textarea live-code-source>&lt;div&gt;
+  &lt;div class=&quot;Subhead border-bottom-0&quot;&gt;
+    &lt;h2 class=&quot;Subhead-heading Subhead-heading--danger&quot;&gt;Danger zone&lt;/h2&gt;
+  &lt;/div&gt;
 
-  <div class="Box Box--danger">
-    <div class="Box-body">
+  &lt;div class=&quot;Box Box--danger&quot;&gt;
+    &lt;div class=&quot;Box-body&quot;&gt;
       Box body
-    </div>
-  </div>
-</div></textarea>
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h2 id="row-themes"><a class="anchor" href="#row-themes"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Row themes</h2>
+<h2 id="row-themes"><a class="anchor" href="#row-themes"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Row themes</h2>
 <p>You can change the background color for individual rows, or change the color on hover or navigation focus.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
@@ -375,23 +378,23 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box">
-  <div class="Box-row Box-row--gray">
+            <textarea live-code-source>&lt;div class=&quot;Box&quot;&gt;
+  &lt;div class=&quot;Box-row Box-row--gray&quot;&gt;
     .Box-row--gray
-  </div>
-  <div class="Box-row Box-row--hover-gray">
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-row Box-row--hover-gray&quot;&gt;
     .Box-row--hover-gray
-  </div>
-  <div class="Box-row Box-row--yellow">
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-row Box-row--yellow&quot;&gt;
     .Box-row--yellow
-  </div>
-  <div class="Box-row Box-row--hover-blue">
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-row Box-row--hover-blue&quot;&gt;
     .Box-row--hover-blue
-  </div>
-  <div class="Box-row Box-row--blue">
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-row Box-row--blue&quot;&gt;
     .Box-row--blue
-  </div>
-</div></textarea>
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
@@ -404,26 +407,26 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box">
-  <div class="Box-row Box-row--focus-gray navigation-focus">
+            <textarea live-code-source>&lt;div class=&quot;Box&quot;&gt;
+  &lt;div class=&quot;Box-row Box-row--focus-gray navigation-focus&quot;&gt;
     .Box-row--focus-gray and .navigation-focus
-  </div>
-  <div class="Box-row Box-row--focus-gray">
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-row Box-row--focus-gray&quot;&gt;
     .Box-row--focus-gray
-  </div>
-  <div class="Box-row Box-row--focus-blue navigation-focus">
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-row Box-row--focus-blue navigation-focus&quot;&gt;
     .Box-row--focus-blue and .navigation-focus
-  </div>
-  <div class="Box-row Box-row--focus-blue">
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-row Box-row--focus-blue&quot;&gt;
     .Box-row--focus-blue
-  </div>
-</div></textarea>
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h3 id="box-row-unread"><a class="anchor" href="#box-row-unread"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Box row unread</h3>
+<h3 id="box-row-unread"><a class="anchor" href="#box-row-unread"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Box row unread</h3>
 <p>Use <code>.Box-row--unread</code> to apply a blue vertical line highlight for indicating a row contains unread items.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
@@ -431,23 +434,23 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box">
-  <div class="Box-row">
+            <textarea live-code-source>&lt;div class=&quot;Box&quot;&gt;
+  &lt;div class=&quot;Box-row&quot;&gt;
     Box row
-  </div>
-  <div class="Box-row Box-row--unread">
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-row Box-row--unread&quot;&gt;
     Box row unread
-  </div>
-  <div class="Box-row">
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-row&quot;&gt;
     Box row
-  </div>
-</div></textarea>
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h3 id="box-row-link"><a class="anchor" href="#box-row-link"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Box row link</h3>
+<h3 id="box-row-link"><a class="anchor" href="#box-row-link"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Box row link</h3>
 <p>Use .<code>Box-row-link</code> when you want a link to appear dark gray and blue on hover on desktop, and remain a blue link on mobile. This is useful to indicate links on mobile without having hover styles.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
@@ -455,17 +458,17 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box">
-  <div class="Box-row">
-    <a class="Box-row-link" href="#box-row-link">Box row link</a>
-  </div>
-</div></textarea>
+            <textarea live-code-source>&lt;div class=&quot;Box&quot;&gt;
+  &lt;div class=&quot;Box-row&quot;&gt;
+    &lt;a class=&quot;Box-row-link&quot; href=&quot;#box-row-link&quot;&gt;Box row link&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h2 id="dashed-border"><a class="anchor" href="#dashed-border"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Dashed border</h2>
+<h2 id="dashed-border"><a class="anchor" href="#dashed-border"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Dashed border</h2>
 <p>Use the <code>border-dashed</code> utility to apply a dashed border to a box.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
@@ -473,15 +476,15 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box border-dashed p-2">
+            <textarea live-code-source>&lt;div class=&quot;Box border-dashed p-2&quot;&gt;
   A box with a dashed border
-</div></textarea>
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h2 id="boxes-with-flash-alerts"><a class="anchor" href="#boxes-with-flash-alerts"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Boxes with flash alerts</h2>
+<h2 id="boxes-with-flash-alerts"><a class="anchor" href="#boxes-with-flash-alerts"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Boxes with flash alerts</h2>
 <p>Use <code>flash-full</code> for flash alert inside a box to remove the rounded corners. Place the flash alert above the <code>Box-body</code> and underneath the <code>Box-header</code>.</p>
 <p>Flash alerts come in three different colors and can be used with icons and buttons, see the <a href="./alerts">alert documentation</a> for more information.</p>
 <pre style="display: none!important;"></pre>
@@ -490,56 +493,56 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box">
-  <div class="Box-header">
+            <textarea live-code-source>&lt;div class=&quot;Box&quot;&gt;
+  &lt;div class=&quot;Box-header&quot;&gt;
     Box header
-  </div>
-  <div class="flash flash-full">
-    <button class="flash-close js-flash-close">
-      <!-- <%= octicon "x" %> -->
-      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
-    </button>
-    <span>Flash message with close button.</span>
-  </div>
-  <div class="flash flash-full flash-success">
-    <!-- <%= octicon("check") %> -->
-    <svg class="octicon octicon-check" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
-    <span>Flash success with an icon.</span>
-  </div>
-  <div class="flash flash-full flash-warn">
-    <!-- <%= octicon("alert") %> -->
-    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg>
-    <span>Flash warning with an icon.</span>
-  </div>
-  <div class="flash flash-full flash-error">
+  &lt;/div&gt;
+  &lt;div class=&quot;flash flash-full&quot;&gt;
+    &lt;button class=&quot;flash-close js-flash-close&quot;&gt;
+      &lt;!-- &lt;%= svgicon &quot;x&quot; %&gt; --&gt;
+      &lt;svg class=&quot;svgicon svgicon-x&quot; viewBox=&quot;0 0 12 16&quot; version=&quot;1.1&quot; width=&quot;12&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/button&gt;
+    &lt;span&gt;Flash message with close button.&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;flash flash-full flash-success&quot;&gt;
+    &lt;!-- &lt;%= svgicon(&quot;check&quot;) %&gt; --&gt;
+    &lt;svg class=&quot;svgicon svgicon-check&quot; viewBox=&quot;0 0 12 16&quot; version=&quot;1.1&quot; width=&quot;12&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;span&gt;Flash success with an icon.&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;flash flash-full flash-warn&quot;&gt;
+    &lt;!-- &lt;%= svgicon(&quot;alert&quot;) %&gt; --&gt;
+    &lt;svg class=&quot;svgicon svgicon-alert&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;span&gt;Flash warning with an icon.&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;flash flash-full flash-error&quot;&gt;
     Flash error inside a Box.
-  </div>
-  <div class="Box-body">
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-body&quot;&gt;
     Box body
-  </div>
-</div></textarea>
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h2 id="boxes-with-icons"><a class="anchor" href="#boxes-with-icons"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Boxes with icons</h2>
-<p>Use <code>Box-btn-octicon</code> with <code>btn-octicon</code> when you want the icon to maintain the same padding as other box elements. This selector offsets margin to ensure it lines up on the left and right sides of the box so you may need to add padding neighboring elements.</p>
+<h2 id="boxes-with-icons"><a class="anchor" href="#boxes-with-icons"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Boxes with icons</h2>
+<p>Use <code>Box-btn-svgicon</code> with <code>btn-svgicon</code> when you want the icon to maintain the same padding as other box elements. This selector offsets margin to ensure it lines up on the left and right sides of the box so you may need to add padding neighboring elements.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box">
-  <div class="Box-body">
-    <span class="pr-2">Box body</span>
-    <button href="#" class="Box-btn-octicon btn-octicon">
-      <!-- <%= octicon "pencil" %> -->
-      <svg class="octicon octicon-pencil" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"></path></svg>
-    </button>
-  </div>
-</div></textarea>
+            <textarea live-code-source>&lt;div class=&quot;Box&quot;&gt;
+  &lt;div class=&quot;Box-body&quot;&gt;
+    &lt;span class=&quot;pr-2&quot;&gt;Box body&lt;/span&gt;
+    &lt;button href=&quot;#&quot; class=&quot;Box-btn-svgicon btn-svgicon&quot;&gt;
+      &lt;!-- &lt;%= svgicon &quot;pencil&quot; %&gt; --&gt;
+      &lt;svg class=&quot;svgicon svgicon-pencil&quot; viewBox=&quot;0 0 14 16&quot; version=&quot;1.1&quot; width=&quot;14&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
@@ -552,18 +555,18 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box">
-  <div class="Box-header clearfix">
-    <button href="#" class="Box-btn-octicon btn-octicon float-right">
-      <!-- <%= octicon "x" %> -->
-      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"></path></svg>
-    </button>
-    <h3 class="Box-title overflow-hidden pr-3">A very long title that wraps onto multiple lines without overlapping or wrapping underneath the icon to it's right</h3>
-  </div>
-  <div class="Box-body">
+            <textarea live-code-source>&lt;div class=&quot;Box&quot;&gt;
+  &lt;div class=&quot;Box-header clearfix&quot;&gt;
+    &lt;button href=&quot;#&quot; class=&quot;Box-btn-svgicon btn-svgicon float-right&quot;&gt;
+      &lt;!-- &lt;%= svgicon &quot;x&quot; %&gt; --&gt;
+      &lt;svg class=&quot;svgicon svgicon-x&quot; viewBox=&quot;0 0 12 16&quot; version=&quot;1.1&quot; width=&quot;12&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/button&gt;
+    &lt;h3 class=&quot;Box-title overflow-hidden pr-3&quot;&gt;A very long title that wraps onto multiple lines without overlapping or wrapping underneath the icon to it's right&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-body&quot;&gt;
     Box body
-  </div>
-</div></textarea>
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
@@ -575,21 +578,21 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box">
-  <div class="Box-row clearfix">
-    <button href="#" class="Box-btn-octicon btn-octicon float-left">
-      <!-- <%= octicon "check" %> -->
-      <svg class="octicon octicon-check" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
-    </button>
-    <p class="overflow-hidden pl-3">A very long paragraph that wraps onto multiple lines without overlapping or wrapping underneath the icon to it's left</p>
-  </div>
-</div></textarea>
+            <textarea live-code-source>&lt;div class=&quot;Box&quot;&gt;
+  &lt;div class=&quot;Box-row clearfix&quot;&gt;
+    &lt;button href=&quot;#&quot; class=&quot;Box-btn-svgicon btn-svgicon float-left&quot;&gt;
+      &lt;!-- &lt;%= svgicon &quot;check&quot; %&gt; --&gt;
+      &lt;svg class=&quot;svgicon svgicon-check&quot; viewBox=&quot;0 0 12 16&quot; version=&quot;1.1&quot; width=&quot;12&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/button&gt;
+    &lt;p class=&quot;overflow-hidden pl-3&quot;&gt;A very long paragraph that wraps onto multiple lines without overlapping or wrapping underneath the icon to it's left&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h2 id="box-headers-with-counters"><a class="anchor" href="#box-headers-with-counters"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Box headers with counters</h2>
+<h2 id="box-headers-with-counters"><a class="anchor" href="#box-headers-with-counters"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Box headers with counters</h2>
 <p>Use a counter with a background that works against the contrast of the box header. The default counter colors do not stand out well against the header background so we suggest using one of the following styles:</p>
 <p>Use <code>Counter--gray</code> for a counter with a gray background and dark gray text.</p>
 <pre style="display: none!important;"></pre>
@@ -598,17 +601,17 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box">
-  <div class="Box-header">
-    <h3 class="Box-title">
+            <textarea live-code-source>&lt;div class=&quot;Box&quot;&gt;
+  &lt;div class=&quot;Box-header&quot;&gt;
+    &lt;h3 class=&quot;Box-title&quot;&gt;
       Box title
-      <span class="Counter Counter--gray">12</span>
-    </h3>
-  </div>
-  <div class="Box-body">
+      &lt;span class=&quot;Counter Counter--gray&quot;&gt;12&lt;/span&gt;
+    &lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-body&quot;&gt;
     Box body
-  </div>
-</div></textarea>
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
@@ -621,23 +624,23 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box">
-  <div class="Box-header">
-    <h3 class="Box-title">
+            <textarea live-code-source>&lt;div class=&quot;Box&quot;&gt;
+  &lt;div class=&quot;Box-header&quot;&gt;
+    &lt;h3 class=&quot;Box-title&quot;&gt;
       Box title
-      <span class="Counter Counter--gray-dark">12</span>
-    </h3>
-  </div>
-  <div class="Box-body">
+      &lt;span class=&quot;Counter Counter--gray-dark&quot;&gt;12&lt;/span&gt;
+    &lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-body&quot;&gt;
     Box body
-  </div>
-</div></textarea>
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h2 id="form-elements-and-buttons-in-boxes"><a class="anchor" href="#form-elements-and-buttons-in-boxes"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Form elements and buttons in boxes</h2>
+<h2 id="form-elements-and-buttons-in-boxes"><a class="anchor" href="#form-elements-and-buttons-in-boxes"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Form elements and buttons in boxes</h2>
 <p>To achieve different layouts when adding buttons or form elements to boxes we suggest you use utilities to achieve the layout you want. Here's some common examples:</p>
 <p>Use <a href="/utilities/flexbox">flexbox utilities</a> to center align items, and avoid using floats by using <code>flex-auto</code> to have the text fill the remaining space so that the button rests on the far right.</p>
 <pre style="display: none!important;"></pre>
@@ -646,19 +649,19 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box Box--condensed">
-  <div class="Box-header d-flex flex-items-center">
-    <h3 class="Box-title overflow-hidden flex-auto">
+            <textarea live-code-source>&lt;div class=&quot;Box Box--condensed&quot;&gt;
+  &lt;div class=&quot;Box-header d-flex flex-items-center&quot;&gt;
+    &lt;h3 class=&quot;Box-title overflow-hidden flex-auto&quot;&gt;
       Box title
-    </h3>
-    <button class="btn btn-primary btn-sm">
+    &lt;/h3&gt;
+    &lt;button class=&quot;btn btn-primary btn-sm&quot;&gt;
       Button
-    </button>
-  </div>
-  <div class="Box-body">
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-body&quot;&gt;
     Box body
-  </div>
-</div></textarea>
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
@@ -671,35 +674,35 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box">
-  <div class="Box-row d-flex flex-items-center">
-    <div class="flex-auto">
-      <strong>Row title</strong>
-      <div class="text-small text-gray-light">
+            <textarea live-code-source>&lt;div class=&quot;Box&quot;&gt;
+  &lt;div class=&quot;Box-row d-flex flex-items-center&quot;&gt;
+    &lt;div class=&quot;flex-auto&quot;&gt;
+      &lt;strong&gt;Row title&lt;/strong&gt;
+      &lt;div class=&quot;text-small text-gray-light&quot;&gt;
         Description
-      </div>
-    </div>
-    <button type="button" class="btn btn-primary" name="button">View</button>
-  </div>
-  <div class="Box-row d-flex flex-items-center">
-    <div class="flex-auto">
-      <strong>Row title</strong>
-      <div class="text-small text-gray-light">
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; name=&quot;button&quot;&gt;View&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-row d-flex flex-items-center&quot;&gt;
+    &lt;div class=&quot;flex-auto&quot;&gt;
+      &lt;strong&gt;Row title&lt;/strong&gt;
+      &lt;div class=&quot;text-small text-gray-light&quot;&gt;
         Description
-      </div>
-    </div>
-    <button type="button" class="btn btn-primary" name="button">View</button>
-  </div>
-  <div class="Box-row d-flex flex-items-center">
-    <div class="flex-auto">
-      <strong>Row title</strong>
-      <div class="text-small text-gray-light">
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; name=&quot;button&quot;&gt;View&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-row d-flex flex-items-center&quot;&gt;
+    &lt;div class=&quot;flex-auto&quot;&gt;
+      &lt;strong&gt;Row title&lt;/strong&gt;
+      &lt;div class=&quot;text-small text-gray-light&quot;&gt;
         Description
-      </div>
-    </div>
-    <button type="button" class="btn btn-primary" name="button">View</button>
-  </div>
-</div></textarea>
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; name=&quot;button&quot;&gt;View&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
@@ -712,22 +715,22 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box">
-  <div class="Box-header d-flex flex-items-center">
-    <form class="flex-auto">
-      <label>
-        <input class="mr-1" type="checkbox" />
+            <textarea live-code-source>&lt;div class=&quot;Box&quot;&gt;
+  &lt;div class=&quot;Box-header d-flex flex-items-center&quot;&gt;
+    &lt;form class=&quot;flex-auto&quot;&gt;
+      &lt;label&gt;
+        &lt;input class=&quot;mr-1&quot; type=&quot;checkbox&quot; /&gt;
         Check it
-      </label>
-    </form>
-    <button class="btn-link select-menu-button muted-link">
+      &lt;/label&gt;
+    &lt;/form&gt;
+    &lt;button class=&quot;btn-link select-menu-button muted-link&quot;&gt;
       Select menu
-    </button>
-  </div>
-  <div class="Box-body">
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;Box-body&quot;&gt;
     Box body
-  </div>
-</div></textarea>
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
@@ -740,35 +743,35 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box">
-  <div class="Box-header">
-    <h3 class="Box-title">
+            <textarea live-code-source>&lt;div class=&quot;Box&quot;&gt;
+  &lt;div class=&quot;Box-header&quot;&gt;
+    &lt;h3 class=&quot;Box-title&quot;&gt;
       Example form title
-    </h3>
-  </div>
-  <form>
-    <div class="Box-body">
-      <div class="form-group">
-        <div class="form-group-header"><label>Example label</label></div>
-        <div class="form-group-body"><input class="form-control" type="text"></div>
-      </div>
-      <div class="form-checkbox">
-        <label>
-          <input type="checkbox" checked="checked" />
+    &lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;form&gt;
+    &lt;div class=&quot;Box-body&quot;&gt;
+      &lt;div class=&quot;form-group&quot;&gt;
+        &lt;div class=&quot;form-group-header&quot;&gt;&lt;label&gt;Example label&lt;/label&gt;&lt;/div&gt;
+        &lt;div class=&quot;form-group-body&quot;&gt;&lt;input class=&quot;form-control&quot; type=&quot;text&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;form-checkbox&quot;&gt;
+        &lt;label&gt;
+          &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;
           Yes please
-        </label>
-      </div>
-    </div>
-    <div class="Box-footer text-right">
-      <button class="btn btn-secondary mr-1">
+        &lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;Box-footer text-right&quot;&gt;
+      &lt;button class=&quot;btn btn-secondary mr-1&quot;&gt;
         Cancel
-      </button>
-      <button class="btn btn-primary">
+      &lt;/button&gt;
+      &lt;button class=&quot;btn btn-primary&quot;&gt;
         Submit
-      </button>
-    </div>
-  </form>
-</div></textarea>
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
@@ -781,22 +784,22 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="Box Box--spacious col-6 mx-auto text-center">
-  <form>
-    <div class="Box-body">
-      <h3 class="f1-light">
+            <textarea live-code-source>&lt;div class=&quot;Box Box--spacious col-6 mx-auto text-center&quot;&gt;
+  &lt;form&gt;
+    &lt;div class=&quot;Box-body&quot;&gt;
+      &lt;h3 class=&quot;f1-light&quot;&gt;
         Example form
-      </h3>
-      <div class="form-group mb-4">
-        <div class="form-group-header"><label>Example label</label></div>
-        <div class="form-group-body"><input class="form-control" type="text" /></div>
-      </div>
-      <button class="btn btn-primary btn-block">
+      &lt;/h3&gt;
+      &lt;div class=&quot;form-group mb-4&quot;&gt;
+        &lt;div class=&quot;form-group-header&quot;&gt;&lt;label&gt;Example label&lt;/label&gt;&lt;/div&gt;
+        &lt;div class=&quot;form-group-body&quot;&gt;&lt;input class=&quot;form-control&quot; type=&quot;text&quot; /&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;button class=&quot;btn btn-primary btn-block&quot;&gt;
         Submit
-      </button>
-    </div>
-  </form>
-</div></textarea>
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>

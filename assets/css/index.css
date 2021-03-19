@@ -52,6 +52,7 @@
 }
 
 .LiveCode-frame {
+  display: block;
   border-color: var(--color-border-primary);
   border-radius: 4px 4px 0 0;
   width: 100%;

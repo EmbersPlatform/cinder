@@ -4,6 +4,7 @@
 }
 
 .LiveCode-frame {
+  display: block;
   border-color: var(--color-border-primary);
   border-radius: $border-radius $border-radius 0 0;
   width: 100%;

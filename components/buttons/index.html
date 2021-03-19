@@ -28,7 +28,9 @@
         
       >Box</a><a href="/cinder/components/buttons/" class="menu-item"
          aria-current="page"
-      >Buttons</a><a href="/cinder/components/navigation/" class="menu-item"
+      >Buttons</a><a href="/cinder/components/forms/" class="menu-item"
+        
+      >Forms</a><a href="/cinder/components/navigation/" class="menu-item"
         
       >Navigation</a><a href="/cinder/components/subheads/" class="menu-item"
         
@@ -52,7 +54,9 @@
         
       >Box</a><a href="/cinder/components/buttons/" class="menu-item"
          aria-current="page"
-      >Buttons</a><a href="/cinder/components/navigation/" class="menu-item"
+      >Buttons</a><a href="/cinder/components/forms/" class="menu-item"
+        
+      >Forms</a><a href="/cinder/components/navigation/" class="menu-item"
         
       >Navigation</a><a href="/cinder/components/subheads/" class="menu-item"
         
@@ -70,15 +74,14 @@
       </nav>
       <div class="Prose">
   <h1>Buttons</h1>
-  <h1 id="buttons"><a class="anchor" href="#buttons"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Buttons</h1>
-<p>Buttons are used for <strong>actions</strong>, like in forms, while textual hyperlinks are used for destinations, or moving from one page to another.</p>
+  <p>Buttons are used for <strong>actions</strong>, like in forms, while textual hyperlinks are used for destinations, or moving from one page to another.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><button class="btn" type="button">Button</button></textarea>
+            <textarea live-code-source>&lt;button class=&quot;btn&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
@@ -91,15 +94,15 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><button class="btn mr-2" type="button">Button button</button>
-<a class="btn" href="#url" role="button">Link button</a></textarea>
+            <textarea live-code-source>&lt;button class=&quot;btn mr-2&quot; type=&quot;button&quot;&gt;Button button&lt;/button&gt;
+&lt;a class=&quot;btn&quot; href=&quot;#url&quot; role=&quot;button&quot;&gt;Link button&lt;/a&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h2 id="button-types"><a class="anchor" href="#button-types"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Button Types</h2>
-<h3 id="default"><a class="anchor" href="#default"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Default</h3>
+<h2 id="button-types"><a class="anchor" href="#button-types"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Button Types</h2>
+<h3 id="default"><a class="anchor" href="#default"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Default</h3>
 <p>Use <code>.btn</code> for form actions and general page actions.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
@@ -107,13 +110,13 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><button class="btn" type="button">Default</button></textarea>
+            <textarea live-code-source>&lt;button class=&quot;btn&quot; type=&quot;button&quot;&gt;Default&lt;/button&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h3 id="primary"><a class="anchor" href="#primary"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Primary</h3>
+<h3 id="primary"><a class="anchor" href="#primary"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Primary</h3>
 <p>Primary buttons use the accent color and are used to indicate the primary action on a page. When you need your buttons to stand out, use <code>.btn.btn-primary</code>. You can use it with both button sizes—just add <code>.btn-primary</code>.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
@@ -121,14 +124,14 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><button class="btn btn-primary" type="button">Primary</button></textarea>
+            <textarea live-code-source>&lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;Primary&lt;/button&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h2 id="button-states"><a class="anchor" href="#button-states"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Button states</h2>
-<h3 id="disabled"><a class="anchor" href="#disabled"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Disabled</h3>
+<h2 id="button-states"><a class="anchor" href="#button-states"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Button states</h2>
+<h3 id="disabled"><a class="anchor" href="#disabled"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Disabled</h3>
 <p>Disable <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code> elements with the <code>aria-disabled=&quot;true&quot;</code> attribute.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
@@ -136,58 +139,58 @@
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><button class="btn mr-2" type="button" aria-disabled="true">Disabled</button>
-<button class="btn btn-primary mr-2" type="button" aria-disabled="true">Disabled</button>
-<button class="btn btn-outline mr-2" type="button" aria-disabled="true">Disabled</button>
-<button class="btn btn-danger" type="button" aria-disabled="true">Disabled</button></textarea>
+            <textarea live-code-source>&lt;button class=&quot;btn mr-2&quot; type=&quot;button&quot; aria-disabled=&quot;true&quot;&gt;Disabled&lt;/button&gt;
+&lt;button class=&quot;btn btn-primary mr-2&quot; type=&quot;button&quot; aria-disabled=&quot;true&quot;&gt;Disabled&lt;/button&gt;
+&lt;button class=&quot;btn btn-outline mr-2&quot; type=&quot;button&quot; aria-disabled=&quot;true&quot;&gt;Disabled&lt;/button&gt;
+&lt;button class=&quot;btn btn-danger&quot; type=&quot;button&quot; aria-disabled=&quot;true&quot;&gt;Disabled&lt;/button&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h2 id="button-variations"><a class="anchor" href="#button-variations"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Button variations</h2>
-<h3 id="sizes"><a class="anchor" href="#sizes"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Sizes</h3>
+<h2 id="button-variations"><a class="anchor" href="#button-variations"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Button variations</h2>
+<h3 id="sizes"><a class="anchor" href="#sizes"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Sizes</h3>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><button class="mr-2 btn btn-sm" type="button">Small</button>
-<button class="mr-2 btn" type="button">Normal</button>
-<button class="mr-2 btn btn-large" type="button">Large</button></textarea>
+            <textarea live-code-source>&lt;button class=&quot;mr-2 btn btn-sm&quot; type=&quot;button&quot;&gt;Small&lt;/button&gt;
+&lt;button class=&quot;mr-2 btn&quot; type=&quot;button&quot;&gt;Normal&lt;/button&gt;
+&lt;button class=&quot;mr-2 btn btn-large&quot; type=&quot;button&quot;&gt;Large&lt;/button&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h3 id="block-button"><a class="anchor" href="#block-button"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Block button</h3>
+<h3 id="block-button"><a class="anchor" href="#block-button"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Block button</h3>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><button class="btn btn-block" type="button">Block</button></textarea>
+            <textarea live-code-source>&lt;button class=&quot;btn btn-block&quot; type=&quot;button&quot;&gt;Block&lt;/button&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h2 id="button-groups"><a class="anchor" href="#button-groups"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Button groups</h2>
+<h2 id="button-groups"><a class="anchor" href="#button-groups"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Button groups</h2>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
         <form action="#0" class="LiveCode-source">
           <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
           <div class="LiveCode-editor">
-            <textarea live-code-source><div class="BtnGroup">
-  <button class="BtnGroup-item btn" type="button">Normal</button>
-  <button class="BtnGroup-item btn btn-outline" type="button">Outline</button>
-  <button class="BtnGroup-item btn btn-primary" type="button">Primary</button>
-  <button class="BtnGroup-item btn btn-success" type="button">Success</button>
-  <button class="BtnGroup-item btn btn-danger" type="button">Danger</button>
-</div></textarea>
+            <textarea live-code-source>&lt;div class=&quot;BtnGroup&quot;&gt;
+  &lt;button class=&quot;BtnGroup-item btn&quot; type=&quot;button&quot;&gt;Normal&lt;/button&gt;
+  &lt;button class=&quot;BtnGroup-item btn btn-outline&quot; type=&quot;button&quot;&gt;Outline&lt;/button&gt;
+  &lt;button class=&quot;BtnGroup-item btn btn-primary&quot; type=&quot;button&quot;&gt;Primary&lt;/button&gt;
+  &lt;button class=&quot;BtnGroup-item btn btn-success&quot; type=&quot;button&quot;&gt;Success&lt;/button&gt;
+  &lt;button class=&quot;BtnGroup-item btn btn-danger&quot; type=&quot;button&quot;&gt;Danger&lt;/button&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
