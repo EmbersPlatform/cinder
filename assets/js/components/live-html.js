@@ -1,6 +1,7 @@
 import { define, Component, store } from "@dorgandash/untitled";
 import { environment } from "../index";
 import hljs from "highlight.js";
+import path from "path";
 
 const shared_state = store({
   theme: environment().theme
@@ -10,7 +11,9 @@ environment.map(({theme}) => {
   shared_state.update({theme});
 })
 
-const styles = fetch("/dist/index.css").then(res => res.text());
+const styles = fetch(
+    path.join(import.meta.env.SNOWPACK_PUBLIC_PATH_PREFIX, `/dist/index.css`)
+  ).then(res => res.text());
 
 define("cinder-live-html", class extends Component() {
 
