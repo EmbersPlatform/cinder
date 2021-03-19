@@ -216,7 +216,7 @@ Use `Box--danger` to apply a red border to the outside of the box. This theme is
 </div>
 ```
 
-`Box-danger` is often paired with a red heading. See the [subhead](./subhead) docs for more information.
+`Box-danger` is often paired with a red heading. See the [subhead]({{ "/components/subheads" | url }}) docs for more information.
 
 ```html live
 <div>
