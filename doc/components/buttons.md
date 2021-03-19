@@ -65,7 +65,6 @@ Disable `<button>` and `<a>` elements with the `aria-disabled="true"` attribute.
   <button class="BtnGroup-item btn" type="button">Normal</button>
   <button class="BtnGroup-item btn btn-outline" type="button">Outline</button>
   <button class="BtnGroup-item btn btn-primary" type="button">Primary</button>
-  <button class="BtnGroup-item btn btn-success" type="button">Success</button>
   <button class="BtnGroup-item btn btn-danger" type="button">Danger</button>
 </div>
 ```

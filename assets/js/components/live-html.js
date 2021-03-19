@@ -48,6 +48,7 @@ define("cinder-live-html", class extends Component() {
     const theme = shared_state().theme;
 
     const content = `
+    <!DOCTYPE html>
     <head>
       <style>${style}</style>
       <style>
