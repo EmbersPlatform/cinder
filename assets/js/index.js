@@ -5,7 +5,11 @@ import path from "path";
 const html = document.documentElement;
 
 export const environment = store({
-  theme: html.dataset.colorMode
+  theme: html.dataset.colorMode == "auto"
+    ? window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? "dark"
+      : "light"
+    : html.dataset.colorMode
 })
 
 environment.map(({theme}) => {
