@@ -2,3 +2,8 @@
 
 @import "./light.scss";
 @import "./dark.scss";
+
+[data-color-mode] {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-canvas);
+}
