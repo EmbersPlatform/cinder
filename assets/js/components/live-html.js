@@ -1,6 +1,9 @@
+import * as __SNOWPACK_ENV__ from '../../../_snowpack/env.js';
+
 import { define, Component, store } from "../../../_snowpack/pkg/@dorgandash/untitled.js";
 import { environment } from "../index.js";
 import hljs from "../../../_snowpack/pkg/highlightjs.js";
+import path from "../../../_snowpack/pkg/path.js";
 
 const shared_state = store({
   theme: environment().theme
@@ -10,7 +13,9 @@ environment.map(({theme}) => {
   shared_state.update({theme});
 })
 
-const styles = fetch("/dist/index.css").then(res => res.text());
+const styles = fetch(
+    path.join(__SNOWPACK_ENV__.SNOWPACK_PUBLIC_PATH_PREFIX, `/dist/index.css`)
+  ).then(res => res.text());
 
 define("cinder-live-html", class extends Component() {
 
