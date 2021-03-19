@@ -12,7 +12,7 @@
     font-weight: $font-weight-bold;
     line-height: $lh-condensed;
 
-    .svg-icon-link {
+    .svgicon-link {
       color: var(--color-text-primary);
       vertical-align: middle;
       visibility: hidden;
@@ -21,7 +21,7 @@
     &:hover .anchor {
       text-decoration: none;
 
-      .svg-icon-link {
+      .svgicon-link {
         visibility: visible;
       }
     }

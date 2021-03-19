@@ -26,8 +26,9 @@
       primary: $gray-9,
       secondary: $gray-8,
       tertiary: $gray-7,
-      overlay: $gray-6,
+      overlay: $gray-9,
       inverse: $white,
+      accent: $orange-5,
       info: rgba($blue-4, 0.4),
       danger: rgba($red-4, 0.4),
       success: rgba($green-3, 0.4),
@@ -42,8 +43,10 @@
       primary: $gray-7,
       secondary: $gray-8,
       tertiary: $gray-6,
-      overlay: $gray-7,
+      overlay: $gray-5,
       backdrop: rgba($black, 0.8),
+      accent: rgba($orange-5, 0.1),
+      accent-inverse: $orange-5,
       info: rgba($blue-4, 0.1),
       info-inverse: $blue-4,
       danger: rgba($red-4, 0.1),
@@ -201,6 +204,104 @@
       bg-info: rgba($blue-4, 0.1),
       border-warning: rgba($yellow-4, 0.4),
       bg-warning: rgba($yellow-4, 0.1),
+    ),
+
+    input: (
+      bg: $gray-9,
+      contrast-bg: rgba($black, 0.5),
+      border: $gray-5,
+      shadow: 0 0 transparent,
+
+      disabled-bg: $gray-8,
+      disabled-border: $gray-7,
+
+      warning-border: $yellow-3,
+      error-border: $red-4,
+
+      tooltip: (
+        success: (
+          text: $green-2,
+          bg: mix($green-4, $gray-9, 10%), // rgba($green-4, 0.1)
+          border: mix($green-4, $gray-9, 46%), // rgba($green-4, 0.4) + 6% to adjust for the background
+        ),
+
+        warning: (
+          text: $yellow-2,
+          bg: mix($yellow-4, $gray-9, 10%), // rgba($yellow-4, 0.1)
+          border: mix($yellow-4, $gray-9, 46%), // rgba($yellow-4, 0.4) + 6% to adjust for the background
+        ),
+
+        error: (
+          text: $red-3,
+          bg: mix($red-4, $gray-9, 10%), // rgba($red-4, 0.1)
+          border: mix($red-4, $gray-9, 46%), // rgba($red-4, 0.4) + 6% to adjust for the background
+        ),
+      ),
+    ),
+
+    checks: (
+      bg: var(--color-bg-canvas-inset),
+
+      run-border-width: 1px,
+      container-border-width: 1px,
+
+      text-primary: var(--color-text-primary),
+      text-secondary: var(--color-text-secondary),
+      text-link: var(--color-text-link),
+
+      btn-icon: var(--color-icon-secondary),
+      btn-hover-icon: var(--color-text-primary),
+      btn-hover-bg: var(--color-btn-hover-bg),
+
+      input-text: var(--color-text-secondary),
+      input-placeholder-text: var(--color-text-placeholder),
+      input-focus-text: var(--color-text-primary),
+      input-bg: var(--color-input-bg),
+      input-shadow: 0 0 0 1px $gray-7, // var(--color-input-border)
+
+      dropdown-text: var(--color-text-primary),
+      dropdown-bg: var(--color-bg-overlay),
+      dropdown-border: var(--color-border-overlay),
+      dropdown-hover-text: var(--color-state-hover-primary-text),
+      dropdown-hover-bg: var(--color-state-hover-primary-bg),
+      dropdown-btn-hover-text: var(--color-state-hover-primary-text),
+      dropdown-btn-hover-bg: var(--color-state-hover-secondary-bg),
+
+      scrollbar-thumb-bg: $gray-6,
+
+      header-label-text: var(--color-text-secondary),
+      header-label-open-text: var(--color-text-primary),
+      header-border: var(--color-border-secondary),
+      header-icon: var(--color-icon-secondary),
+
+      line-text: var(--color-text-secondary),
+      line-num-text: var(--color-text-tertiary),
+      line-timestamp-text: var(--color-text-tertiary),
+      line-hover-bg: var(--color-state-hover-secondary-bg),
+      line-selected-bg: var(--color-bg-info),
+      line-selected-num-text: var(--color-text-link),
+      line-dt-fm-text: var(--color-text-inverse),
+      line-dt-fm-bg: $yellow-3,
+
+      gate-bg: rgba($yellow-6, 0.15),
+      gate-text: var(--color-text-secondary),
+      gate-waiting-text: var(--color-text-warning),
+
+      step-header-open-bg: var(--color-state-hover-secondary-bg),
+      step-error-text: var(--color-text-danger),
+      step-warning-text: var(--color-text-warning),
+
+      logline-text: $gray-4,
+      logline-num-text: var(--color-text-tertiary),
+      logline-debug-text: $purple-3,
+      logline-error-text: var(--color-text-secondary),
+      logline-error-num-text: var(--color-text-tertiary),
+      logline-error-bg: var(--color-bg-danger),
+      logline-warning-text: var(--color-text-secondary),
+      logline-warning-num-text: var(--color-text-warning),
+      logline-warning-bg: var(--color-bg-warning),
+      logline-command-text: $blue-3,
+      logline-section-text: var(--color-text-success),
     ),
 
     highlight: (

@@ -70,8 +70,13 @@ define("cinder-live-html", class extends Component() {
     this.frame.contentWindow.document.write(content);
     this.frame.contentWindow.document.close();
 
+    const resizeObserver = new ResizeObserver(_ => {
+      this.frame.height = this.frame.contentWindow.document.querySelector(".LiveCode-frame-content").offsetHeight;      
+    })
+
     this.frame.addEventListener("load", () => {
       this.frame_loaded = true;
+      resizeObserver.observe(this.frame.contentWindow.document.querySelector(".LiveCode-frame-content"));
       this.frame.height = this.frame.contentWindow.document.querySelector(".LiveCode-frame-content").offsetHeight;
     })
 

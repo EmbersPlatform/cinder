@@ -17,13 +17,13 @@ The menu is a vertical list of navigational links. **A menu's width and placemen
 </nav>
 ```
 
-There are a few subcomponents and add-ons that work well with the menu, including avatars, counters, and svg-icons.
+There are a few subcomponents and add-ons that work well with the menu, including avatars, counters, and svgicons.
 
 ```html live
 <nav class="menu" aria-label="Person settings">
   <a class="menu-item" href="#url" aria-current="page">
-    <!-- <%= svg-icon "tools" %> -->
-    <svg width="16" height="16" viewBox="0 0 16 16" class="svg-icon svg-icon-tools" aria-hidden="true">
+    <!-- <%= svgicon "tools" %> -->
+    <svg width="16" height="16" viewBox="0 0 16 16" class="svgicon svgicon-tools" aria-hidden="true">
       <path
         fill-rule="evenodd"
         d="M4.48 7.27c.26.26 1.28 1.33 1.28 1.33l.56-.58-.88-.91 1.69-1.8s-.76-.74-.43-.45c.32-1.19.03-2.51-.87-3.44C4.93.5 3.66.2 2.52.51l1.93 2-.51 1.96-1.89.52-1.93-2C-.19 4.17.1 5.48 1 6.4c.94.98 2.29 1.26 3.48.87zm6.44 1.94l-2.33 2.3 3.84 3.98c.31.33.73.49 1.14.49.41 0 .82-.16 1.14-.49.63-.65.63-1.7 0-2.35l-3.79-3.93zM16 2.53L13.55 0 6.33 7.46l.88.91-4.31 4.46-.99.53-1.39 2.27.35.37 2.2-1.44.51-1.02L7.9 9.08l.88.91L16 2.53z"
@@ -32,8 +32,8 @@ There are a few subcomponents and add-ons that work well with the menu, includin
     Account
   </a>
   <a class="menu-item" href="#url">
-    <!-- <%= svg-icon "person" %> -->
-    <svg width="12" height="16" viewBox="0 0 12 16" class="svg-icon svg-icon-person" aria-hidden="true">
+    <!-- <%= svgicon "person" %> -->
+    <svg width="12" height="16" viewBox="0 0 12 16" class="svgicon svgicon-person" aria-hidden="true">
       <path
         fill-rule="evenodd"
         d="M12 14.002a.998.998 0 0 1-.998.998H1.001A1 1 0 0 1 0 13.999V13c0-2.633 4-4 4-4s.229-.409 0-1c-.841-.62-.944-1.59-1-4 .173-2.413 1.867-3 3-3s2.827.586 3 3c-.056 2.41-.159 3.38-1 4-.229.59 0 1 0 1s4 1.367 4 4v1.002z"
@@ -42,8 +42,8 @@ There are a few subcomponents and add-ons that work well with the menu, includin
     Profile
   </a>
   <a class="menu-item" href="#url">
-    <!-- <%= svg-icon "mail" %>-->
-    <svg version="1.1" width="14" height="16" viewBox="0 0 14 16" class="svg-icon svg-icon-mail" aria-hidden="true">
+    <!-- <%= svgicon "mail" %>-->
+    <svg version="1.1" width="14" height="16" viewBox="0 0 14 16" class="svgicon svgicon-mail" aria-hidden="true">
       <path
         fill-rule="evenodd"
         d="M0 4v8c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H1c-.55 0-1 .45-1 1zm13 0L7 9 1 4h12zM1 5.5l4 3-4 3v-6zM2 12l3.5-3L7 10.5 8.5 9l3.5 3H2zm11-.5l-4-3 4-3v6z"
@@ -52,13 +52,13 @@ There are a few subcomponents and add-ons that work well with the menu, includin
     Emails
   </a>
   <a class="menu-item" href="#url">
-    <!-- <%= svg-icon "radio-tower" %> -->
+    <!-- <%= svgicon "radio-tower" %> -->
     <svg
       version="1.1"
       width="16"
       height="16"
       viewBox="0 0 16 16"
-      class="svg-icon svg-icon-radio-tower"
+      class="svgicon svgicon-radio-tower"
       aria-hidden="true"
     >
       <path
