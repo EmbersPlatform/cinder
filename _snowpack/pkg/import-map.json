@@ -1,6 +1,7 @@
 {
   "imports": {
     "@dorgandash/untitled": "./@dorgandash/untitled.js",
+    "highlight.js": "./highlightjs.js",
     "path": "./path.js",
     "uce-loader": "./uce-loader.js"
   }

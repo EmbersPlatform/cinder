@@ -48,13 +48,15 @@
 /* Breakpoints in the form (name: length) */
 .LiveCode {
   display: block;
+  background: none;
 }
 
 .LiveCode-frame {
-  color: var(--color-text-primary);
-  background-color: var(--color-bg-primary);
   border-color: var(--color-border-primary);
   border-radius: 4px 4px 0 0;
+  width: 100%;
+  border: none;
+  overflow-y: hidden;
 }
 
 .LiveCode .LiveCode-source {
@@ -63,6 +65,37 @@
   border: none;
   border-top: 1px solid var(--color-border-primary);
   margin-bottom: 0 !important;
+}
+.LiveCode .LiveCode-source .LiveCode-editor {
+  display: grid;
+}
+.LiveCode .LiveCode-source .LiveCode-editor::after {
+  content: attr(data-replicated-value) " ";
+  white-space: pre-wrap;
+  visibility: hidden;
+}
+.LiveCode .LiveCode-source .LiveCode-editor > textarea {
+  resize: none;
+  overflow: hidden;
+  display: block;
+  border: none;
+  background: var(--color-highlight-bg);
+  color: transparent;
+  width: 100%;
+  resize: none;
+  padding: 8px;
+  caret-color: var(--color-text-primary);
+}
+.LiveCode .LiveCode-source .LiveCode-editor > *,
+.LiveCode .LiveCode-source .LiveCode-editor::after {
+  margin: 0;
+  padding: 8px;
+  font: 1rem/1.4 monospace;
+  grid-area: 1/1/2/2;
+}
+.LiveCode .LiveCode-source .LiveCode-editor > pre {
+  pointer-events: none;
+  border: none;
 }
 
 .LiveCode-copy-btn {

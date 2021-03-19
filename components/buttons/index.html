@@ -28,12 +28,9 @@
         
       >Box</a><a href="/cinder/components/buttons/" class="menu-item"
          aria-current="page"
-      >Buttons</a><a href="/cinder/components/menu/" class="menu-item"
+      >Buttons</a><a href="/cinder/components/navigation/" class="menu-item"
         
-      >Menu</a>
-    <div class="menu-heading">Misc</div><a href="/cinder/misc/markdown_test/" class="menu-item"
-        
-      >Markdown test</a>
+      >Navigation</a>
     <div class="menu-heading">Utilities</div><a href="/cinder/utilities/margin/" class="menu-item"
         
       >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
@@ -41,6 +38,9 @@
       >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
         
       >Typography</a>
+    <div class="menu-heading">Misc</div><a href="/cinder/misc/markdown_test/" class="menu-item"
+        
+      >Markdown test</a>
       </nav>
     </div>
     <div class="col-12 col-md-8 col-lg-6 flex-1 p-2 container-lg">
@@ -50,12 +50,9 @@
         
       >Box</a><a href="/cinder/components/buttons/" class="menu-item"
          aria-current="page"
-      >Buttons</a><a href="/cinder/components/menu/" class="menu-item"
+      >Buttons</a><a href="/cinder/components/navigation/" class="menu-item"
         
-      >Menu</a>
-    <div class="menu-heading">Misc</div><a href="/cinder/misc/markdown_test/" class="menu-item"
-        
-      >Markdown test</a>
+      >Navigation</a>
     <div class="menu-heading">Utilities</div><a href="/cinder/utilities/margin/" class="menu-item"
         
       >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
@@ -63,42 +60,37 @@
       >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
         
       >Typography</a>
+    <div class="menu-heading">Misc</div><a href="/cinder/misc/markdown_test/" class="menu-item"
+        
+      >Markdown test</a>
       </nav>
       <div class="Prose">
         <h1>Buttons</h1>
 <p>Buttons are used for <strong>actions</strong>, like in forms, while textual hyperlinks are used for destinations, or moving from one page to another.</p>
 <pre style="display: none!important;"></pre>
           <cinder-live-html class="Box LiveCode mb-2">
-            <div class="LiveCode-frame">
-              <div class="pt-2 px-2 d-flex flex-justify-end">
-                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+            <iframe class="LiveCode-frame" height="100"></iframe>
+            <form action="#0" class="LiveCode-source">
+              <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+              <div class="LiveCode-editor">
+                <textarea live-code-source><button class="btn" type="button">Button</button></textarea>
+                <pre><code></code></pre>
               </div>
-              <div class="LiveCode-frame-content p-3"><button class="btn" type="button">Button</button>
-</div>
-            </div>
-            <textarea live-code-source class="d-none"><button class="btn" type="button">Button</button>
-</textarea>
-            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+            </form>
           </cinder-live-html>
           
 <p>Note: When using a <code>&lt;button&gt;</code> element, <strong>always specify a <code>type</code></strong>. When using a <code>&lt;a&gt;</code> element, <strong>always add <code>role=&quot;button&quot;</code> for accessibility</strong>.</p>
 <pre style="display: none!important;"></pre>
           <cinder-live-html class="Box LiveCode mb-2">
-            <div class="LiveCode-frame">
-              <div class="pt-2 px-2 d-flex flex-justify-end">
-                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+            <iframe class="LiveCode-frame" height="100"></iframe>
+            <form action="#0" class="LiveCode-source">
+              <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+              <div class="LiveCode-editor">
+                <textarea live-code-source><button class="btn mr-2" type="button">Button button</button>
+<a class="btn" href="#url" role="button">Link button</a></textarea>
+                <pre><code></code></pre>
               </div>
-              <div class="LiveCode-frame-content p-3"><button class="btn mr-2" type="button">Button button</button>
-<a class="btn" href="#url" role="button">Link button</a>
-</div>
-            </div>
-            <textarea live-code-source class="d-none"><button class="btn mr-2" type="button">Button button</button>
-<a class="btn" href="#url" role="button">Link button</a>
-</textarea>
-            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn mr-2&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>Button button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#url&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>Link button<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+            </form>
           </cinder-live-html>
           
 <h2>Button Types</h2>
@@ -106,34 +98,28 @@
 <p>Use <code>.btn</code> for form actions and general page actions.</p>
 <pre style="display: none!important;"></pre>
           <cinder-live-html class="Box LiveCode mb-2">
-            <div class="LiveCode-frame">
-              <div class="pt-2 px-2 d-flex flex-justify-end">
-                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+            <iframe class="LiveCode-frame" height="100"></iframe>
+            <form action="#0" class="LiveCode-source">
+              <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+              <div class="LiveCode-editor">
+                <textarea live-code-source><button class="btn" type="button">Default</button></textarea>
+                <pre><code></code></pre>
               </div>
-              <div class="LiveCode-frame-content p-3"><button class="btn" type="button">Default</button>
-</div>
-            </div>
-            <textarea live-code-source class="d-none"><button class="btn" type="button">Default</button>
-</textarea>
-            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>Default<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+            </form>
           </cinder-live-html>
           
 <h3>Primary</h3>
 <p>Primary buttons use the accent color and are used to indicate the primary action on a page. When you need your buttons to stand out, use <code>.btn.btn-primary</code>. You can use it with both button sizes—just add <code>.btn-primary</code>.</p>
 <pre style="display: none!important;"></pre>
           <cinder-live-html class="Box LiveCode mb-2">
-            <div class="LiveCode-frame">
-              <div class="pt-2 px-2 d-flex flex-justify-end">
-                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+            <iframe class="LiveCode-frame" height="100"></iframe>
+            <form action="#0" class="LiveCode-source">
+              <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+              <div class="LiveCode-editor">
+                <textarea live-code-source><button class="btn btn-primary" type="button">Primary</button></textarea>
+                <pre><code></code></pre>
               </div>
-              <div class="LiveCode-frame-content p-3"><button class="btn btn-primary" type="button">Primary</button>
-</div>
-            </div>
-            <textarea live-code-source class="d-none"><button class="btn btn-primary" type="button">Primary</button>
-</textarea>
-            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-primary&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+            </form>
           </cinder-live-html>
           
 <h2>Button states</h2>
@@ -141,99 +127,65 @@
 <p>Disable <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code> elements with the <code>aria-disabled=&quot;true&quot;</code> attribute.</p>
 <pre style="display: none!important;"></pre>
           <cinder-live-html class="Box LiveCode mb-2">
-            <div class="LiveCode-frame">
-              <div class="pt-2 px-2 d-flex flex-justify-end">
-                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+            <iframe class="LiveCode-frame" height="100"></iframe>
+            <form action="#0" class="LiveCode-source">
+              <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+              <div class="LiveCode-editor">
+                <textarea live-code-source><button class="btn mr-2" type="button" aria-disabled="true">Disabled</button>
+<button class="btn btn-primary mr-2" type="button" aria-disabled="true">Disabled</button>
+<button class="btn btn-outline mr-2" type="button" aria-disabled="true">Disabled</button>
+<button class="btn btn-danger" type="button" aria-disabled="true">Disabled</button></textarea>
+                <pre><code></code></pre>
               </div>
-              <div class="LiveCode-frame-content p-3"><button class="btn mr-2" type="button" aria-disabled="true">Disabled</button>
-<button class="btn btn-primary mr-2" type="button" aria-disabled="true">Disabled</button>
-<button class="btn btn-outline mr-2" type="button" aria-disabled="true">Disabled</button>
-<button class="btn btn-danger" type="button" aria-disabled="true">Disabled</button>
-</div>
-            </div>
-            <textarea live-code-source class="d-none"><button class="btn mr-2" type="button" aria-disabled="true">Disabled</button>
-<button class="btn btn-primary mr-2" type="button" aria-disabled="true">Disabled</button>
-<button class="btn btn-outline mr-2" type="button" aria-disabled="true">Disabled</button>
-<button class="btn btn-danger" type="button" aria-disabled="true">Disabled</button>
-</textarea>
-            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn mr-2&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">aria-disabled</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-primary mr-2&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">aria-disabled</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-outline mr-2&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">aria-disabled</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-danger&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">aria-disabled</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+            </form>
           </cinder-live-html>
           
 <h2>Button variations</h2>
 <h3>Sizes</h3>
 <pre style="display: none!important;"></pre>
           <cinder-live-html class="Box LiveCode mb-2">
-            <div class="LiveCode-frame">
-              <div class="pt-2 px-2 d-flex flex-justify-end">
-                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+            <iframe class="LiveCode-frame" height="100"></iframe>
+            <form action="#0" class="LiveCode-source">
+              <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+              <div class="LiveCode-editor">
+                <textarea live-code-source><button class="mr-2 btn btn-sm" type="button">Small</button>
+<button class="mr-2 btn" type="button">Normal</button>
+<button class="mr-2 btn btn-large" type="button">Large</button></textarea>
+                <pre><code></code></pre>
               </div>
-              <div class="LiveCode-frame-content p-3"><button class="mr-2 btn btn-sm" type="button">Small</button>
-<button class="mr-2 btn" type="button">Normal</button>
-<button class="mr-2 btn btn-large" type="button">Large</button>
-</div>
-            </div>
-            <textarea live-code-source class="d-none"><button class="mr-2 btn btn-sm" type="button">Small</button>
-<button class="mr-2 btn" type="button">Normal</button>
-<button class="mr-2 btn btn-large" type="button">Large</button>
-</textarea>
-            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mr-2 btn btn-sm&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>Small<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mr-2 btn&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>Normal<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mr-2 btn btn-large&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>Large<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+            </form>
           </cinder-live-html>
           
 <h3>Block button</h3>
 <pre style="display: none!important;"></pre>
           <cinder-live-html class="Box LiveCode mb-2">
-            <div class="LiveCode-frame">
-              <div class="pt-2 px-2 d-flex flex-justify-end">
-                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+            <iframe class="LiveCode-frame" height="100"></iframe>
+            <form action="#0" class="LiveCode-source">
+              <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+              <div class="LiveCode-editor">
+                <textarea live-code-source><button class="btn btn-block" type="button">Block</button></textarea>
+                <pre><code></code></pre>
               </div>
-              <div class="LiveCode-frame-content p-3"><button class="btn btn-block" type="button">Block</button>
-</div>
-            </div>
-            <textarea live-code-source class="d-none"><button class="btn btn-block" type="button">Block</button>
-</textarea>
-            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-block&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>Block<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+            </form>
           </cinder-live-html>
           
 <h2>Button groups</h2>
 <pre style="display: none!important;"></pre>
           <cinder-live-html class="Box LiveCode mb-2">
-            <div class="LiveCode-frame">
-              <div class="pt-2 px-2 d-flex flex-justify-end">
-                <button class="btn" type="button" data-action="toggle_theme">Theme</button>
+            <iframe class="LiveCode-frame" height="100"></iframe>
+            <form action="#0" class="LiveCode-source">
+              <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+              <div class="LiveCode-editor">
+                <textarea live-code-source><div class="BtnGroup">
+  <button class="BtnGroup-item btn" type="button">Normal</button>
+  <button class="BtnGroup-item btn btn-outline" type="button">Outline</button>
+  <button class="BtnGroup-item btn btn-primary" type="button">Primary</button>
+  <button class="BtnGroup-item btn btn-success" type="button">Success</button>
+  <button class="BtnGroup-item btn btn-danger" type="button">Danger</button>
+</div></textarea>
+                <pre><code></code></pre>
               </div>
-              <div class="LiveCode-frame-content p-3"><div class="BtnGroup">
-  <button class="BtnGroup-item btn" type="button">Normal</button>
-  <button class="BtnGroup-item btn btn-outline" type="button">Outline</button>
-  <button class="BtnGroup-item btn btn-primary" type="button">Primary</button>
-  <button class="BtnGroup-item btn btn-success" type="button">Success</button>
-  <button class="BtnGroup-item btn btn-danger" type="button">Danger</button>
-</div>
-</div>
-            </div>
-            <textarea live-code-source class="d-none"><div class="BtnGroup">
-  <button class="BtnGroup-item btn" type="button">Normal</button>
-  <button class="BtnGroup-item btn btn-outline" type="button">Outline</button>
-  <button class="BtnGroup-item btn btn-primary" type="button">Primary</button>
-  <button class="BtnGroup-item btn btn-success" type="button">Success</button>
-  <button class="BtnGroup-item btn btn-danger" type="button">Danger</button>
-</div>
-</textarea>
-            <pre class="LiveCode-source hljs p-3"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;BtnGroup&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;BtnGroup-item btn&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>Normal<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;BtnGroup-item btn btn-outline&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>Outline<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;BtnGroup-item btn btn-primary&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;BtnGroup-item btn btn-success&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>Success<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;BtnGroup-item btn btn-danger&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>Danger<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button></code></pre>
+            </form>
           </cinder-live-html>
           
 
