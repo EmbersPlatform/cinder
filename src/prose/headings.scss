@@ -12,8 +12,18 @@
     font-weight: $font-weight-bold;
     line-height: $lh-condensed;
 
+    .octicon-link {
+      color: var(--color-text-primary);
+      vertical-align: middle;
+      visibility: hidden;
+    }
+
     &:hover .anchor {
       text-decoration: none;
+
+      .octicon-link {
+        visibility: visible;
+      }
     }
 
     tt,

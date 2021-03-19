@@ -18,9 +18,9 @@ Box elements include `Box-header`, `Box-body`, and `Box-footer`. These elements 
 ```html live
 <div class="Box">
   <div class="Box-header">
-    <div class="Box-title f3">
+    <h3 class="Box-title">
       Box title
-    </div>
+    </h3>
   </div>
   <div class="Box-body">
     Box body
