@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Subheads - Cinder CSS</title>
+  
+
+  <link rel="stylesheet" href="/cinder/dist/index.css">
+  <link rel="stylesheet" href="/cinder/assets/css/index.css">
+
+  <script type="module" src="/cinder/assets/js/index.js"></script>
+</head>
+
+<body>
+  <nav class="Header" style="position: sticky; top: 0;">
+    <h1 class="Header-item h3 mr-3">Cinder</h1>
+    <button class="Header-item  btn" theme-toggler>Toggle dark theme</button>
+  </nav>
+  <div class="d-flex flex-wrap">
+    <div class="p-2 col-12 col-md-4 col-lg-3 hide-md hide-sm">
+      <nav class="menu position-sticky" style="top: 72px;">
+        <a href="/cinder/" class="menu-item" >Home</a>
+    <div class="menu-heading">Components</div><a href="/cinder/components/box/" class="menu-item"
+        
+      >Box</a><a href="/cinder/components/buttons/" class="menu-item"
+        
+      >Buttons</a><a href="/cinder/components/navigation/" class="menu-item"
+        
+      >Navigation</a><a href="/cinder/components/subheads/" class="menu-item"
+         aria-current="page"
+      >Subheads</a>
+    <div class="menu-heading">Misc</div><a href="/cinder/misc/markdown_test/" class="menu-item"
+        
+      >Markdown test</a>
+    <div class="menu-heading">Utilities</div><a href="/cinder/utilities/margin/" class="menu-item"
+        
+      >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
+        
+      >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
+        
+      >Typography</a>
+      </nav>
+    </div>
+    <div class="col-12 col-md-8 col-lg-6 flex-1 p-4 container-lg">
+      <nav class="menu d-md-none">
+        <a href="/cinder/" class="menu-item" >Home</a>
+    <div class="menu-heading">Components</div><a href="/cinder/components/box/" class="menu-item"
+        
+      >Box</a><a href="/cinder/components/buttons/" class="menu-item"
+        
+      >Buttons</a><a href="/cinder/components/navigation/" class="menu-item"
+        
+      >Navigation</a><a href="/cinder/components/subheads/" class="menu-item"
+         aria-current="page"
+      >Subheads</a>
+    <div class="menu-heading">Misc</div><a href="/cinder/misc/markdown_test/" class="menu-item"
+        
+      >Markdown test</a>
+    <div class="menu-heading">Utilities</div><a href="/cinder/utilities/margin/" class="menu-item"
+        
+      >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
+        
+      >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
+        
+      >Typography</a>
+      </nav>
+      <div class="Prose">
+  <h1>Subheads</h1>
+  <p>The basic Subhead consists of a <code>.Subhead</code> container, which has a light gray bottom border. Use <code>.Subhead-heading</code> for the heading itself. It's an <code>&lt;h2&gt;</code> sized heading with normal font-weight.</p>
+<p>Use a heading element whenever possible as they can be used as navigation for assistive technologies, and avoid skipping levels.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source><div class="Subhead">
+  <div class="Subhead-heading">Plain subhead</div>
+</div></textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<p>To add a top margin to the Subhead, use <code>.Subhead--spacious</code>. This is useful for separating sections on a settings page.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source><div class="Subhead Subhead--spacious">
+  <div class="Subhead-heading">Spacious subhead</div>
+</div></textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<p>You can add a one line description to the subhead with <code>.Subhead-description</code>.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source><div class="Subhead">
+  <div class="Subhead-heading">Subhead with description</div>
+  <div class="Subhead-description">The subhead is a subdued header style with a light bottom border.</div>
+</div></textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<p>For longer descriptions, it is recommended that you use a paragraph below the Subhead.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source><div class="Subhead">
+  <div class="Subhead-heading">Plain subhead</div>
+</div>
+<p>
+  This is a longer description that is sitting below the Subheader. It's much longer than a description that could sit comfortably in the Subhead. It might even have <strong>bold</strong> text. <a href="#">Click to learn more.</a>
+</p></textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<p>You can add a button or something to the right of <code>.Subhead-heading</code> with the <code>.Subhead-actions</code> element.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source><div class="Subhead">
+  <div class="Subhead-heading">Subhead with button</div>
+  <div class="Subhead-actions"><a href="#url" class="btn btn-sm btn-primary" role="button">Action</a></div>
+</div>
+
+<div class="Subhead Subhead--spacious">
+  <div class="Subhead-heading">Subhead with link</div>
+  <div class="Subhead-actions"><a href="#url">Learn more</a></div>
+</div></textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<p>Use all the elements together to create a Subhead with actions and a description.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source><div class="Subhead">
+  <div class="Subhead-heading">Subhead with actions and description</div>
+  <div class="Subhead-actions"><a href="#url" class="btn btn-sm btn-primary" role="button">Action</a></div>
+  <div class="Subhead-description">The subhead is a subdued header style with a light bottom border.</div>
+</div></textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<p>Use the <code>.Subhead-heading--danger</code> modifier to make the text bold and red. This is useful for warning users.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">Copy</button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source><div class="Subhead">
+  <div class="Subhead-heading Subhead-heading--danger">Danger zone</div>
+</div></textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+
+</div>
+    </div>
+  </div>
+</body>
+
+</html>
