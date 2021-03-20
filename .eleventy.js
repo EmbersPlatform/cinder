@@ -3,6 +3,8 @@ const hljs = require('highlight.js');
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
+
+  eleventyConfig.addFilter('sortBy', sortBy);
   
   const markdown = md({
     html: true,
@@ -68,4 +70,8 @@ function highlighter(str, lang, attrs) {
    */
 
   return highlight(str, lang);
+}
+
+function sortBy(values, attr) {
+  return values.slice().sort((a, b) => a.data[attr].localeCompare(b.data[attr]))
 }

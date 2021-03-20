@@ -3,7 +3,7 @@
 {%- for collectionName, collection in collections -%}
   {% if collectionName !== "all" %}
     <div class="menu-heading">{{ collectionName | capitalize }}</div>
-    {%- for entry in collection -%}
+    {%- for entry in collection | sortBy("title") -%}
       <a href="{{ entry.url | url }}" class="menu-item"
         {% if entry.url == page.url %} aria-current="page"{% endif %}
       >{{ entry.data.title }}</a>

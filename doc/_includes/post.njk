@@ -2,9 +2,11 @@
 layout: base
 ---
 <div class="d-flex flex-wrap">
-  <div class="Prose flex-1 col-12 col-md-8">
+  <section class="Prose flex-1 col-12 col-md-8">
     <h1>{{ title }}</h1>
     {{ content | safe }}
-  </div>
-  <div class="col-4 p-3 hide-sm hide-md hide-lg">a</div>
+  </section>
+  <aside class="col-4 p-3 hide-sm hide-md hide-lg">
+    Contents
+  </aside>
 </div>

@@ -108,6 +108,8 @@
       white-85: $white-fade-8,
     ),
 
+    // Components
+
     alert: (
       info: (
         text: $gray-9,
@@ -266,10 +268,70 @@
       counter-bg: rgba($black, 0.08), // Darken for just a tad more contrast against the button background
     ),
 
+    counter: (
+      text: $gray-9,
+      bg: rgba($gray-3, 0.5),
+
+      primary: (
+        text: $white,
+        bg: $gray-5,
+      ),
+
+      secondary: (
+        text: $gray-5,
+      ),
+    ),
+
+    dropdown: (
+      shadow: 0 8px 24px rgba($gray-4, 0.2),
+    ),
+
+    label: (
+      border: $gray-2,
+
+      primary: (
+        text: $gray-9,
+        border: $gray-5,
+      ),
+
+      secondary: (
+        text: $gray-6,
+        border: $gray-2,
+      ),
+
+      info: (
+        text: $blue-5,
+        border: $blue-5,
+      ),
+
+      success: (
+        text: $green-6,
+        border: $green-5,
+      ),
+
+      warning: (
+        text: $yellow-9,
+        border: $yellow-8,
+      ),
+
+      danger: (
+        text: $red-5,
+        border: $red-6,
+      ),
+    ),
+
     header: (
       text: $white,
       bg: $orange-5,
       logo: $gray-0,
+    ),
+
+    avatar: (
+      bg: $white,
+      border: transparent,
+      stack-fade: $gray-3,
+      stack-fade-more: $gray-2,
+      child-shadow: -2px -2px 0 rgba($white, 0.8),
     ),
 
     menu: (

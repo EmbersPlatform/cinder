@@ -110,6 +110,8 @@
       white-85: $white-fade-8,
     ),
 
+    // Components
+
     alert: (
       info: (
         text: $blue-2,
@@ -265,6 +267,66 @@
       counter-bg: $gray-6,
     ),
 
+    counter: (
+      text: $gray-1,
+      bg: $gray-5,
+
+      primary: (
+        text: $gray-1,
+        bg: $gray-4,
+      ),
+
+      secondary: (
+        text: $gray-3,
+      ),
+    ),
+
+    dropdown: (
+      shadow: 0 16px 32px $black-fade-85,
+    ),
+
+    label: (
+      border: $gray-5,
+
+      primary: (
+        text: $gray-2,
+        border: $gray-4,
+      ),
+
+      secondary: (
+        text: $gray-3,
+        border: $gray-6,
+      ),
+
+      info: (
+        text: $blue-4,
+        border: rgba($blue-4, 0.4),
+      ),
+
+      success: (
+        text: $green-3,
+        border: rgba($green-4, 0.4),
+      ),
+
+      warning: (
+        text: $yellow-2,
+        border: rgba(#F2D35B, 0.4),
+      ),
+
+      danger: (
+        text: $red-4,
+        border: rgba($red-4, 0.4),
+      ),
+    ),
+
+    avatar: (
+      bg: $white-fade-1,
+      border: $white-fade-1,
+      stack-fade: $gray-6,
+      stack-fade-more: $gray-7,
+      child-shadow: -2px -2px 0 $gray-9,
+    ),
+
     header: (
       text: $white-fade-7,
       bg: $gray-8,
@@ -281,8 +343,8 @@
       blue-border: $blue-7,
       row-yellow-bg: rgba(#EBC440, 0.1),
       row-blue-bg: rgba($blue-2, 0.1),
-      header-blue-bg: $gray-9,
-      header-blue-border: $gray-6,
+      header-blue-bg: rgba($blue-4, 0.1),
+      header-blue-border: $blue-7,
       border-info: rgba($blue-4, 0.4),
       bg-info: rgba($blue-4, 0.1),
       border-warning: rgba($yellow-4, 0.4),
