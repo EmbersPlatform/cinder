@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Avatars - Cinder CSS</title>
+  
+
+  <link rel="stylesheet" href="/cinder/dist/index.css">
+  <link rel="stylesheet" href="/cinder/assets/css/index.css">
+
+  <script>
+  window.toggler_icons = {
+    light: `<svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display: inline-block; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z"></path></svg>`,
+    dark: `<svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display: inline-block; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z"></path></svg>`
+  }
+
+  const theme = localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ? "dark"
+      : "light"
+
+  document.documentElement.dataset.colorMode = theme;
+  </script>
+  <script type="module" src="/cinder/assets/js/index.js"></script>
+</head>
+
+<body>
+  <nav class="Header" style="position: sticky; top: 0;">
+    <h1 class="Header-item h3 mr-3">Cinder</h1>
+    <button class="Header-item  btn" id="color-mode-toggler">Toggle dark theme</button>
+    <script>
+    document.getElementById("color-mode-toggler").innerHTML = toggler_icons[theme];
+    </script>
+  </nav>
+  <div class="d-flex flex-wrap">
+    <div class="p-2 col-12 col-md-3 col-lg-3 hide-md hide-sm" style="max-width: 260px;">
+      <nav class="menu">
+        <a href="/cinder/" class="menu-item" >Home</a>
+    <div class="menu-heading">Components</div><a href="/cinder/components/alerts/" class="menu-item"
+        
+      >Alerts</a><a href="/cinder/components/avatars/" class="menu-item"
+         aria-current="page"
+      >Avatars</a><a href="/cinder/components/box/" class="menu-item"
+        
+      >Box</a><a href="/cinder/components/buttons/" class="menu-item"
+        
+      >Buttons</a><a href="/cinder/components/dropdown/" class="menu-item"
+        
+      >Dropdown</a><a href="/cinder/components/forms/" class="menu-item"
+        
+      >Forms</a><a href="/cinder/components/labels/" class="menu-item"
+        
+      >Labels</a><a href="/cinder/components/navigation/" class="menu-item"
+        
+      >Navigation</a><a href="/cinder/components/select-menu/" class="menu-item"
+        
+      >Select menu</a><a href="/cinder/components/subheads/" class="menu-item"
+        
+      >Subheads</a>
+    <div class="menu-heading">Misc</div><a href="/cinder/misc/markdown_test/" class="menu-item"
+        
+      >Markdown test</a>
+    <div class="menu-heading">Utilities</div><a href="/cinder/utilities/details/" class="menu-item"
+        
+      >Details</a><a href="/cinder/utilities/margin/" class="menu-item"
+        
+      >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
+        
+      >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
+        
+      >Typography</a>
+      </nav>
+    </div>
+    <div class="col-12 col-md-9 col-lg-9 flex-1 p-4 container-lg">
+      <nav class="menu d-md-none">
+        <a href="/cinder/" class="menu-item" >Home</a>
+    <div class="menu-heading">Components</div><a href="/cinder/components/alerts/" class="menu-item"
+        
+      >Alerts</a><a href="/cinder/components/avatars/" class="menu-item"
+         aria-current="page"
+      >Avatars</a><a href="/cinder/components/box/" class="menu-item"
+        
+      >Box</a><a href="/cinder/components/buttons/" class="menu-item"
+        
+      >Buttons</a><a href="/cinder/components/dropdown/" class="menu-item"
+        
+      >Dropdown</a><a href="/cinder/components/forms/" class="menu-item"
+        
+      >Forms</a><a href="/cinder/components/labels/" class="menu-item"
+        
+      >Labels</a><a href="/cinder/components/navigation/" class="menu-item"
+        
+      >Navigation</a><a href="/cinder/components/select-menu/" class="menu-item"
+        
+      >Select menu</a><a href="/cinder/components/subheads/" class="menu-item"
+        
+      >Subheads</a>
+    <div class="menu-heading">Misc</div><a href="/cinder/misc/markdown_test/" class="menu-item"
+        
+      >Markdown test</a>
+    <div class="menu-heading">Utilities</div><a href="/cinder/utilities/details/" class="menu-item"
+        
+      >Details</a><a href="/cinder/utilities/margin/" class="menu-item"
+        
+      >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
+        
+      >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
+        
+      >Typography</a>
+      </nav>
+      <div class="d-flex flex-wrap">
+  <section class="Prose flex-1 col-12 col-md-8">
+    <h1>Avatars</h1>
+    <p>Avatars are images that users can set as their profile picture. They can be custom photos, uploaded by users, or generated as Identicons as a placeholder.</p>
+<h2 id="basic-example"><a class="anchor" href="#basic-example"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Basic example</h2>
+<p>Add <code>.avatar</code> to any <code>&lt;img&gt;</code> element to make it an avatar. This resets some key styles for alignment, address a Firefox image placeholder bug, and rounds the corners.</p>
+<p>Be sure to set <code>width</code> and <code>height</code> attributes for maximum browser performance.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;img class=&quot;avatar&quot; alt=&quot;jonrohan&quot; src=&quot;https://github.com/jonrohan.png?v=3&amp;s=96&quot; width=&quot;48&quot; height=&quot;48&quot; /&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h3 id="small-avatars"><a class="anchor" href="#small-avatars"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Small avatars</h3>
+<p>We occasionally use smaller avatars. Anything less than <code>24px</code> wide should include the <code>.avatar-small</code> modifier class to reset the <code>border-radius</code> to a more appropriate level.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;img class=&quot;avatar avatar-small&quot; alt=&quot;jonrohan&quot; src=&quot;https://github.com/jonrohan.png?v=3&amp;s=40&quot; width=&quot;20&quot; height=&quot;20&quot; /&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h3 id="avatar-sizes"><a class="anchor" href="#avatar-sizes"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Avatar sizes</h3>
+<p>Instead of using the <code>width</code> and <code>height</code> attribute, you can also use a class like <code>.avatar-[1-8]</code>. The sizes go from <code>16px</code> up to <code>64px</code>. Note: Avatar stacks are only supported for the <code>20px</code> avatar size.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;img class=&quot;avatar avatar-1 mr-2&quot; alt=&quot;jonrohan&quot; src=&quot;https://github.com/jonrohan.png?v=3&amp;s=32&quot; /&gt;
+&lt;img class=&quot;avatar avatar-2 mr-2&quot; alt=&quot;jonrohan&quot; src=&quot;https://github.com/jonrohan.png?v=3&amp;s=40&quot; /&gt;
+&lt;img class=&quot;avatar avatar-3 mr-2&quot; alt=&quot;jonrohan&quot; src=&quot;https://github.com/jonrohan.png?v=3&amp;s=48&quot; /&gt;
+&lt;img class=&quot;avatar avatar-4 mr-2&quot; alt=&quot;jonrohan&quot; src=&quot;https://github.com/jonrohan.png?v=3&amp;s=56&quot; /&gt;
+&lt;img class=&quot;avatar avatar-5 mr-2&quot; alt=&quot;jonrohan&quot; src=&quot;https://github.com/jonrohan.png?v=3&amp;s=64&quot; /&gt;
+&lt;img class=&quot;avatar avatar-6 mr-2&quot; alt=&quot;jonrohan&quot; src=&quot;https://github.com/jonrohan.png?v=3&amp;s=80&quot; /&gt;
+&lt;img class=&quot;avatar avatar-7 mr-2&quot; alt=&quot;jonrohan&quot; src=&quot;https://github.com/jonrohan.png?v=3&amp;s=96&quot; /&gt;
+&lt;img class=&quot;avatar avatar-8 mr-2&quot; alt=&quot;jonrohan&quot; src=&quot;https://github.com/jonrohan.png?v=3&amp;s=128&quot; /&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h3 id="parent-child-avatars"><a class="anchor" href="#parent-child-avatars"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Parent-child avatars</h3>
+<p>When you need a larger parent avatar, and a smaller child one, overlaid slightly, use the parent-child classes.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;div class=&quot;avatar-parent-child d-inline-flex&quot;&gt;
+  &lt;img class=&quot;avatar&quot; alt=&quot;jonrohan&quot; src=&quot;https://github.com/jonrohan.png?v=3&amp;s=96&quot; width=&quot;48&quot; height=&quot;48&quot; /&gt;
+  &lt;img class=&quot;avatar avatar-child&quot; alt=&quot;josh&quot; src=&quot;https://github.com/josh.png?v=3&amp;s=40&quot; width=&quot;20&quot; height=&quot;20&quot; /&gt;
+&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h3 id="avatar-stack"><a class="anchor" href="#avatar-stack"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Avatar stack</h3>
+<p>Stacked avatars can be used to show multiple collaborators or participants when there is limited space available. When you hover over the stack, the avatars will reveal themselves.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;div class=&quot;AvatarStack AvatarStack--three-plus&quot;&gt;
+  &lt;div
+    class=&quot;AvatarStack-body tooltipped tooltipped-se tooltipped-align-left-1&quot;
+    aria-label=&quot;octocat, octocat, and octocat&quot;
+  &gt;
+    &lt;img
+      class=&quot;avatar&quot;
+      height=&quot;20&quot;
+      alt=&quot;@octocat&quot;
+      src=&quot;https://user-images.githubusercontent.com/334891/29999089-2837c968-9009-11e7-92c1-6a7540a594d5.png&quot;
+      width=&quot;20&quot;
+    /&gt;
+    &lt;img
+      class=&quot;avatar&quot;
+      height=&quot;20&quot;
+      alt=&quot;@octocat&quot;
+      src=&quot;https://user-images.githubusercontent.com/334891/29999089-2837c968-9009-11e7-92c1-6a7540a594d5.png&quot;
+      width=&quot;20&quot;
+    /&gt;
+    &lt;img
+      class=&quot;avatar&quot;
+      height=&quot;20&quot;
+      alt=&quot;@octocat&quot;
+      src=&quot;https://user-images.githubusercontent.com/334891/29999089-2837c968-9009-11e7-92c1-6a7540a594d5.png&quot;
+      width=&quot;20&quot;
+    /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<p>Based on the number of avatars in the stack, add these modifier classes:</p>
+<ul>
+<li><code>AvatarStack--two</code> for 2 avatars.</li>
+<li><code>AvatarStack--three-plus</code> for 3 or more avatars.</li>
+</ul>
+<p>If you have more than three avatars, add a div with the classes <code>avatar avatar-more</code> as the third avatar in the stack, as such:</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;div class=&quot;AvatarStack AvatarStack--three-plus&quot;&gt;
+  &lt;div
+    class=&quot;AvatarStack-body tooltipped tooltipped-se tooltipped-align-left-1&quot;
+    aria-label=&quot;octocat, octocat, octocat, octocat, and octocat&quot;
+  &gt;
+    &lt;img
+      class=&quot;avatar&quot;
+      height=&quot;20&quot;
+      alt=&quot;@octocat&quot;
+      src=&quot;https://user-images.githubusercontent.com/334891/29999089-2837c968-9009-11e7-92c1-6a7540a594d5.png&quot;
+      width=&quot;20&quot;
+    /&gt;
+    &lt;img
+      class=&quot;avatar&quot;
+      height=&quot;20&quot;
+      alt=&quot;@octocat&quot;
+      src=&quot;https://user-images.githubusercontent.com/334891/29999089-2837c968-9009-11e7-92c1-6a7540a594d5.png&quot;
+      width=&quot;20&quot;
+    /&gt;
+    &lt;div class=&quot;avatar avatar-more&quot;&gt;&lt;/div&gt;
+    &lt;img
+      class=&quot;avatar&quot;
+      height=&quot;20&quot;
+      alt=&quot;@octocat&quot;
+      src=&quot;https://user-images.githubusercontent.com/334891/29999089-2837c968-9009-11e7-92c1-6a7540a594d5.png&quot;
+      width=&quot;20&quot;
+    /&gt;
+    &lt;img
+      class=&quot;avatar&quot;
+      height=&quot;20&quot;
+      alt=&quot;@octocat&quot;
+      src=&quot;https://user-images.githubusercontent.com/334891/29999089-2837c968-9009-11e7-92c1-6a7540a594d5.png&quot;
+      width=&quot;20&quot;
+    /&gt;
+    &lt;img
+      class=&quot;avatar&quot;
+      height=&quot;20&quot;
+      alt=&quot;@octocat&quot;
+      src=&quot;https://user-images.githubusercontent.com/334891/29999089-2837c968-9009-11e7-92c1-6a7540a594d5.png&quot;
+      width=&quot;20&quot;
+    /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<p>You can also link individual avatars. To do this shift the <code>avatar</code> class over to the anchor:</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;div class=&quot;AvatarStack AvatarStack--two&quot;&gt;
+  &lt;div class=&quot;AvatarStack-body tooltipped tooltipped-se tooltipped-align-left-1&quot; aria-label=&quot;octocat and octocat&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;avatar&quot;&gt;
+      &lt;img
+        height=&quot;20&quot;
+        alt=&quot;@octocat&quot;
+        src=&quot;https://user-images.githubusercontent.com/334891/29999089-2837c968-9009-11e7-92c1-6a7540a594d5.png&quot;
+        width=&quot;20&quot;
+      /&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;avatar&quot;&gt;
+      &lt;img
+        height=&quot;20&quot;
+        alt=&quot;@octocat&quot;
+        src=&quot;https://user-images.githubusercontent.com/334891/29999089-2837c968-9009-11e7-92c1-6a7540a594d5.png&quot;
+        width=&quot;20&quot;
+      /&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<p>Use <code>AvatarStack--right</code> to right-align the avatar stack. Remember to switch the alignment of tooltips when making this change.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;div class=&quot;AvatarStack AvatarStack--three-plus AvatarStack--right&quot;&gt;
+  &lt;div
+    class=&quot;AvatarStack-body tooltipped tooltipped-sw tooltipped-align-right-1&quot;
+    aria-label=&quot;octocat, octocat, and octocat&quot;
+  &gt;
+    &lt;img
+      class=&quot;avatar&quot;
+      height=&quot;20&quot;
+      alt=&quot;@octocat&quot;
+      src=&quot;https://user-images.githubusercontent.com/334891/29999089-2837c968-9009-11e7-92c1-6a7540a594d5.png&quot;
+      width=&quot;20&quot;
+    /&gt;
+    &lt;img
+      class=&quot;avatar&quot;
+      height=&quot;20&quot;
+      alt=&quot;@octocat&quot;
+      src=&quot;https://user-images.githubusercontent.com/334891/29999089-2837c968-9009-11e7-92c1-6a7540a594d5.png&quot;
+      width=&quot;20&quot;
+    /&gt;
+    &lt;img
+      class=&quot;avatar&quot;
+      height=&quot;20&quot;
+      alt=&quot;@octocat&quot;
+      src=&quot;https://user-images.githubusercontent.com/334891/29999089-2837c968-9009-11e7-92c1-6a7540a594d5.png&quot;
+      width=&quot;20&quot;
+    /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="circle-badge"><a class="anchor" href="#circle-badge"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Circle badge</h2>
+<p><code>.CircleBadge</code> allows for the display of badge-like icons or logos. They are used mostly with svgicons or partner integration icons.</p>
+<p><code>.CircleBadge</code> should have an <code>aria-label</code>, <code>title</code> (for a link), or an <code>alt</code> (for child <code>img</code> elements) attribute specified if there is no text-based alternative to describe it. If there is a text-based alternative or the icon has no semantic value, <code>aria-hidden=&quot;true&quot;</code> or an empty <code>alt</code> attribute may be used.</p>
+<h3 id="small"><a class="anchor" href="#small"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Small</h3>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;a class=&quot;CircleBadge CircleBadge--small float-left mr-2&quot; href=&quot;#small&quot;&gt;
+  &lt;img src=&quot;https://github.com/travis-ci.png&quot;  class=&quot;CircleBadge-icon&quot; alt=&quot;&quot;&gt;
+&lt;/a&gt;
+&lt;a class=&quot;CircleBadge CircleBadge--small bg-yellow&quot; href=&quot;#small&quot;&gt;
+  &lt;!-- &lt;%= svgicon &quot;zap&quot;,  class: &quot;CircleBadge-icon text-white&quot; %&gt; --&gt;
+  &lt;svg class=&quot;CircleBadge-icon text-white svgicon svgicon-zap&quot; viewBox=&quot;0 0 10 16&quot; version=&quot;1.1&quot; width=&quot;10&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10 7H6l3-7-9 9h4l-3 7 9-9z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+&lt;/a&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h3 id="medium"><a class="anchor" href="#medium"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Medium</h3>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;div class=&quot;CircleBadge CircleBadge--medium bg-gray-dark&quot;&gt;
+  &lt;img src=&quot;https://github.com/travis-ci.png&quot; alt=&quot;Travis CI&quot; class=&quot;CircleBadge-icon&quot; /&gt;
+&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h3 id="large"><a class="anchor" href="#large"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Large</h3>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;div class=&quot;CircleBadge CircleBadge--large&quot;&gt;
+  &lt;img src=&quot;https://github.com/travis-ci.png&quot; alt=&quot;Travis CI&quot; class=&quot;CircleBadge-icon&quot; /&gt;
+&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h3 id="dashed-connection"><a class="anchor" href="#dashed-connection"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Dashed connection</h3>
+<p>For specific cases where two badges or more need to be shown as related or connected (such as integrations or specific product workflows), a <code>DashedConnection</code> class was created. Use utility classes to ensure badges are spaced correctly.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;div class=&quot;DashedConnection&quot;&gt;
+  &lt;ul class=&quot;d-flex list-style-none flex-justify-between&quot; aria-label=&quot;A sample GitHub workflow&quot;&gt;
+    &lt;li class=&quot;CircleBadge CircleBadge--small&quot; aria-label=&quot;GitHub&quot;&gt;
+      &lt;!-- &lt;%= svgicon &quot;mark-github&quot;, class: &quot;width-full height-full&quot; %&gt; --&gt;
+      &lt;svg class=&quot;svgicon svgicon-mark-github width-full height-full&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/li&gt;
+
+    &lt;li class=&quot;CircleBadge CircleBadge--small&quot; aria-label=&quot;Slack&quot;&gt;
+        &lt;img src=&quot;https://github.com/slackhq.png&quot;  alt=&quot;&quot; class=&quot;CircleBadge-icon&quot;&gt;
+    &lt;/li&gt;
+
+    &lt;li class=&quot;CircleBadge CircleBadge--small&quot; aria-label=&quot;Travis CI&quot;&gt;
+        &lt;img src=&quot;https://github.com/travis-ci.png&quot;  alt=&quot;&quot; class=&quot;CircleBadge-icon&quot;&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+
+  </section>
+  <aside class="col-4 p-3 hide-sm hide-md hide-lg">
+    Contents
+  </aside>
+</div>
+    </div>
+  </div>
+</body>
+</html>

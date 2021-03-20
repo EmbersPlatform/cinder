@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Typography - Cinder CSS</title>
+  <title>Dropdown - Cinder CSS</title>
   
 
   <link rel="stylesheet" href="/cinder/dist/index.css">
@@ -48,7 +48,7 @@
       >Box</a><a href="/cinder/components/buttons/" class="menu-item"
         
       >Buttons</a><a href="/cinder/components/dropdown/" class="menu-item"
-        
+         aria-current="page"
       >Dropdown</a><a href="/cinder/components/forms/" class="menu-item"
         
       >Forms</a><a href="/cinder/components/labels/" class="menu-item"
@@ -70,7 +70,7 @@
       >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
         
       >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
-         aria-current="page"
+        
       >Typography</a>
       </nav>
     </div>
@@ -86,7 +86,7 @@
       >Box</a><a href="/cinder/components/buttons/" class="menu-item"
         
       >Buttons</a><a href="/cinder/components/dropdown/" class="menu-item"
-        
+         aria-current="page"
       >Dropdown</a><a href="/cinder/components/forms/" class="menu-item"
         
       >Forms</a><a href="/cinder/components/labels/" class="menu-item"
@@ -108,85 +108,16 @@
       >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
         
       >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
-         aria-current="page"
+        
       >Typography</a>
       </nav>
       <div class="d-flex flex-wrap">
   <section class="Prose flex-1 col-12 col-md-8">
-    <h1>Typography</h1>
-    <p>Type utilities are designed to work in combination with line-height utilities so as to result in more sensible numbers wherever possible.</p>
-<p>Font sizes are smaller on mobile and scale up at the <code>md</code> breakpoint to be larger on desktop.</p>
-<table>
-<thead>
-<tr>
-<th>Scale</th>
-<th>Font size: mobile</th>
-<th>Font size: desktop</th>
-<th>1.25 line height</th>
-<th>1.5 line height</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>00</td>
-<td>40px</td>
-<td>48px</td>
-<td>60</td>
-<td>72</td>
-</tr>
-<tr>
-<td>0</td>
-<td>32px</td>
-<td>40px</td>
-<td>50</td>
-<td>60</td>
-</tr>
-<tr>
-<td>1</td>
-<td>26px</td>
-<td>32px</td>
-<td>40</td>
-<td>48</td>
-</tr>
-<tr>
-<td>2</td>
-<td>22px</td>
-<td>24px</td>
-<td>30</td>
-<td>36</td>
-</tr>
-<tr>
-<td>3</td>
-<td>18px</td>
-<td>20px</td>
-<td>25</td>
-<td>30</td>
-</tr>
-<tr>
-<td>4</td>
-<td>16px</td>
-<td>16px</td>
-<td>20</td>
-<td>24</td>
-</tr>
-<tr>
-<td>5</td>
-<td>14px</td>
-<td>14px</td>
-<td>17.5</td>
-<td>21</td>
-</tr>
-<tr>
-<td>6</td>
-<td>12px</td>
-<td>12px</td>
-<td>15</td>
-<td>18</td>
-</tr>
-</tbody>
-</table>
-<h2 id="heading-utilities"><a class="anchor" href="#heading-utilities"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Heading utilities</h2>
-<p>Use <code>.h1</code> – <code>.h6</code> to change an elements font size and weight to match our heading styles.</p>
+    <h1>Dropdown</h1>
+    <p>Dropdowns are lightweight context menus for housing navigation and actions. They're great for instances where you don't need the full power (and code) of the select menu.</p>
+<h2 id="basic-examples"><a class="anchor" href="#basic-examples"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Basic examples</h2>
+<p>Dropdowns should be triggered by a <code>&lt;button&gt;</code>. <strong><a href="#alignment">Each dropdown menu requires a directional class</a></strong>, much like our tooltips.</p>
+<p>Using a button:</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
@@ -195,18 +126,26 @@
             <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
           </button>
           <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;p class=&quot;h1&quot;&gt;Pizza 1&lt;/p&gt;
-&lt;p class=&quot;h2&quot;&gt;Pizza 2&lt;/p&gt;
-&lt;p class=&quot;h3&quot;&gt;Pizza 3&lt;/p&gt;
-&lt;p class=&quot;h4&quot;&gt;Pizza 4&lt;/p&gt;
-&lt;p class=&quot;h5&quot;&gt;Pizza 5&lt;/p&gt;
-&lt;p class=&quot;h6&quot;&gt;Pizza 6&lt;/p&gt;</textarea>
+            <textarea live-code-source>&lt;div style=&quot;margin-bottom: 100px&quot;&gt;
+  &lt;details class=&quot;dropdown details-reset details-overlay d-inline-block&quot;&gt;
+    &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+      Dropdown
+      &lt;div class=&quot;dropdown-caret&quot;&gt;&lt;/div&gt;
+    &lt;/summary&gt;
+
+    &lt;ul class=&quot;dropdown-menu dropdown-menu-se&quot;&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/details&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<p>These are particularly useful for changing the visual appearance while keeping the markup semantically correct. Be sure you keep the hierarchy appropriate for the page.</p>
+<p>Using a button customized with additional utilities:</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
@@ -215,14 +154,28 @@
             <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
           </button>
           <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;h2 class=&quot;h1&quot;&gt;Looks like a heading 1, semantically a heading 2&lt;/h2&gt;</textarea>
+            <textarea live-code-source>&lt;div style=&quot;margin-bottom: 100px&quot;&gt;
+  &lt;details class=&quot;dropdown details-reset details-overlay d-inline-block&quot;&gt;
+    &lt;summary class=&quot;text-gray p-2 d-inline&quot; aria-haspopup=&quot;true&quot;&gt;
+      Dropdown
+      &lt;div class=&quot;dropdown-caret&quot;&gt;&lt;/div&gt;
+    &lt;/summary&gt;
+
+    &lt;ul class=&quot;dropdown-menu dropdown-menu-se&quot;&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/details&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h2 id="type-scale-utilities"><a class="anchor" href="#type-scale-utilities"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Type scale utilities</h2>
-<p>Use <code>.f1</code> – <code>.f6</code> to change an elements font size while keeping inline with our type scale.</p>
+<h2 id="options"><a class="anchor" href="#options"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Options</h2>
+<h3 id="alignment"><a class="anchor" href="#alignment"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Alignment</h3>
+<p>Align the direction of dropdown menus and their arrows with modifier classes.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
@@ -231,18 +184,25 @@
             <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
           </button>
           <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;p class=&quot;f1&quot;&gt;Focaccia&lt;/p&gt;
-&lt;p class=&quot;f2&quot;&gt;Focaccia&lt;/p&gt;
-&lt;p class=&quot;f3&quot;&gt;Focaccia&lt;/p&gt;
-&lt;p class=&quot;f4&quot;&gt;Focaccia&lt;/p&gt;
-&lt;p class=&quot;f5&quot;&gt;Focaccia&lt;/p&gt;
-&lt;p class=&quot;f6&quot;&gt;Focaccia&lt;/p&gt;</textarea>
+            <textarea live-code-source>&lt;div style=&quot;margin-top: 100px&quot;&gt;
+  &lt;details class=&quot;dropdown details-reset details-overlay d-inline-block&quot;&gt;
+    &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+      .dropdown-ne
+      &lt;div class=&quot;dropdown-caret&quot;&gt;&lt;/div&gt;
+    &lt;/summary&gt;
+
+    &lt;ul class=&quot;dropdown-menu dropdown-menu-ne&quot;&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/details&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<p>Lighter font-weight utilities are available in a limited range. Lighter font-weights reduce the legibility of text, particularly at small font sizes, so the scale only goes down to <code>f3</code> at 20px. The larger sizes <code>f0</code> and <code>f00</code> allow for lighter and larger type that is in keeping with our marketing styles.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
@@ -251,18 +211,25 @@
             <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
           </button>
           <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;h1 class=&quot;f00-light&quot;&gt;Potato chips&lt;/h1&gt;
-&lt;h1 class=&quot;f0-light&quot;&gt;Potato chips&lt;/h1&gt;
-&lt;h1 class=&quot;f1-light&quot;&gt;Potato chips&lt;/h1&gt;
-&lt;h1 class=&quot;f2-light&quot;&gt;Potato chips&lt;/h1&gt;
-&lt;h1 class=&quot;f3-light&quot;&gt;Potato chips&lt;/h1&gt;</textarea>
+            <textarea live-code-source>&lt;div style=&quot;margin-bottom: 100px&quot;&gt;
+  &lt;details class=&quot;dropdown details-reset details-overlay d-inline-block&quot;&gt;
+    &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+      .dropdown-e
+      &lt;div class=&quot;dropdown-caret&quot;&gt;&lt;/div&gt;
+    &lt;/summary&gt;
+
+    &lt;ul class=&quot;dropdown-menu dropdown-menu-e&quot;&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/details&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h2 id="line-height-styles"><a class="anchor" href="#line-height-styles"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Line height styles</h2>
-<p>Change the line height density with these utilities. Responsive variants are also available (e.g. <code>.lh-sm-condensed</code>).</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
@@ -271,23 +238,25 @@
             <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
           </button>
           <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;p class=&quot;lh-default&quot;&gt;
-  Bacon ipsum dolor amet tri-tip chicken kielbasa, cow swine beef corned beef ground round prosciutto hamburger porchetta sausage alcatra tail. Jowl chuck biltong flank meatball, beef short ribs. Jowl tenderloin ground round, short loin tri-tip ribeye picanha filet mignon pig chicken kielbasa t-bone fatback. Beef ribs meatball chicken corned beef salami.
-&lt;/p&gt;
-&lt;p class=&quot;lh-condensed&quot;&gt;
-  Bacon ipsum dolor amet tri-tip chicken kielbasa, cow swine beef corned beef ground round prosciutto hamburger porchetta sausage alcatra tail. Jowl chuck biltong flank meatball, beef short ribs. Jowl tenderloin ground round, short loin tri-tip ribeye picanha filet mignon pig chicken kielbasa t-bone fatback. Beef ribs meatball chicken corned beef salami.
-&lt;/p&gt;
-&lt;p class=&quot;lh-condensed-ultra&quot;&gt;
-  Bacon ipsum dolor amet tri-tip chicken kielbasa, cow swine beef corned beef ground round prosciutto hamburger porchetta sausage alcatra tail. Jowl chuck biltong flank meatball, beef short ribs. Jowl tenderloin ground round, short loin tri-tip ribeye picanha filet mignon pig chicken kielbasa t-bone fatback. Beef ribs meatball chicken corned beef salami.
-&lt;/p&gt;</textarea>
+            <textarea live-code-source>&lt;div style=&quot;margin-bottom: 100px&quot;&gt;
+  &lt;details class=&quot;dropdown details-reset details-overlay d-inline-block&quot;&gt;
+    &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+      .dropdown-se
+      &lt;div class=&quot;dropdown-caret&quot;&gt;&lt;/div&gt;
+    &lt;/summary&gt;
+
+    &lt;ul class=&quot;dropdown-menu dropdown-menu-se&quot;&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/details&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<p>The <code>lh-0</code> utility class sets <code>line-height: 0 !important</code>, and can be used to remove vertical spacing from elements that inherit line-height but don't contain any text.</p>
-<h2 id="typographic-styles"><a class="anchor" href="#typographic-styles"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Typographic styles</h2>
-<p>Change the font weight, styles, and alignment with these utilities.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
@@ -296,34 +265,25 @@
             <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
           </button>
           <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;p class=&quot;text-normal&quot;&gt;Normal&lt;/p&gt;
-&lt;p class=&quot;text-italic&quot;&gt;Italic&lt;/p&gt;
-&lt;p class=&quot;text-bold&quot;&gt;Bold&lt;/p&gt;
-&lt;p class=&quot;text-uppercase&quot;&gt;Uppercase&lt;/p&gt;
-&lt;p class=&quot;no-wrap&quot;&gt;No wrap&lt;/p&gt;
-&lt;p class=&quot;ws-normal&quot;&gt;Normal whitespace&lt;/p&gt;
-&lt;p class=&quot;text-underline&quot;&gt;Text underline&lt;/p&gt;
-&lt;p class=&quot;no-underline&quot;&gt;No underline&lt;/p&gt;
-&lt;p class=&quot;text-emphasized&quot;&gt;Emphasized&lt;/p&gt;
-&lt;p class=&quot;text-small&quot;&gt;Small&lt;/p&gt;
-&lt;p class=&quot;lead&quot;&gt;Bacon ipsum dolor amet tri-tip chicken kielbasa, cow swine beef corned beef ground round prosciutto hamburger porchetta sausage alcatra tail.&lt;/p&gt;
-&lt;p class=&quot;text-mono&quot;&gt;Monospace&lt;/p&gt;
-&lt;p class=&quot;user-select-none&quot;&gt;User Select None&lt;/p&gt;</textarea>
+            <textarea live-code-source>&lt;div style=&quot;margin-bottom: 100px&quot; class=&quot;d-flex flex-justify-center&quot;&gt;
+  &lt;details class=&quot;dropdown details-reset details-overlay d-inline-block&quot;&gt;
+    &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+      .dropdown-s
+      &lt;div class=&quot;dropdown-caret&quot;&gt;&lt;/div&gt;
+    &lt;/summary&gt;
+
+    &lt;ul class=&quot;dropdown-menu dropdown-menu-s&quot;&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/details&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h2 id="word-break"><a class="anchor" href="#word-break"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Word break</h2>
-<p>There are two utilities for adjusting how lines and words of text break when they exceed the width of their containing element:</p>
-<ul>
-<li>
-<p><code>break-word</code> sets <code>word-break: break-word</code> and <code>overflow-wrap: break-word</code>, which will only break words if they would exceed the line length <em>after wrapping</em>.</p>
-</li>
-<li>
-<p><code>wb-break-all</code> sets <code>word-break: break-all</code>, which will force a word to break regardless of whether it's shorter than the line length. See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-break#Values">MDN's <code>word-break</code> docs</a> for more info.</p>
-</li>
-</ul>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
@@ -332,15 +292,25 @@
             <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
           </button>
           <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;p class=&quot;break-word p-2 bg-gray col-3 border-right&quot;&gt;.break-word will only break long words that exceed the line length, such as supercalifragilisticexpialidocious. Long words like &quot;exceedingly&quot; will simply break to the next line.&lt;/p&gt;
-&lt;p class=&quot;wb-break-all p-2 bg-gray col-3 border-right&quot;&gt;.wb-break-all will break any word that meets the end its line, and should be used sparingly. As you can see here, it's not particularly nice to read text that breaks in weird places.&lt;/p&gt;</textarea>
+            <textarea live-code-source>&lt;div style=&quot;margin-bottom: 100px&quot; class=&quot;d-flex flex-justify-end&quot;&gt;
+  &lt;details class=&quot;dropdown details-reset details-overlay d-inline-block&quot;&gt;
+    &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+      .dropdown-sw
+      &lt;div class=&quot;dropdown-caret&quot;&gt;&lt;/div&gt;
+    &lt;/summary&gt;
+
+    &lt;ul class=&quot;dropdown-menu dropdown-menu-sw&quot;&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/details&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h2 id="text-alignment"><a class="anchor" href="#text-alignment"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Text alignment</h2>
-<p>Use text alignment utilities to left align, center, or right align text.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
@@ -349,16 +319,26 @@
             <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
           </button>
           <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;p class=&quot;text-left&quot;&gt;Left align&lt;/p&gt;
-&lt;p class=&quot;text-center&quot;&gt;Center&lt;/p&gt;
-&lt;p class=&quot;text-right&quot;&gt;Right align&lt;/p&gt;</textarea>
+            <textarea live-code-source>&lt;div style=&quot;margin-bottom: 100px&quot; class=&quot;d-flex flex-justify-end&quot;&gt;
+  &lt;details class=&quot;dropdown details-reset details-overlay d-inline-block&quot;&gt;
+    &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+      .dropdown-w
+      &lt;div class=&quot;dropdown-caret&quot;&gt;&lt;/div&gt;
+    &lt;/summary&gt;
+
+    &lt;ul class=&quot;dropdown-menu dropdown-menu-w&quot;&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/details&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h2 id="responsive-alignment"><a class="anchor" href="#responsive-alignment"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Responsive alignment</h2>
-<p>Use the following formula to make a text alignment utility responsive: <code>.text-[breakpoint]-[alignment]</code></p>
+<h3 id="dividers"><a class="anchor" href="#dividers"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Dividers</h3>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
@@ -367,14 +347,29 @@
             <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
           </button>
           <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;p class=&quot;text-left text-sm-center text-lg-right&quot;&gt;Left in a small viewport, centered in mid-sized viewports, and right aligned in larger viewports&lt;/p&gt;</textarea>
+            <textarea live-code-source>&lt;div style=&quot;margin-bottom: 170px&quot;&gt;
+  &lt;details class=&quot;dropdown details-reset details-overlay d-inline-block&quot;&gt;
+    &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+      Dropdown
+      &lt;div class=&quot;dropdown-caret&quot;&gt;&lt;/div&gt;
+    &lt;/summary&gt;
+
+    &lt;ul class=&quot;dropdown-menu dropdown-menu-se&quot;&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;dropdown-divider&quot; role=&quot;separator&quot;&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Another item&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;One more&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/details&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h2 id="list-styles"><a class="anchor" href="#list-styles"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>List styles</h2>
-<p>Remove bullets from an unordered list or numbers from an ordered list by applying <code>.list-style-none</code> to the <code>&lt;ul&gt;</code>.</p>
+<h3 id="headers"><a class="anchor" href="#headers"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Headers</h3>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
@@ -383,11 +378,25 @@
             <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
           </button>
           <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;ul class=&quot;list-style-none&quot;&gt;
-  &lt;li&gt;First list item&lt;/li&gt;
-  &lt;li&gt;Second list item&lt;/li&gt;
-  &lt;li&gt;Third list item&lt;/li&gt;
-&lt;/ul&gt;</textarea>
+            <textarea live-code-source>&lt;div style=&quot;margin-bottom: 126px&quot;&gt;
+  &lt;details class=&quot;dropdown details-reset details-overlay d-inline-block&quot;&gt;
+    &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+      Dropdown
+      &lt;div class=&quot;dropdown-caret&quot;&gt;&lt;/div&gt;
+    &lt;/summary&gt;
+
+    &lt;div class=&quot;dropdown-menu dropdown-menu-se&quot;&gt;
+      &lt;div class=&quot;dropdown-header&quot;&gt;
+        Dropdown header
+      &lt;/div&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/details&gt;
+&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>

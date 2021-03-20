@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Margin - Cinder CSS</title>
+  <title>Labels - Cinder CSS</title>
   
 
   <link rel="stylesheet" href="/cinder/dist/index.css">
@@ -52,7 +52,7 @@
       >Dropdown</a><a href="/cinder/components/forms/" class="menu-item"
         
       >Forms</a><a href="/cinder/components/labels/" class="menu-item"
-        
+         aria-current="page"
       >Labels</a><a href="/cinder/components/navigation/" class="menu-item"
         
       >Navigation</a><a href="/cinder/components/select-menu/" class="menu-item"
@@ -66,7 +66,7 @@
     <div class="menu-heading">Utilities</div><a href="/cinder/utilities/details/" class="menu-item"
         
       >Details</a><a href="/cinder/utilities/margin/" class="menu-item"
-         aria-current="page"
+        
       >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
         
       >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
@@ -90,7 +90,7 @@
       >Dropdown</a><a href="/cinder/components/forms/" class="menu-item"
         
       >Forms</a><a href="/cinder/components/labels/" class="menu-item"
-        
+         aria-current="page"
       >Labels</a><a href="/cinder/components/navigation/" class="menu-item"
         
       >Navigation</a><a href="/cinder/components/select-menu/" class="menu-item"
@@ -104,7 +104,7 @@
     <div class="menu-heading">Utilities</div><a href="/cinder/utilities/details/" class="menu-item"
         
       >Details</a><a href="/cinder/utilities/margin/" class="menu-item"
-         aria-current="page"
+        
       >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
         
       >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
@@ -113,78 +113,11 @@
       </nav>
       <div class="d-flex flex-wrap">
   <section class="Prose flex-1 col-12 col-md-8">
-    <h1>Margin</h1>
-    <p>Margin utilities are based on a global spacing scale which helps keep horizontal and vertical spacing consistent. These utilities help us reduce the amount of custom CSS that share the same properties, and allows to achieve many different page layouts using the same styles.</p>
-<h2 id="naming-convention"><a class="anchor" href="#naming-convention"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Naming convention</h2>
-<p>Since margin utilities have many variations and will be used in many places, we use a shorthand naming convention to help keep class names succinct.</p>
-<table>
-<thead>
-<tr>
-<th>Shorthand</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>m</td>
-<td>margin</td>
-</tr>
-<tr>
-<td>t</td>
-<td>top</td>
-</tr>
-<tr>
-<td>r</td>
-<td>right</td>
-</tr>
-<tr>
-<td>b</td>
-<td>bottom</td>
-</tr>
-<tr>
-<td>l</td>
-<td>left</td>
-</tr>
-<tr>
-<td>x</td>
-<td>horizontal, left &amp; right</td>
-</tr>
-<tr>
-<td>y</td>
-<td>vertical, top &amp; bottom</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>4px</td>
-</tr>
-<tr>
-<td>2</td>
-<td>8px</td>
-</tr>
-<tr>
-<td>3</td>
-<td>16px</td>
-</tr>
-<tr>
-<td>4</td>
-<td>24px</td>
-</tr>
-<tr>
-<td>5</td>
-<td>32px</td>
-</tr>
-<tr>
-<td>6</td>
-<td>40px</td>
-</tr>
-</tbody>
-</table>
-<h2 id="uniform-margins"><a class="anchor" href="#uniform-margins"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Uniform margins</h2>
-<p>Use uniform spacing utilities to apply equal margin to all sides of an element. These utilities can change or override default margins, and can be used with a spacing scale from 0-6.</p>
+    <h1>Labels</h1>
+    <p>Labels add metadata or indicate status of items and navigational elements. Three different types of labels are available: <a href="#default-label-styles">Labels</a> for adding metadata and <a href="#counters">Counters</a> for showing the count for a number of items.</p>
+<h2 id="labels"><a class="anchor" href="#labels"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Labels</h2>
+<p>The base label component styles the text, adds padding and rounded corners, and a border. Labels come in various themes which apply different colors.</p>
+<p>The base <code>Label</code> style does not apply a background color and only uses the default border:</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
@@ -193,22 +126,137 @@
             <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
           </button>
           <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;div class=&quot;d-flex flex-items-baseline flex-justify-around&quot;&gt;
-  &lt;div class=&quot;bg-yellow&quot;&gt;&lt;div class=&quot;m-0 p-1 bg-gray&quot;&gt;.m-0&lt;/div&gt;&lt;/div&gt;
-  &lt;div class=&quot;bg-yellow&quot;&gt;&lt;div class=&quot;m-1 p-1 bg-gray&quot;&gt;.m-1&lt;/div&gt;&lt;/div&gt;
-  &lt;div class=&quot;bg-yellow&quot;&gt;&lt;div class=&quot;m-2 p-1 bg-gray&quot;&gt;.m-2&lt;/div&gt;&lt;/div&gt;
-  &lt;div class=&quot;bg-yellow&quot;&gt;&lt;div class=&quot;m-3 p-1 bg-gray&quot;&gt;.m-3&lt;/div&gt;&lt;/div&gt;
-  &lt;div class=&quot;bg-yellow&quot;&gt;&lt;div class=&quot;m-4 p-1 bg-gray&quot;&gt;.m-4&lt;/div&gt;&lt;/div&gt;
-  &lt;div class=&quot;bg-yellow&quot;&gt;&lt;div class=&quot;m-5 p-1 bg-gray&quot;&gt;.m-5&lt;/div&gt;&lt;/div&gt;
-  &lt;div class=&quot;bg-yellow&quot;&gt;&lt;div class=&quot;m-6 p-1 bg-gray&quot;&gt;.m-6&lt;/div&gt;&lt;/div&gt;
+            <textarea live-code-source>&lt;span class=&quot;Label&quot;&gt;design&lt;/span&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h3 id="label-contrast"><a class="anchor" href="#label-contrast"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Label contrast</h3>
+<p>Use <code>Label--primary</code> to create a label with a stronger border. This label is also neutral in color, however, since its border is stronger it can stand out more compared to the default <code>Label</code>.</p>
+<p>Use <code>Label--secondary</code> to create a label with a subtler text color. This label is neutral in color and can be used in contexts where all you need to communicate is metadata, or where you want a label to feel less prominent compared with labels with stronger colors.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;span class=&quot;Label&quot;&gt;Default&lt;/span&gt;
+&lt;span class=&quot;Label Label--primary ml-1&quot;&gt;Primary&lt;/span&gt;
+&lt;span class=&quot;Label Label--secondary ml-1&quot;&gt;Secondary&lt;/span&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h3 id="colored-labels"><a class="anchor" href="#colored-labels"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Colored labels</h3>
+<p>Labels come in a few different functional classes. Use to communicate the content of the label, and ensure it's used consistently.</p>
+<ul>
+<li><code>Label--info</code></li>
+<li><code>Label--success</code></li>
+<li><code>Label--warning</code></li>
+<li><code>Label--danger</code></li>
+</ul>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;span class=&quot;Label mr-1 Label--info&quot;&gt;Info&lt;/span&gt;
+&lt;span class=&quot;Label mr-1 Label--success&quot;&gt;Success&lt;/span&gt;
+&lt;span class=&quot;Label mr-1 Label--warning&quot;&gt;Warning&lt;/span&gt;
+&lt;span class=&quot;Label mr-1 Label--danger&quot;&gt;Danger&lt;/span&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h3 id="label-sizes"><a class="anchor" href="#label-sizes"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Label sizes</h3>
+<p>If space allows, add the <code>Label--large</code> modidfier to add a bit more padding to lables.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;span class=&quot;Label Label--gray-darker mr-1&quot;&gt;Default&lt;/span&gt;
+&lt;span class=&quot;Label Label--large Label--gray-darker mr-1&quot;&gt;Large&lt;/span&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h3 id="inline-labels"><a class="anchor" href="#inline-labels"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Inline labels</h3>
+<p>Sometimes when adding a label the line-height can be incrased. Or the parent element increases in height. If that is not desired, use the <code>Label--inline</code> modifier change to the <code>display</code> property to <code>inline</code>. The font-size also adapts.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;p class=&quot;col-4&quot;&gt;
+  Lorem Ipsum is simply &lt;span class=&quot;Label Label--inline&quot;&gt;dummy text&lt;/span&gt; of the printing and typesetting industry.
+  Lorem Ipsum has been the industry's standard dummy text.
+&lt;/p&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="counters"><a class="anchor" href="#counters"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Counters</h2>
+<p>Use the <code>Counter</code> component to add a count to navigational elements and buttons. Counters come in 3 variations:</p>
+<ol>
+<li>the default <code>Counter</code>,</li>
+<li>the <code>Counter--primary</code> with a stronger background color</li>
+<li>and <code>Counter--secondary</code> with a more subtler text color.</li>
+</ol>
+<p>Note: When a counter is empty, its visibility will be hidden.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;span class=&quot;Counter mr-1&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;Counter mr-1 Counter--primary&quot;&gt;23&lt;/span&gt;
+&lt;span class=&quot;Counter mr-1 Counter--secondary&quot;&gt;456&lt;/span&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<p>Use the <code>Counter</code> in navigation to indicate the number of items without the user having to click through or count the items, such as open issues in a GitHub repo. See more options in <a href="/cinder/components/navigation">navigation</a>.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;div class=&quot;tabnav&quot;&gt;
+  &lt;nav class=&quot;tabnav-tabs&quot; aria-label=&quot;Foo bar&quot;&gt;
+    &lt;a href=&quot;#url&quot; class=&quot;tabnav-tab&quot; aria-current=&quot;page&quot;&gt;Foo tab &lt;span class=&quot;Counter&quot;&gt;23&lt;/span&gt;&lt;/a&gt;
+    &lt;a href=&quot;#url&quot; class=&quot;tabnav-tab&quot;&gt;Bar tab&lt;/a&gt;
+  &lt;/nav&gt;
 &lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h2 id="directional-margins"><a class="anchor" href="#directional-margins"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Directional margins</h2>
-<p>Use directional utilities to apply margin to an individual side, or the X and Y axis of an element. Directional utilities can change or override default margins, and can be used with a spacing scale of 0-6.</p>
+<p>You can also have icons and emoji in counters. Or use utilities for counters with different background colors.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
@@ -217,92 +265,16 @@
             <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
           </button>
           <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;div class=&quot;d-flex flex-items-baseline flex-justify-around&quot;&gt;
-  &lt;div class=&quot;bg-yellow&quot;&gt;&lt;div class=&quot;mt-3 p-1 bg-gray&quot;&gt;.mt-3&lt;/div&gt;&lt;/div&gt;
-  &lt;div class=&quot;bg-yellow&quot;&gt;&lt;div class=&quot;mr-3 p-1 bg-gray&quot;&gt;.mr-3&lt;/div&gt;&lt;/div&gt;
-  &lt;div class=&quot;bg-yellow&quot;&gt;&lt;div class=&quot;mb-3 p-1 bg-gray&quot;&gt;.mb-3&lt;/div&gt;&lt;/div&gt;
-  &lt;div class=&quot;bg-yellow&quot;&gt;&lt;div class=&quot;ml-3 p-1 bg-gray&quot;&gt;.ml-3&lt;/div&gt;&lt;/div&gt;
-  &lt;div class=&quot;bg-yellow&quot;&gt;&lt;div class=&quot;mx-3 p-1 bg-gray&quot;&gt;.mx-3&lt;/div&gt;&lt;/div&gt;
-  &lt;div class=&quot;bg-yellow&quot;&gt;&lt;div class=&quot;my-3 p-1 bg-gray&quot;&gt;.my-3&lt;/div&gt;&lt;/div&gt;
-&lt;/div&gt;</textarea>
-            <pre><code></code></pre>
-          </div>
-        </form>
-      </cinder-live-html>
-      
-<h2 id="center-elements"><a class="anchor" href="#center-elements"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Center elements</h2>
-<p>Use <code>mx-auto</code>to center block elements with a set width.</p>
-<pre style="display: none!important;"></pre>
-      <cinder-live-html class="Box LiveCode mb-2">
-        <iframe class="LiveCode-frame" height="100"></iframe>
-        <form action="#0" class="LiveCode-source">
-          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
-            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
-          </button>
-          <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;div class=&quot;bg-yellow&quot;&gt;
-  &lt;div class=&quot;mx-auto bg-gray text-center&quot; style=&quot;max-width: 500px;&quot;&gt;.mx-auto&lt;/div&gt;
-&lt;/div&gt;</textarea>
-            <pre><code></code></pre>
-          </div>
-        </form>
-      </cinder-live-html>
-      
-<h2 id="reset-margins"><a class="anchor" href="#reset-margins"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Reset margins</h2>
-<p>Reset margins built into typography elements or other components with <code>m-0</code>, <code>mt-0</code>, <code>mr-0</code>, <code>mb-0</code>, <code>ml-0</code>, <code>mx-0</code>, and <code>my-0</code>.</p>
-<pre style="display: none!important;"></pre>
-      <cinder-live-html class="Box LiveCode mb-2">
-        <iframe class="LiveCode-frame" height="100"></iframe>
-        <form action="#0" class="LiveCode-source">
-          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
-            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
-          </button>
-          <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;div class=&quot;bg-yellow border&quot;&gt;
-  &lt;p class=&quot;mb-0 bg-gray p-1&quot;&gt;No bottom margin on this paragraph.&lt;/p&gt;
-&lt;/div&gt;</textarea>
-            <pre><code></code></pre>
-          </div>
-        </form>
-      </cinder-live-html>
-      
-<h2 id="responsive-margins"><a class="anchor" href="#responsive-margins"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Responsive margins</h2>
-<p>All margin utilities can be adjusted per breakpoint using the following formula: <code>m[direction]-[breakpoint]-[spacer]</code>. Each responsive style is applied to the specified breakpoint and up.</p>
-<pre style="display: none!important;"></pre>
-      <cinder-live-html class="Box LiveCode mb-2">
-        <iframe class="LiveCode-frame" height="100"></iframe>
-        <form action="#0" class="LiveCode-source">
-          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
-            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
-          </button>
-          <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;div class=&quot;bg-yellow d-inline-block&quot;&gt;
-  &lt;div class=&quot;mx-sm-2 mx-md-4 bg-gray p-1&quot;&gt;
-    .mx-sm-2 .mx-md-4
-  &lt;/div&gt;
-&lt;/div&gt;</textarea>
-            <pre><code></code></pre>
-          </div>
-        </form>
-      </cinder-live-html>
-      
-<h2 id="negative-margins"><a class="anchor" href="#negative-margins"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Negative margins</h2>
-<p>You can add negative margins to the top, right, bottom, or left of an item by adding a negative margin utility. The formula for this is: <code>m[direction]-n[spacer]</code>. This also works responsively, with the following formula: <code>m[direction]-[breakpoint]-n[spacer]</code>.</p>
-<pre style="display: none!important;"></pre>
-      <cinder-live-html class="Box LiveCode mb-2">
-        <iframe class="LiveCode-frame" height="100"></iframe>
-        <form action="#0" class="LiveCode-source">
-          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
-            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
-          </button>
-          <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;div class=&quot;d-flex flex-justify-center&quot;&gt;
-  &lt;div class=&quot;bg-yellow&quot;&gt;
-    &lt;div class=&quot;m-3 ml-n4 ml-md-n6 border-left border-red bg-gray p-2&quot;&gt;
-      .m-3 .ml-n4 .ml-md-n6
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</textarea>
+            <textarea live-code-source>&lt;span class=&quot;Counter mr-1&quot;&gt;1.5K&lt;/span&gt;
+&lt;span class=&quot;Counter mr-1&quot;&gt;
+  &lt;!-- &lt;%= svgicon &quot;comment&quot; %&gt; --&gt;
+  &lt;svg class=&quot;svgicon svgicon-comment&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; height=&quot;16&quot;&gt;  &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M2.75 2.5C2.6837 2.5 2.62011 2.52634 2.57322 2.57322C2.52634 2.62011 2.5 2.6837 2.5 2.75V10.25C2.5 10.388 2.612 10.5 2.75 10.5H4.75C4.94891 10.5 5.13968 10.579 5.28033 10.7197C5.42098 10.8603 5.5 11.0511 5.5 11.25V13.44L8.22 10.72C8.36052 10.5793 8.55115 10.5002 8.75 10.5H13.25C13.3163 10.5 13.3799 10.4737 13.4268 10.4268C13.4737 10.3799 13.5 10.3163 13.5 10.25V2.75C13.5 2.6837 13.4737 2.62011 13.4268 2.57322C13.3799 2.52634 13.3163 2.5 13.25 2.5H2.75ZM1 2.75C1 1.784 1.784 1 2.75 1H13.25C14.216 1 15 1.784 15 2.75V10.25C15 10.7141 14.8156 11.1592 14.4874 11.4874C14.1592 11.8156 13.7141 12 13.25 12H9.06L6.487 14.573C6.28324 14.7767 6.02367 14.9153 5.74111 14.9715C5.45854 15.0277 5.16567 14.9988 4.8995 14.8886C4.63333 14.7784 4.40581 14.5917 4.24571 14.3522C4.08561 14.1127 4.0001 13.8311 4 13.543V12H2.75C2.28587 12 1.84075 11.8156 1.51256 11.4874C1.18437 11.1592 1 10.7141 1 10.25V2.75Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+  10
+&lt;/span&gt;
+&lt;span class=&quot;Counter mr-1&quot;&gt;👍 2&lt;/span&gt;
+&lt;span class=&quot;Counter mr-1 bg-green text-white&quot;&gt;22&lt;/span&gt;
+&lt;span class=&quot;Counter mr-1 bg-red text-white&quot;&gt;22&lt;/span&gt;
+&lt;span class=&quot;Counter mr-1 bg-purple text-white&quot;&gt;22&lt;/span&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
