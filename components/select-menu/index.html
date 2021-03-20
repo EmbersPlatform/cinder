@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Select menu - Cinder CSS</title>
+  
+
+  <link rel="stylesheet" href="/cinder/dist/index.css">
+  <link rel="stylesheet" href="/cinder/assets/css/index.css">
+
+  <script>
+  window.toggler_icons = {
+    light: `<svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display: inline-block; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z"></path></svg>`,
+    dark: `<svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display: inline-block; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z"></path></svg>`
+  }
+
+  const theme = localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ? "dark"
+      : "light"
+
+  document.documentElement.dataset.colorMode = theme;
+  </script>
+  <script type="module" src="/cinder/assets/js/index.js"></script>
+</head>
+
+<body>
+  <nav class="Header" style="position: sticky; top: 0;">
+    <h1 class="Header-item h3 mr-3">Cinder</h1>
+    <button class="Header-item  btn" id="color-mode-toggler">Toggle dark theme</button>
+    <script>
+    document.getElementById("color-mode-toggler").innerHTML = toggler_icons[theme];
+    </script>
+  </nav>
+  <div class="d-flex flex-wrap">
+    <div class="p-2 col-12 col-md-3 col-lg-3 hide-md hide-sm">
+      <nav class="menu position-sticky" style="top: 72px;">
+        <a href="/cinder/" class="menu-item" >Home</a>
+    <div class="menu-heading">Components</div><a href="/cinder/components/alerts/" class="menu-item"
+        
+      >Alerts</a><a href="/cinder/components/box/" class="menu-item"
+        
+      >Box</a><a href="/cinder/components/buttons/" class="menu-item"
+        
+      >Buttons</a><a href="/cinder/components/forms/" class="menu-item"
+        
+      >Forms</a><a href="/cinder/components/navigation/" class="menu-item"
+        
+      >Navigation</a><a href="/cinder/components/select-menu/" class="menu-item"
+         aria-current="page"
+      >Select menu</a><a href="/cinder/components/subheads/" class="menu-item"
+        
+      >Subheads</a>
+    <div class="menu-heading">Misc</div><a href="/cinder/misc/markdown_test/" class="menu-item"
+        
+      >Markdown test</a>
+    <div class="menu-heading">Utilities</div><a href="/cinder/utilities/margin/" class="menu-item"
+        
+      >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
+        
+      >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
+        
+      >Typography</a>
+      </nav>
+    </div>
+    <div class="col-12 col-md-9 col-lg-9 flex-1 p-4 container-lg">
+      <nav class="menu d-md-none">
+        <a href="/cinder/" class="menu-item" >Home</a>
+    <div class="menu-heading">Components</div><a href="/cinder/components/alerts/" class="menu-item"
+        
+      >Alerts</a><a href="/cinder/components/box/" class="menu-item"
+        
+      >Box</a><a href="/cinder/components/buttons/" class="menu-item"
+        
+      >Buttons</a><a href="/cinder/components/forms/" class="menu-item"
+        
+      >Forms</a><a href="/cinder/components/navigation/" class="menu-item"
+        
+      >Navigation</a><a href="/cinder/components/select-menu/" class="menu-item"
+         aria-current="page"
+      >Select menu</a><a href="/cinder/components/subheads/" class="menu-item"
+        
+      >Subheads</a>
+    <div class="menu-heading">Misc</div><a href="/cinder/misc/markdown_test/" class="menu-item"
+        
+      >Markdown test</a>
+    <div class="menu-heading">Utilities</div><a href="/cinder/utilities/margin/" class="menu-item"
+        
+      >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
+        
+      >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
+        
+      >Typography</a>
+      </nav>
+      <div class="d-flex flex-wrap">
+  <div class="Prose flex-1 col-12 col-md-8">
+    <h1>Select menu</h1>
+    <p>The <code>SelectMenu</code> component provides advanced support for navigation, filtering, and more. Any menu can make use of JavaScript-enabled live filtering, selected states, tabbed lists, and keyboard navigation with a bit of markup.</p>
+<h2 id="basic-example"><a class="anchor" href="#basic-example"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Basic example</h2>
+<p>Use a <code>&lt;details&gt;</code> element to toggle the select menu. The <code>&lt;summary&gt;</code> element can be styled in many ways. In the example below it's a <code>.btn</code>.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;details class=&quot;details-reset details-overlay&quot; open&gt;
+  &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+    Choose an item
+  &lt;/summary&gt;
+  &lt;div class=&quot;SelectMenu&quot;&gt;
+    &lt;div class=&quot;SelectMenu-modal&quot;&gt;
+      &lt;div class=&quot;SelectMenu-list&quot;&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 1&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 2&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 3&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;div class=&quot;d-sm-none&quot; style=&quot;height: 600px&quot;&gt;&lt;!-- min height for &lt; sm --&gt;&lt;/div&gt;
+&lt;div class=&quot;d-none d-sm-block&quot; style=&quot;height: 120px&quot;&gt;&lt;!-- min height for &gt; sm --&gt;&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<p>Add a <code>.SelectMenu-header</code> to house a clear title and a close button. Note that the close button is only shown on narrow screens (mobile).</p>
+<h2 id="right-aligned"><a class="anchor" href="#right-aligned"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Right aligned</h2>
+<p>In case the select menu should be aligned to the right, use <code>SelectMenu right-0</code>.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;div class=&quot;d-flex flex-justify-end position-relative&quot;&gt;
+  &lt;details class=&quot;details-reset details-overlay&quot; open&gt;
+    &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+      Choose an item
+    &lt;/summary&gt;
+    &lt;div class=&quot;SelectMenu right-0&quot;&gt;
+      &lt;div class=&quot;SelectMenu-modal&quot;&gt;
+        &lt;div class=&quot;SelectMenu-list&quot;&gt;
+          &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 1&lt;/button&gt;
+          &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 2&lt;/button&gt;
+          &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 3&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/details&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;d-sm-none&quot; style=&quot;height: 600px&quot;&gt;&lt;!-- min height for &lt; sm --&gt;&lt;/div&gt;
+&lt;div class=&quot;d-none d-sm-block&quot; style=&quot;height: 180px&quot;&gt;&lt;!-- min height for &gt; sm --&gt;&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="selected-state"><a class="anchor" href="#selected-state"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Selected state</h2>
+<p>If the <code>SelectMenu</code> should show a check icon for selected items, use the <code>SelectMenu-icon SelectMenu-icon--check</code> classes. It will make the check icon show when <code>aria-checked=&quot;true&quot;</code> is set.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;details class=&quot;details-reset details-overlay&quot; open&gt;
+  &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+    Choose an item
+  &lt;/summary&gt;
+  &lt;div class=&quot;SelectMenu&quot;&gt;
+    &lt;div class=&quot;SelectMenu-modal&quot;&gt;
+      &lt;div class=&quot;SelectMenu-list&quot;&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitemcheckbox&quot; aria-checked=&quot;true&quot;&gt;
+          &lt;!-- &lt;%= svgicon &quot;check&quot;, class: &quot;SelectMenu-icon SelectMenu-icon--check&quot; %&gt; --&gt;
+          &lt;svg class=&quot;SelectMenu-icon SelectMenu-icon--check svgicon svgicon-check&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; height=&quot;16&quot;&gt;  &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M13.78 4.22C13.9204 4.36062 13.9993 4.55125 13.9993 4.75C13.9993 4.94875 13.9204 5.13937 13.78 5.28L6.53 12.53C6.38937 12.6704 6.19875 12.7493 6 12.7493C5.80125 12.7493 5.61062 12.6704 5.47 12.53L2.22 9.28C2.08752 9.13782 2.0154 8.94978 2.01882 8.75547C2.02225 8.56117 2.10096 8.37579 2.23838 8.23837C2.37579 8.10096 2.56118 8.02225 2.75548 8.01882C2.94978 8.01539 3.13782 8.08752 3.28 8.22L6 10.94L12.72 4.22C12.8606 4.07955 13.0512 4.00066 13.25 4.00066C13.4487 4.00066 13.6394 4.07955 13.78 4.22Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+          Selected state
+        &lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitemcheckbox&quot;&gt;
+          &lt;!-- &lt;%= svgicon &quot;check&quot;, class: &quot;SelectMenu-icon SelectMenu-icon--check&quot; %&gt; --&gt;
+          &lt;svg class=&quot;SelectMenu-icon SelectMenu-icon--check svgicon svgicon-check&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; height=&quot;16&quot;&gt;  &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M13.78 4.22C13.9204 4.36062 13.9993 4.55125 13.9993 4.75C13.9993 4.94875 13.9204 5.13937 13.78 5.28L6.53 12.53C6.38937 12.6704 6.19875 12.7493 6 12.7493C5.80125 12.7493 5.61062 12.6704 5.47 12.53L2.22 9.28C2.08752 9.13782 2.0154 8.94978 2.01882 8.75547C2.02225 8.56117 2.10096 8.37579 2.23838 8.23837C2.37579 8.10096 2.56118 8.02225 2.75548 8.01882C2.94978 8.01539 3.13782 8.08752 3.28 8.22L6 10.94L12.72 4.22C12.8606 4.07955 13.0512 4.00066 13.25 4.00066C13.4487 4.00066 13.6394 4.07955 13.78 4.22Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+          Default state
+        &lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitemcheckbox&quot; aria-checked=&quot;true&quot;&gt;
+          &lt;!-- &lt;%= svgicon &quot;check&quot;, class: &quot;SelectMenu-icon SelectMenu-icon--check&quot; %&gt; --&gt;
+          &lt;svg class=&quot;SelectMenu-icon SelectMenu-icon--check svgicon svgicon-check&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; height=&quot;16&quot;&gt;  &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M13.78 4.22C13.9204 4.36062 13.9993 4.55125 13.9993 4.75C13.9993 4.94875 13.9204 5.13937 13.78 5.28L6.53 12.53C6.38937 12.6704 6.19875 12.7493 6 12.7493C5.80125 12.7493 5.61062 12.6704 5.47 12.53L2.22 9.28C2.08752 9.13782 2.0154 8.94978 2.01882 8.75547C2.02225 8.56117 2.10096 8.37579 2.23838 8.23837C2.37579 8.10096 2.56118 8.02225 2.75548 8.01882C2.94978 8.01539 3.13782 8.08752 3.28 8.22L6 10.94L12.72 4.22C12.8606 4.07955 13.0512 4.00066 13.25 4.00066C13.4487 4.00066 13.6394 4.07955 13.78 4.22Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+          Selected state
+        &lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitemcheckbox&quot;&gt;
+          &lt;!-- &lt;%= svgicon &quot;check&quot;, class: &quot;SelectMenu-icon SelectMenu-icon--check&quot; %&gt; --&gt;
+          &lt;svg class=&quot;SelectMenu-icon SelectMenu-icon--check svgicon svgicon-check&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; height=&quot;16&quot;&gt;  &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M13.78 4.22C13.9204 4.36062 13.9993 4.55125 13.9993 4.75C13.9993 4.94875 13.9204 5.13937 13.78 5.28L6.53 12.53C6.38937 12.6704 6.19875 12.7493 6 12.7493C5.80125 12.7493 5.61062 12.6704 5.47 12.53L2.22 9.28C2.08752 9.13782 2.0154 8.94978 2.01882 8.75547C2.02225 8.56117 2.10096 8.37579 2.23838 8.23837C2.37579 8.10096 2.56118 8.02225 2.75548 8.01882C2.94978 8.01539 3.13782 8.08752 3.28 8.22L6 10.94L12.72 4.22C12.8606 4.07955 13.0512 4.00066 13.25 4.00066C13.4487 4.00066 13.6394 4.07955 13.78 4.22Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+          Default state
+        &lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitemcheckbox&quot;&gt;
+          &lt;!-- &lt;%= svgicon &quot;check&quot;, class: &quot;SelectMenu-icon SelectMenu-icon--check&quot; %&gt; --&gt;
+          &lt;svg class=&quot;SelectMenu-icon SelectMenu-icon--check svgicon svgicon-check&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; height=&quot;16&quot;&gt;  &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M13.78 4.22C13.9204 4.36062 13.9993 4.55125 13.9993 4.75C13.9993 4.94875 13.9204 5.13937 13.78 5.28L6.53 12.53C6.38937 12.6704 6.19875 12.7493 6 12.7493C5.80125 12.7493 5.61062 12.6704 5.47 12.53L2.22 9.28C2.08752 9.13782 2.0154 8.94978 2.01882 8.75547C2.02225 8.56117 2.10096 8.37579 2.23838 8.23837C2.37579 8.10096 2.56118 8.02225 2.75548 8.01882C2.94978 8.01539 3.13782 8.08752 3.28 8.22L6 10.94L12.72 4.22C12.8606 4.07955 13.0512 4.00066 13.25 4.00066C13.4487 4.00066 13.6394 4.07955 13.78 4.22Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+          Default state
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;div class=&quot;d-sm-none&quot; style=&quot;height: 600px&quot;&gt;&lt;!-- min height for &lt; sm --&gt;&lt;/div&gt;
+&lt;div class=&quot;d-none d-sm-block&quot; style=&quot;height: 200px&quot;&gt;&lt;!-- min height for &gt; sm --&gt;&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="borderless"><a class="anchor" href="#borderless"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Borderless</h2>
+<p>Use the <code>.SelectMenu-list--borderless</code> modifier to remove the borders between list items. Note: It's better to keep the borders if a list contains items with multiple lines of text. It will make it easier to see where the items start and end.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;details class=&quot;details-reset details-overlay&quot; open&gt;
+  &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+    Choose an item
+  &lt;/summary&gt;
+  &lt;div class=&quot;SelectMenu&quot;&gt;
+    &lt;div class=&quot;SelectMenu-modal&quot;&gt;
+      &lt;div class=&quot;SelectMenu-list SelectMenu-list--borderless&quot;&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 1&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 2&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 3&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;div class=&quot;d-sm-none&quot; style=&quot;height: 600px&quot;&gt;&lt;!-- min height for &lt; sm --&gt;&lt;/div&gt;
+&lt;div class=&quot;d-none d-sm-block&quot; style=&quot;height: 120px&quot;&gt;&lt;!-- min height for &gt; sm --&gt;&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="header"><a class="anchor" href="#header"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Header</h2>
+<p>Add a <code>.SelectMenu-header</code> at the top to house a clear title and a close button.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;details class=&quot;details-reset details-overlay&quot; open&gt;
+  &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+    Choose an item
+  &lt;/summary&gt;
+  &lt;div class=&quot;SelectMenu&quot;&gt;
+    &lt;div class=&quot;SelectMenu-modal&quot;&gt;
+      &lt;header class=&quot;SelectMenu-header&quot;&gt;
+        &lt;h3 class=&quot;SelectMenu-title&quot;&gt;Title&lt;/h3&gt;
+        &lt;button class=&quot;SelectMenu-closeButton&quot; type=&quot;button&quot;&gt;
+          &lt;!-- &lt;%= svgicon &quot;x&quot; %&gt; --&gt;
+          &lt;svg class=&quot;svgicon svgicon-x&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; height=&quot;16&quot;&gt;  &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M3.72 3.72C3.86062 3.57955 4.05125 3.50066 4.25 3.50066C4.44875 3.50066 4.63937 3.57955 4.78 3.72L8 6.94L11.22 3.72C11.2887 3.64631 11.3715 3.58721 11.4635 3.54622C11.5555 3.50523 11.6548 3.48319 11.7555 3.48141C11.8562 3.47963 11.9562 3.49816 12.0496 3.53588C12.143 3.5736 12.2278 3.62974 12.299 3.70096C12.3703 3.77218 12.4264 3.85702 12.4641 3.9504C12.5018 4.04379 12.5204 4.14382 12.5186 4.24452C12.5168 4.34523 12.4948 4.44454 12.4538 4.53654C12.4128 4.62854 12.3537 4.71134 12.28 4.78L9.06 8L12.28 11.22C12.3537 11.2887 12.4128 11.3715 12.4538 11.4635C12.4948 11.5555 12.5168 11.6548 12.5186 11.7555C12.5204 11.8562 12.5018 11.9562 12.4641 12.0496C12.4264 12.143 12.3703 12.2278 12.299 12.299C12.2278 12.3703 12.143 12.4264 12.0496 12.4641C11.9562 12.5018 11.8562 12.5204 11.7555 12.5186C11.6548 12.5168 11.5555 12.4948 11.4635 12.4538C11.3715 12.4128 11.2887 12.3537 11.22 12.28L8 9.06L4.78 12.28C4.63782 12.4125 4.44977 12.4846 4.25547 12.4812C4.06117 12.4777 3.87579 12.399 3.73837 12.2616C3.60096 12.1242 3.52225 11.9388 3.51882 11.7445C3.51539 11.5502 3.58752 11.3622 3.72 11.22L6.94 8L3.72 4.78C3.57955 4.63938 3.50066 4.44875 3.50066 4.25C3.50066 4.05125 3.57955 3.86063 3.72 3.72Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+        &lt;/button&gt;
+      &lt;/header&gt;
+      &lt;div class=&quot;SelectMenu-list&quot;&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 1&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 2&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 3&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;div class=&quot;d-sm-none&quot; style=&quot;height: 600px&quot;&gt;&lt;!-- min height for &lt; sm --&gt;&lt;/div&gt;
+&lt;div class=&quot;d-none d-sm-block&quot; style=&quot;height: 180px&quot;&gt;&lt;!-- min height for &gt; sm --&gt;&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="list-items"><a class="anchor" href="#list-items"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>List items</h2>
+<p>The list of items is arguably the most important subcomponent within the menu. Build them out of anchors, buttons, or just about any <a href="http://w3c.github.io/html/dom.html#interactive-content">interactive content</a>. List items are also customizable with options for avatars, additional icons, and multiple lines of text. Use utility classes in case more custom styling is needed.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;details class=&quot;details-reset details-overlay&quot; open&gt;
+  &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+    Choose an item
+  &lt;/summary&gt;
+  &lt;div class=&quot;SelectMenu&quot;&gt;
+    &lt;div class=&quot;SelectMenu-modal&quot;&gt;
+      &lt;header class=&quot;SelectMenu-header&quot;&gt;
+        &lt;h3 class=&quot;SelectMenu-title&quot;&gt;Title&lt;/h3&gt;
+        &lt;button class=&quot;SelectMenu-closeButton&quot; type=&quot;button&quot;&gt;
+          &lt;!-- &lt;%= svgicon &quot;x&quot; %&gt; --&gt;
+          &lt;svg class=&quot;svgicon svgicon-x&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; height=&quot;16&quot;&gt;  &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M3.72 3.72C3.86062 3.57955 4.05125 3.50066 4.25 3.50066C4.44875 3.50066 4.63937 3.57955 4.78 3.72L8 6.94L11.22 3.72C11.2887 3.64631 11.3715 3.58721 11.4635 3.54622C11.5555 3.50523 11.6548 3.48319 11.7555 3.48141C11.8562 3.47963 11.9562 3.49816 12.0496 3.53588C12.143 3.5736 12.2278 3.62974 12.299 3.70096C12.3703 3.77218 12.4264 3.85702 12.4641 3.9504C12.5018 4.04379 12.5204 4.14382 12.5186 4.24452C12.5168 4.34523 12.4948 4.44454 12.4538 4.53654C12.4128 4.62854 12.3537 4.71134 12.28 4.78L9.06 8L12.28 11.22C12.3537 11.2887 12.4128 11.3715 12.4538 11.4635C12.4948 11.5555 12.5168 11.6548 12.5186 11.7555C12.5204 11.8562 12.5018 11.9562 12.4641 12.0496C12.4264 12.143 12.3703 12.2278 12.299 12.299C12.2278 12.3703 12.143 12.4264 12.0496 12.4641C11.9562 12.5018 11.8562 12.5204 11.7555 12.5186C11.6548 12.5168 11.5555 12.4948 11.4635 12.4538C11.3715 12.4128 11.2887 12.3537 11.22 12.28L8 9.06L4.78 12.28C4.63782 12.4125 4.44977 12.4846 4.25547 12.4812C4.06117 12.4777 3.87579 12.399 3.73837 12.2616C3.60096 12.1242 3.52225 11.9388 3.51882 11.7445C3.51539 11.5502 3.58752 11.3622 3.72 11.22L6.94 8L3.72 4.78C3.57955 4.63938 3.50066 4.44875 3.50066 4.25C3.50066 4.05125 3.57955 3.86063 3.72 3.72Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+        &lt;/button&gt;
+      &lt;/header&gt;
+      &lt;div class=&quot;SelectMenu-list&quot;&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;
+          Text only
+        &lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;
+          &lt;!-- &lt;%= svgicon &quot;pin&quot;, class: &quot;SelectMenu-icon&quot; %&gt; --&gt;
+          &lt;svg class=&quot;SelectMenu-icon svgicon svgicon-pin&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10 1.2V2l.5 1L6 6H2.2c-.44 0-.67.53-.34.86L5 10l-4 5 5-4 3.14 3.14a.5.5 0 00.86-.34V10l3-4.5 1 .5h.8c.44 0 .67-.53.34-.86L10.86.86a.5.5 0 00-.86.34z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+          With an icon
+        &lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;
+          &lt;img
+            class=&quot;avatar avatar-small mr-2&quot;
+            src=&quot;https://avatars.githubusercontent.com/hubot?s=40&quot;
+            alt=&quot;hubot&quot;
+            height=&quot;20&quot;
+            width=&quot;20&quot;
+          /&gt;
+          With an avatar
+        &lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item flex-justify-between&quot; role=&quot;menuitem&quot;&gt;
+          With a status icon
+          &lt;!-- &lt;%= svgicon &quot;primitive-dot&quot;, class: &quot;color-green-5 ml-2&quot; %&gt; --&gt;
+          &lt;svg
+            width=&quot;8&quot;
+            height=&quot;16&quot;
+            viewBox=&quot;0 0 8 16&quot;
+            class=&quot;svgicon svgicon-primitive-dot color-green-5 ml-2&quot;
+            aria-hidden=&quot;true&quot;
+          &gt;
+            &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M0 8c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4z&quot; /&gt;
+          &lt;/svg&gt;
+        &lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item d-block&quot; role=&quot;menuitem&quot;&gt;With a &lt;span class=&quot;Label bg-blue&quot;&gt;label&lt;/span&gt;&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;
+          With a counter &lt;span class=&quot;Counter bg-gray-2 ml-1&quot;&gt;16&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item d-block&quot; role=&quot;menuitem&quot;&gt;
+          &lt;h5&gt;With a heading&lt;/h5&gt;
+          &lt;span&gt;and some longer description&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;div class=&quot;d-sm-none&quot; style=&quot;height: 600px&quot;&gt;&lt;!-- min height for &lt; sm --&gt;&lt;/div&gt;
+&lt;div class=&quot;d-none d-sm-block&quot; style=&quot;height: 320px&quot;&gt;&lt;!-- min height for &gt; sm --&gt;&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="divider"><a class="anchor" href="#divider"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Divider</h2>
+<p>The select menu's list can be divided into multiple parts by adding a <code>.SelectMenu-divider</code>. It can be a <code>&lt;div&gt;</code> with text/content. Or just an <code>&lt;hr&gt;</code> to add a visual separator.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;details class=&quot;details-reset details-overlay&quot; open&gt;
+  &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+    Choose an item
+  &lt;/summary&gt;
+  &lt;div class=&quot;SelectMenu&quot;&gt;
+    &lt;div class=&quot;SelectMenu-modal&quot;&gt;
+      &lt;header class=&quot;SelectMenu-header&quot;&gt;
+        &lt;h3 class=&quot;SelectMenu-title&quot;&gt;Title&lt;/h3&gt;
+        &lt;button class=&quot;SelectMenu-closeButton&quot; type=&quot;button&quot;&gt;
+          &lt;!-- &lt;%= svgicon &quot;x&quot; %&gt; --&gt;
+          &lt;svg class=&quot;svgicon svgicon-x&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; height=&quot;16&quot;&gt;  &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M3.72 3.72C3.86062 3.57955 4.05125 3.50066 4.25 3.50066C4.44875 3.50066 4.63937 3.57955 4.78 3.72L8 6.94L11.22 3.72C11.2887 3.64631 11.3715 3.58721 11.4635 3.54622C11.5555 3.50523 11.6548 3.48319 11.7555 3.48141C11.8562 3.47963 11.9562 3.49816 12.0496 3.53588C12.143 3.5736 12.2278 3.62974 12.299 3.70096C12.3703 3.77218 12.4264 3.85702 12.4641 3.9504C12.5018 4.04379 12.5204 4.14382 12.5186 4.24452C12.5168 4.34523 12.4948 4.44454 12.4538 4.53654C12.4128 4.62854 12.3537 4.71134 12.28 4.78L9.06 8L12.28 11.22C12.3537 11.2887 12.4128 11.3715 12.4538 11.4635C12.4948 11.5555 12.5168 11.6548 12.5186 11.7555C12.5204 11.8562 12.5018 11.9562 12.4641 12.0496C12.4264 12.143 12.3703 12.2278 12.299 12.299C12.2278 12.3703 12.143 12.4264 12.0496 12.4641C11.9562 12.5018 11.8562 12.5204 11.7555 12.5186C11.6548 12.5168 11.5555 12.4948 11.4635 12.4538C11.3715 12.4128 11.2887 12.3537 11.22 12.28L8 9.06L4.78 12.28C4.63782 12.4125 4.44977 12.4846 4.25547 12.4812C4.06117 12.4777 3.87579 12.399 3.73837 12.2616C3.60096 12.1242 3.52225 11.9388 3.51882 11.7445C3.51539 11.5502 3.58752 11.3622 3.72 11.22L6.94 8L3.72 4.78C3.57955 4.63938 3.50066 4.44875 3.50066 4.25C3.50066 4.05125 3.57955 3.86063 3.72 3.72Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+        &lt;/button&gt;
+      &lt;/header&gt;
+      &lt;div class=&quot;SelectMenu-list&quot;&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 1&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 2&lt;/button&gt;
+        &lt;div class=&quot;SelectMenu-divider&quot;&gt;More options&lt;/div&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 3&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 4&lt;/button&gt;
+        &lt;hr class=&quot;SelectMenu-divider&quot;&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 5&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 6&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;div class=&quot;d-sm-none&quot; style=&quot;height: 600px&quot;&gt;&lt;!-- min height for &lt; sm --&gt;&lt;/div&gt;
+&lt;div class=&quot;d-none d-sm-block&quot; style=&quot;height: 300px&quot;&gt;&lt;!-- min height for &gt; sm --&gt;&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<p>Dividers are also supported when using the <code>.SelectMenu-list--borderless</code> modifier.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;details class=&quot;details-reset details-overlay&quot; open&gt;
+  &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+    Choose an item
+  &lt;/summary&gt;
+  &lt;div class=&quot;SelectMenu&quot;&gt;
+    &lt;div class=&quot;SelectMenu-modal&quot;&gt;
+      &lt;header class=&quot;SelectMenu-header&quot;&gt;
+        &lt;h3 class=&quot;SelectMenu-title&quot;&gt;Title&lt;/h3&gt;
+        &lt;button class=&quot;SelectMenu-closeButton&quot; type=&quot;button&quot;&gt;
+          &lt;!-- &lt;%= svgicon &quot;x&quot; %&gt; --&gt;
+          &lt;svg class=&quot;svgicon svgicon-x&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; height=&quot;16&quot;&gt;  &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M3.72 3.72C3.86062 3.57955 4.05125 3.50066 4.25 3.50066C4.44875 3.50066 4.63937 3.57955 4.78 3.72L8 6.94L11.22 3.72C11.2887 3.64631 11.3715 3.58721 11.4635 3.54622C11.5555 3.50523 11.6548 3.48319 11.7555 3.48141C11.8562 3.47963 11.9562 3.49816 12.0496 3.53588C12.143 3.5736 12.2278 3.62974 12.299 3.70096C12.3703 3.77218 12.4264 3.85702 12.4641 3.9504C12.5018 4.04379 12.5204 4.14382 12.5186 4.24452C12.5168 4.34523 12.4948 4.44454 12.4538 4.53654C12.4128 4.62854 12.3537 4.71134 12.28 4.78L9.06 8L12.28 11.22C12.3537 11.2887 12.4128 11.3715 12.4538 11.4635C12.4948 11.5555 12.5168 11.6548 12.5186 11.7555C12.5204 11.8562 12.5018 11.9562 12.4641 12.0496C12.4264 12.143 12.3703 12.2278 12.299 12.299C12.2278 12.3703 12.143 12.4264 12.0496 12.4641C11.9562 12.5018 11.8562 12.5204 11.7555 12.5186C11.6548 12.5168 11.5555 12.4948 11.4635 12.4538C11.3715 12.4128 11.2887 12.3537 11.22 12.28L8 9.06L4.78 12.28C4.63782 12.4125 4.44977 12.4846 4.25547 12.4812C4.06117 12.4777 3.87579 12.399 3.73837 12.2616C3.60096 12.1242 3.52225 11.9388 3.51882 11.7445C3.51539 11.5502 3.58752 11.3622 3.72 11.22L6.94 8L3.72 4.78C3.57955 4.63938 3.50066 4.44875 3.50066 4.25C3.50066 4.05125 3.57955 3.86063 3.72 3.72Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+        &lt;/button&gt;
+      &lt;/header&gt;
+      &lt;div class=&quot;SelectMenu-list SelectMenu-list--borderless&quot;&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 1&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 2&lt;/button&gt;
+        &lt;div class=&quot;SelectMenu-divider&quot;&gt;More options&lt;/div&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 3&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 4&lt;/button&gt;
+        &lt;hr class=&quot;SelectMenu-divider&quot;&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 5&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 6&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;div class=&quot;d-sm-none&quot; style=&quot;height: 600px&quot;&gt;&lt;!-- min height for &lt; sm --&gt;&lt;/div&gt;
+&lt;div class=&quot;d-none d-sm-block&quot; style=&quot;height: 300px&quot;&gt;&lt;!-- min height for &gt; sm --&gt;&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="footer"><a class="anchor" href="#footer"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Footer</h2>
+<p>Use a <code>.SelectMenu-footer</code> at the bottom for additional information. As a side effect it can greatly improve the scrolling performance because the list doesn't need to be repainted due to the rounded corners.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;details class=&quot;details-reset details-overlay&quot; open&gt;
+  &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+    Choose an item
+  &lt;/summary&gt;
+  &lt;div class=&quot;SelectMenu&quot;&gt;
+    &lt;div class=&quot;SelectMenu-modal&quot;&gt;
+      &lt;header class=&quot;SelectMenu-header&quot;&gt;
+        &lt;h3 class=&quot;SelectMenu-title&quot;&gt;Title&lt;/h3&gt;
+        &lt;button class=&quot;SelectMenu-closeButton&quot; type=&quot;button&quot;&gt;
+          &lt;!-- &lt;%= svgicon &quot;x&quot; %&gt; --&gt;
+          &lt;svg class=&quot;svgicon svgicon-x&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; height=&quot;16&quot;&gt;  &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M3.72 3.72C3.86062 3.57955 4.05125 3.50066 4.25 3.50066C4.44875 3.50066 4.63937 3.57955 4.78 3.72L8 6.94L11.22 3.72C11.2887 3.64631 11.3715 3.58721 11.4635 3.54622C11.5555 3.50523 11.6548 3.48319 11.7555 3.48141C11.8562 3.47963 11.9562 3.49816 12.0496 3.53588C12.143 3.5736 12.2278 3.62974 12.299 3.70096C12.3703 3.77218 12.4264 3.85702 12.4641 3.9504C12.5018 4.04379 12.5204 4.14382 12.5186 4.24452C12.5168 4.34523 12.4948 4.44454 12.4538 4.53654C12.4128 4.62854 12.3537 4.71134 12.28 4.78L9.06 8L12.28 11.22C12.3537 11.2887 12.4128 11.3715 12.4538 11.4635C12.4948 11.5555 12.5168 11.6548 12.5186 11.7555C12.5204 11.8562 12.5018 11.9562 12.4641 12.0496C12.4264 12.143 12.3703 12.2278 12.299 12.299C12.2278 12.3703 12.143 12.4264 12.0496 12.4641C11.9562 12.5018 11.8562 12.5204 11.7555 12.5186C11.6548 12.5168 11.5555 12.4948 11.4635 12.4538C11.3715 12.4128 11.2887 12.3537 11.22 12.28L8 9.06L4.78 12.28C4.63782 12.4125 4.44977 12.4846 4.25547 12.4812C4.06117 12.4777 3.87579 12.399 3.73837 12.2616C3.60096 12.1242 3.52225 11.9388 3.51882 11.7445C3.51539 11.5502 3.58752 11.3622 3.72 11.22L6.94 8L3.72 4.78C3.57955 4.63938 3.50066 4.44875 3.50066 4.25C3.50066 4.05125 3.57955 3.86063 3.72 3.72Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+        &lt;/button&gt;
+      &lt;/header&gt;
+      &lt;div class=&quot;SelectMenu-list&quot;&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 1&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 2&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 3&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 4&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 5&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;footer class=&quot;SelectMenu-footer&quot;&gt;Footer&lt;/footer&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;div class=&quot;d-sm-none&quot; style=&quot;height: 600px&quot;&gt;&lt;!-- min height for &lt; sm --&gt;&lt;/div&gt;
+&lt;div class=&quot;d-none d-sm-block&quot; style=&quot;height: 260px&quot;&gt;&lt;!-- min height for &gt; sm --&gt;&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="filter"><a class="anchor" href="#filter"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Filter</h2>
+<p>If the list is expected to get long, consider adding a <code>.SelectMenu-filter</code> input. Be sure to also include the <code>.SelectMenu--hasFilter</code> modifier class. On mobile devices it will add a fixed height and anchor the select menu to the top of the screen. This makes sure the filter input stays at the same position while typing.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;details class=&quot;details-reset details-overlay&quot; open&gt;
+  &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+    Choose an item
+  &lt;/summary&gt;
+  &lt;div class=&quot;SelectMenu SelectMenu--hasFilter&quot;&gt;
+    &lt;div class=&quot;SelectMenu-modal&quot;&gt;
+      &lt;header class=&quot;SelectMenu-header&quot;&gt;
+        &lt;h3 class=&quot;SelectMenu-title&quot;&gt;Title&lt;/h3&gt;
+        &lt;button class=&quot;SelectMenu-closeButton&quot; type=&quot;button&quot;&gt;
+          &lt;!-- &lt;%= svgicon &quot;x&quot; %&gt; --&gt;
+          &lt;svg class=&quot;svgicon svgicon-x&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; height=&quot;16&quot;&gt;  &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M3.72 3.72C3.86062 3.57955 4.05125 3.50066 4.25 3.50066C4.44875 3.50066 4.63937 3.57955 4.78 3.72L8 6.94L11.22 3.72C11.2887 3.64631 11.3715 3.58721 11.4635 3.54622C11.5555 3.50523 11.6548 3.48319 11.7555 3.48141C11.8562 3.47963 11.9562 3.49816 12.0496 3.53588C12.143 3.5736 12.2278 3.62974 12.299 3.70096C12.3703 3.77218 12.4264 3.85702 12.4641 3.9504C12.5018 4.04379 12.5204 4.14382 12.5186 4.24452C12.5168 4.34523 12.4948 4.44454 12.4538 4.53654C12.4128 4.62854 12.3537 4.71134 12.28 4.78L9.06 8L12.28 11.22C12.3537 11.2887 12.4128 11.3715 12.4538 11.4635C12.4948 11.5555 12.5168 11.6548 12.5186 11.7555C12.5204 11.8562 12.5018 11.9562 12.4641 12.0496C12.4264 12.143 12.3703 12.2278 12.299 12.299C12.2278 12.3703 12.143 12.4264 12.0496 12.4641C11.9562 12.5018 11.8562 12.5204 11.7555 12.5186C11.6548 12.5168 11.5555 12.4948 11.4635 12.4538C11.3715 12.4128 11.2887 12.3537 11.22 12.28L8 9.06L4.78 12.28C4.63782 12.4125 4.44977 12.4846 4.25547 12.4812C4.06117 12.4777 3.87579 12.399 3.73837 12.2616C3.60096 12.1242 3.52225 11.9388 3.51882 11.7445C3.51539 11.5502 3.58752 11.3622 3.72 11.22L6.94 8L3.72 4.78C3.57955 4.63938 3.50066 4.44875 3.50066 4.25C3.50066 4.05125 3.57955 3.86063 3.72 3.72Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+        &lt;/button&gt;
+      &lt;/header&gt;
+      &lt;form class=&quot;SelectMenu-filter&quot;&gt;
+        &lt;input class=&quot;SelectMenu-input form-control&quot; type=&quot;text&quot; placeholder=&quot;Filter&quot; aria-label=&quot;Filter&quot;&gt;
+      &lt;/form&gt;
+      &lt;div class=&quot;SelectMenu-list&quot;&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 1&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 2&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 3&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 4&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 5&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 6&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 7&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 8&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 9&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 10&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 11&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 12&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 13&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 14&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 15&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 16&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 17&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 18&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 19&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 20&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 21&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 22&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 23&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 24&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 25&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;footer class=&quot;SelectMenu-footer&quot;&gt;Showing 25 of 25&lt;/footer&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;div class=&quot;d-sm-none&quot;         style=&quot;height: 600px&quot;&gt; &lt;!-- min height for &lt; sm --&gt; &lt;/div&gt;
+&lt;div class=&quot;d-none d-sm-block&quot; style=&quot;height: 500px&quot;&gt; &lt;!-- min height for &gt; sm --&gt; &lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="tabs"><a class="anchor" href="#tabs"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Tabs</h2>
+<p>Sometimes you need two or more lists of items in your select menu, e.g. branches and tags. Select menu lists can be tabbed with the addition of <code>.SelectMenu-tabs</code> above the menu.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;details class=&quot;details-reset details-overlay&quot; open&gt;
+  &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+    Choose an item
+  &lt;/summary&gt;
+  &lt;div class=&quot;SelectMenu SelectMenu--hasFilter&quot;&gt;
+    &lt;div class=&quot;SelectMenu-modal&quot;&gt;
+      &lt;header class=&quot;SelectMenu-header&quot;&gt;
+        &lt;h3 class=&quot;SelectMenu-title&quot;&gt;Title&lt;/h3&gt;
+        &lt;button class=&quot;SelectMenu-closeButton&quot; type=&quot;button&quot;&gt;
+          &lt;!-- &lt;%= svgicon &quot;x&quot; %&gt; --&gt;
+          &lt;svg class=&quot;svgicon svgicon-x&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; height=&quot;16&quot;&gt;  &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M3.72 3.72C3.86062 3.57955 4.05125 3.50066 4.25 3.50066C4.44875 3.50066 4.63937 3.57955 4.78 3.72L8 6.94L11.22 3.72C11.2887 3.64631 11.3715 3.58721 11.4635 3.54622C11.5555 3.50523 11.6548 3.48319 11.7555 3.48141C11.8562 3.47963 11.9562 3.49816 12.0496 3.53588C12.143 3.5736 12.2278 3.62974 12.299 3.70096C12.3703 3.77218 12.4264 3.85702 12.4641 3.9504C12.5018 4.04379 12.5204 4.14382 12.5186 4.24452C12.5168 4.34523 12.4948 4.44454 12.4538 4.53654C12.4128 4.62854 12.3537 4.71134 12.28 4.78L9.06 8L12.28 11.22C12.3537 11.2887 12.4128 11.3715 12.4538 11.4635C12.4948 11.5555 12.5168 11.6548 12.5186 11.7555C12.5204 11.8562 12.5018 11.9562 12.4641 12.0496C12.4264 12.143 12.3703 12.2278 12.299 12.299C12.2278 12.3703 12.143 12.4264 12.0496 12.4641C11.9562 12.5018 11.8562 12.5204 11.7555 12.5186C11.6548 12.5168 11.5555 12.4948 11.4635 12.4538C11.3715 12.4128 11.2887 12.3537 11.22 12.28L8 9.06L4.78 12.28C4.63782 12.4125 4.44977 12.4846 4.25547 12.4812C4.06117 12.4777 3.87579 12.399 3.73837 12.2616C3.60096 12.1242 3.52225 11.9388 3.51882 11.7445C3.51539 11.5502 3.58752 11.3622 3.72 11.22L6.94 8L3.72 4.78C3.57955 4.63938 3.50066 4.44875 3.50066 4.25C3.50066 4.05125 3.57955 3.86063 3.72 3.72Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+        &lt;/button&gt;
+      &lt;/header&gt;
+      &lt;form class=&quot;SelectMenu-filter&quot;&gt;
+        &lt;input class=&quot;SelectMenu-input form-control&quot; type=&quot;text&quot; placeholder=&quot;Filter&quot; aria-label=&quot;Filter&quot; /&gt;
+      &lt;/form&gt;
+      &lt;nav class=&quot;SelectMenu-tabs&quot;&gt;
+        &lt;button class=&quot;SelectMenu-tab&quot; aria-selected=&quot;true&quot;&gt;Branches&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-tab&quot;&gt;Tags&lt;/button&gt;
+      &lt;/nav&gt;
+      &lt;div class=&quot;SelectMenu-list&quot;&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Branch 1&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Branch 2&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Branch 3&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Branch 4&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Branch 5&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;SelectMenu-list&quot; hidden&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Tag 1&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Tag 2&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Tag 3&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;footer class=&quot;SelectMenu-footer&quot;&gt;Showing 5 of 5&lt;/footer&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;div class=&quot;d-sm-none&quot; style=&quot;height: 600px&quot;&gt;&lt;!-- min height for &lt; sm --&gt;&lt;/div&gt;
+&lt;div class=&quot;d-none d-sm-block&quot; style=&quot;height: 380px&quot;&gt;&lt;!-- min height for &gt; sm --&gt;&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="message"><a class="anchor" href="#message"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Message</h2>
+<p>A <code>SelectMenu-message</code> can be used to show different kind of messages to a user. Use utility classes to further style the message.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;details class=&quot;details-reset details-overlay&quot; open&gt;
+  &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+    Choose an item
+  &lt;/summary&gt;
+  &lt;div class=&quot;SelectMenu&quot;&gt;
+    &lt;div class=&quot;SelectMenu-modal&quot;&gt;
+      &lt;header class=&quot;SelectMenu-header&quot;&gt;
+        &lt;h3 class=&quot;SelectMenu-title&quot;&gt;Title&lt;/h3&gt;
+        &lt;button class=&quot;SelectMenu-closeButton&quot; type=&quot;button&quot;&gt;
+          &lt;!-- &lt;%= svgicon &quot;x&quot; %&gt; --&gt;
+          &lt;svg class=&quot;svgicon svgicon-x&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; height=&quot;16&quot;&gt;  &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M3.72 3.72C3.86062 3.57955 4.05125 3.50066 4.25 3.50066C4.44875 3.50066 4.63937 3.57955 4.78 3.72L8 6.94L11.22 3.72C11.2887 3.64631 11.3715 3.58721 11.4635 3.54622C11.5555 3.50523 11.6548 3.48319 11.7555 3.48141C11.8562 3.47963 11.9562 3.49816 12.0496 3.53588C12.143 3.5736 12.2278 3.62974 12.299 3.70096C12.3703 3.77218 12.4264 3.85702 12.4641 3.9504C12.5018 4.04379 12.5204 4.14382 12.5186 4.24452C12.5168 4.34523 12.4948 4.44454 12.4538 4.53654C12.4128 4.62854 12.3537 4.71134 12.28 4.78L9.06 8L12.28 11.22C12.3537 11.2887 12.4128 11.3715 12.4538 11.4635C12.4948 11.5555 12.5168 11.6548 12.5186 11.7555C12.5204 11.8562 12.5018 11.9562 12.4641 12.0496C12.4264 12.143 12.3703 12.2278 12.299 12.299C12.2278 12.3703 12.143 12.4264 12.0496 12.4641C11.9562 12.5018 11.8562 12.5204 11.7555 12.5186C11.6548 12.5168 11.5555 12.4948 11.4635 12.4538C11.3715 12.4128 11.2887 12.3537 11.22 12.28L8 9.06L4.78 12.28C4.63782 12.4125 4.44977 12.4846 4.25547 12.4812C4.06117 12.4777 3.87579 12.399 3.73837 12.2616C3.60096 12.1242 3.52225 11.9388 3.51882 11.7445C3.51539 11.5502 3.58752 11.3622 3.72 11.22L6.94 8L3.72 4.78C3.57955 4.63938 3.50066 4.44875 3.50066 4.25C3.50066 4.05125 3.57955 3.86063 3.72 3.72Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+        &lt;/button&gt;
+      &lt;/header&gt;
+      &lt;div class=&quot;SelectMenu-list&quot;&gt;
+        &lt;div class=&quot;SelectMenu-message bg-red-0 text-red&quot;&gt;Message goes here&lt;/div&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 1&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 2&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 3&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;div class=&quot;d-sm-none&quot; style=&quot;height: 600px&quot;&gt;&lt;!-- min height for &lt; sm --&gt;&lt;/div&gt;
+&lt;div class=&quot;d-none d-sm-block&quot; style=&quot;height: 200px&quot;&gt;&lt;!-- min height for &gt; sm --&gt;&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="loading"><a class="anchor" href="#loading"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Loading</h2>
+<p>When fetching large lists, consider showing a <code>.SelectMenu-loading</code> animation.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;details class=&quot;details-reset details-overlay&quot; open&gt;
+  &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+    Choose an item
+  &lt;/summary&gt;
+  &lt;div class=&quot;SelectMenu&quot;&gt;
+    &lt;div class=&quot;SelectMenu-modal&quot;&gt;
+      &lt;header class=&quot;SelectMenu-header&quot;&gt;
+        &lt;h3 class=&quot;SelectMenu-title&quot;&gt;Title&lt;/h3&gt;
+        &lt;button class=&quot;SelectMenu-closeButton&quot; type=&quot;button&quot;&gt;
+          &lt;!-- &lt;%= svgicon &quot;x&quot; %&gt; --&gt;
+          &lt;svg class=&quot;svgicon svgicon-x&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; height=&quot;16&quot;&gt;  &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M3.72 3.72C3.86062 3.57955 4.05125 3.50066 4.25 3.50066C4.44875 3.50066 4.63937 3.57955 4.78 3.72L8 6.94L11.22 3.72C11.2887 3.64631 11.3715 3.58721 11.4635 3.54622C11.5555 3.50523 11.6548 3.48319 11.7555 3.48141C11.8562 3.47963 11.9562 3.49816 12.0496 3.53588C12.143 3.5736 12.2278 3.62974 12.299 3.70096C12.3703 3.77218 12.4264 3.85702 12.4641 3.9504C12.5018 4.04379 12.5204 4.14382 12.5186 4.24452C12.5168 4.34523 12.4948 4.44454 12.4538 4.53654C12.4128 4.62854 12.3537 4.71134 12.28 4.78L9.06 8L12.28 11.22C12.3537 11.2887 12.4128 11.3715 12.4538 11.4635C12.4948 11.5555 12.5168 11.6548 12.5186 11.7555C12.5204 11.8562 12.5018 11.9562 12.4641 12.0496C12.4264 12.143 12.3703 12.2278 12.299 12.299C12.2278 12.3703 12.143 12.4264 12.0496 12.4641C11.9562 12.5018 11.8562 12.5204 11.7555 12.5186C11.6548 12.5168 11.5555 12.4948 11.4635 12.4538C11.3715 12.4128 11.2887 12.3537 11.22 12.28L8 9.06L4.78 12.28C4.63782 12.4125 4.44977 12.4846 4.25547 12.4812C4.06117 12.4777 3.87579 12.399 3.73837 12.2616C3.60096 12.1242 3.52225 11.9388 3.51882 11.7445C3.51539 11.5502 3.58752 11.3622 3.72 11.22L6.94 8L3.72 4.78C3.57955 4.63938 3.50066 4.44875 3.50066 4.25C3.50066 4.05125 3.57955 3.86063 3.72 3.72Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+        &lt;/button&gt;
+      &lt;/header&gt;
+      &lt;div class=&quot;SelectMenu-list&quot;&gt;
+        &lt;div class=&quot;SelectMenu-loading&quot;&gt;
+          &lt;!-- &lt;%= svgicon &quot;octoface&quot;, class: &quot;anim-pulse&quot;, width: 32 %&gt; --&gt;
+          &lt;svg
+            width=&quot;32 &quot;
+            height=&quot;32&quot;
+            viewBox=&quot;0 0 16 16&quot;
+            class=&quot;svgicon svgicon-octoface anim-pulse&quot;
+            aria-hidden=&quot;true&quot;
+          &gt;
+            &lt;path
+              fill-rule=&quot;evenodd&quot;
+              d=&quot;M14.7 5.34c.13-.32.55-1.59-.13-3.31 0 0-1.05-.33-3.44 1.3-1-.28-2.07-.32-3.13-.32s-2.13.04-3.13.32c-2.39-1.64-3.44-1.3-3.44-1.3-.68 1.72-.26 2.99-.13 3.31C.49 6.21 0 7.33 0 8.69 0 13.84 3.33 15 7.98 15S16 13.84 16 8.69c0-1.36-.49-2.48-1.3-3.35zM8 14.02c-3.3 0-5.98-.15-5.98-3.35 0-.76.38-1.48 1.02-2.07 1.07-.98 2.9-.46 4.96-.46 2.07 0 3.88-.52 4.96.46.65.59 1.02 1.3 1.02 2.07 0 3.19-2.68 3.35-5.98 3.35zM5.49 9.01c-.66 0-1.2.8-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.54-1.78-1.2-1.78zm5.02 0c-.66 0-1.2.79-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.53-1.78-1.2-1.78z&quot;
+            /&gt;
+          &lt;/svg&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;footer class=&quot;SelectMenu-footer&quot;&gt;Loading...&lt;/footer&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;div class=&quot;d-sm-none&quot; style=&quot;height: 600px&quot;&gt;&lt;!-- min height for &lt; sm --&gt;&lt;/div&gt;
+&lt;div class=&quot;d-none d-sm-block&quot; style=&quot;height: 220px&quot;&gt;&lt;!-- min height for &gt; sm --&gt;&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="disabled"><a class="anchor" href="#disabled"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Disabled</h2>
+<p>To disable a list item, use the <code>disabled</code> attribute for <code>&lt;button&gt;</code>s. For <code>&lt;a&gt;</code>s replace the <code>href</code> with an <code>aria-disabled=&quot;true&quot;</code> attribute. Note: If not obvious, try to communicate to the user why an item is disabled.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;details class=&quot;details-reset details-overlay&quot; open&gt;
+  &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+    Choose an item
+  &lt;/summary&gt;
+  &lt;div class=&quot;SelectMenu&quot;&gt;
+    &lt;div class=&quot;SelectMenu-modal&quot;&gt;
+      &lt;div class=&quot;SelectMenu-list&quot;&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 1&lt;/button&gt;
+        &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot; disabled&gt;Item 2 (disabled)&lt;/button&gt;
+        &lt;a class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot; href=&quot;#&quot;&gt;Item 3&lt;/a&gt;
+        &lt;a class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot; aria-disabled=&quot;true&quot;&gt;Item 4 (disabled)&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;div class=&quot;d-sm-none&quot; style=&quot;height: 600px&quot;&gt;&lt;!-- min height for &lt; sm --&gt;&lt;/div&gt;
+&lt;div class=&quot;d-none d-sm-block&quot; style=&quot;height: 160px&quot;&gt;&lt;!-- min height for &gt; sm --&gt;&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="blankslate"><a class="anchor" href="#blankslate"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Blankslate</h2>
+<p>Sometimes a select menu needs to communicate a &quot;blank slate&quot; where there's no content in the menu's list. Usually these include a clear call to action to add said content to the list. Swap out the contents of a <code>.SelectMenu-list</code> with a <code>.SelectMenu-blankslate</code> and customize its contents as needed.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;details class=&quot;details-reset details-overlay&quot; open&gt;
+  &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+    Choose an item
+  &lt;/summary&gt;
+  &lt;div class=&quot;SelectMenu&quot;&gt;
+    &lt;div class=&quot;SelectMenu-modal&quot;&gt;
+      &lt;header class=&quot;SelectMenu-header&quot;&gt;
+        &lt;h3 class=&quot;SelectMenu-title&quot;&gt;Title&lt;/h3&gt;
+        &lt;button class=&quot;SelectMenu-closeButton&quot; type=&quot;button&quot;&gt;
+          &lt;!-- &lt;%= svgicon &quot;x&quot; %&gt; --&gt;
+          &lt;svg class=&quot;svgicon svgicon-x&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot; height=&quot;16&quot;&gt;  &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M3.72 3.72C3.86062 3.57955 4.05125 3.50066 4.25 3.50066C4.44875 3.50066 4.63937 3.57955 4.78 3.72L8 6.94L11.22 3.72C11.2887 3.64631 11.3715 3.58721 11.4635 3.54622C11.5555 3.50523 11.6548 3.48319 11.7555 3.48141C11.8562 3.47963 11.9562 3.49816 12.0496 3.53588C12.143 3.5736 12.2278 3.62974 12.299 3.70096C12.3703 3.77218 12.4264 3.85702 12.4641 3.9504C12.5018 4.04379 12.5204 4.14382 12.5186 4.24452C12.5168 4.34523 12.4948 4.44454 12.4538 4.53654C12.4128 4.62854 12.3537 4.71134 12.28 4.78L9.06 8L12.28 11.22C12.3537 11.2887 12.4128 11.3715 12.4538 11.4635C12.4948 11.5555 12.5168 11.6548 12.5186 11.7555C12.5204 11.8562 12.5018 11.9562 12.4641 12.0496C12.4264 12.143 12.3703 12.2278 12.299 12.299C12.2278 12.3703 12.143 12.4264 12.0496 12.4641C11.9562 12.5018 11.8562 12.5204 11.7555 12.5186C11.6548 12.5168 11.5555 12.4948 11.4635 12.4538C11.3715 12.4128 11.2887 12.3537 11.22 12.28L8 9.06L4.78 12.28C4.63782 12.4125 4.44977 12.4846 4.25547 12.4812C4.06117 12.4777 3.87579 12.399 3.73837 12.2616C3.60096 12.1242 3.52225 11.9388 3.51882 11.7445C3.51539 11.5502 3.58752 11.3622 3.72 11.22L6.94 8L3.72 4.78C3.57955 4.63938 3.50066 4.44875 3.50066 4.25C3.50066 4.05125 3.57955 3.86063 3.72 3.72Z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+        &lt;/button&gt;
+      &lt;/header&gt;
+      &lt;div class=&quot;SelectMenu-list&quot;&gt;
+        &lt;div class=&quot;SelectMenu-blankslate&quot;&gt;
+          &lt;!-- &lt;%= svgicon &quot;repo&quot;, class: &quot;color-gray-3&quot;, width: 24 %&gt; --&gt;
+          &lt;svg width=&quot;24 &quot; height=&quot;32&quot; viewBox=&quot;0 0 12 16&quot; class=&quot;svgicon svgicon-repo color-gray-3&quot; aria-hidden=&quot;true&quot;&gt;
+            &lt;path
+              fill-rule=&quot;evenodd&quot;
+              d=&quot;M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z&quot;
+            /&gt;
+          &lt;/svg&gt;
+          &lt;h4 class=&quot;my-2&quot;&gt;No repositories&lt;/h4&gt;
+          &lt;p class=&quot;mb-3 text-gray&quot;&gt;We didn’t find any matching repositories that you can commit to.&lt;/p&gt;
+          &lt;button type=&quot;button&quot; class=&quot;btn btn-sm btn-primary&quot;&gt;Create a repository&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/details&gt;
+
+&lt;div class=&quot;d-sm-none&quot; style=&quot;height: 600px&quot;&gt;&lt;!-- min height for &lt; sm --&gt;&lt;/div&gt;
+&lt;div class=&quot;d-none d-sm-block&quot; style=&quot;height: 260px&quot;&gt;&lt;!-- min height for &gt; sm --&gt;&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+
+  </div>
+  <div class="col-4 p-3 hide-sm hide-md hide-lg">a</div>
+</div>
+    </div>
+  </div>
+</body>
+</html>

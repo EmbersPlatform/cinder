@@ -97,9 +97,10 @@
 .LiveCode .LiveCode-source .LiveCode-editor > pre {
   pointer-events: none;
   border: none;
+  overflow-x: hidden;
 }
 .LiveCode .LiveCode-source .LiveCode-editor > pre > code {
-  overflow-x: auto;
+  overflow-x: hidden;
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
   white-space: -pre-wrap;

@@ -36,10 +36,12 @@
     </script>
   </nav>
   <div class="d-flex flex-wrap">
-    <div class="p-2 col-12 col-md-4 col-lg-3 hide-md hide-sm">
+    <div class="p-2 col-12 col-md-3 col-lg-3 hide-md hide-sm">
       <nav class="menu position-sticky" style="top: 72px;">
         <a href="/cinder/" class="menu-item" >Home</a>
-    <div class="menu-heading">Components</div><a href="/cinder/components/box/" class="menu-item"
+    <div class="menu-heading">Components</div><a href="/cinder/components/alerts/" class="menu-item"
+        
+      >Alerts</a><a href="/cinder/components/box/" class="menu-item"
         
       >Box</a><a href="/cinder/components/buttons/" class="menu-item"
         
@@ -47,7 +49,9 @@
         
       >Forms</a><a href="/cinder/components/navigation/" class="menu-item"
         
-      >Navigation</a><a href="/cinder/components/subheads/" class="menu-item"
+      >Navigation</a><a href="/cinder/components/select-menu/" class="menu-item"
+        
+      >Select menu</a><a href="/cinder/components/subheads/" class="menu-item"
          aria-current="page"
       >Subheads</a>
     <div class="menu-heading">Misc</div><a href="/cinder/misc/markdown_test/" class="menu-item"
@@ -62,10 +66,12 @@
       >Typography</a>
       </nav>
     </div>
-    <div class="col-12 col-md-8 col-lg-6 flex-1 p-4 container-lg">
+    <div class="col-12 col-md-9 col-lg-9 flex-1 p-4 container-lg">
       <nav class="menu d-md-none">
         <a href="/cinder/" class="menu-item" >Home</a>
-    <div class="menu-heading">Components</div><a href="/cinder/components/box/" class="menu-item"
+    <div class="menu-heading">Components</div><a href="/cinder/components/alerts/" class="menu-item"
+        
+      >Alerts</a><a href="/cinder/components/box/" class="menu-item"
         
       >Box</a><a href="/cinder/components/buttons/" class="menu-item"
         
@@ -73,7 +79,9 @@
         
       >Forms</a><a href="/cinder/components/navigation/" class="menu-item"
         
-      >Navigation</a><a href="/cinder/components/subheads/" class="menu-item"
+      >Navigation</a><a href="/cinder/components/select-menu/" class="menu-item"
+        
+      >Select menu</a><a href="/cinder/components/subheads/" class="menu-item"
          aria-current="page"
       >Subheads</a>
     <div class="menu-heading">Misc</div><a href="/cinder/misc/markdown_test/" class="menu-item"
@@ -87,9 +95,10 @@
         
       >Typography</a>
       </nav>
-      <div class="Prose">
-  <h1>Subheads</h1>
-  <p>The basic Subhead consists of a <code>.Subhead</code> container, which has a light gray bottom border. Use <code>.Subhead-heading</code> for the heading itself. It's an <code>&lt;h2&gt;</code> sized heading with normal font-weight.</p>
+      <div class="d-flex flex-wrap">
+  <div class="Prose flex-1 col-12 col-md-8">
+    <h1>Subheads</h1>
+    <p>The basic Subhead consists of a <code>.Subhead</code> container, which has a light gray bottom border. Use <code>.Subhead-heading</code> for the heading itself. It's an <code>&lt;h2&gt;</code> sized heading with normal font-weight.</p>
 <p>Use a heading element whenever possible as they can be used as navigation for assistive technologies, and avoid skipping levels.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
@@ -222,9 +231,10 @@
       </cinder-live-html>
       
 
+  </div>
+  <div class="col-4 p-3 hide-sm hide-md hide-lg">a</div>
 </div>
     </div>
   </div>
 </body>
-
 </html>

@@ -61,7 +61,7 @@ define("cinder-live-html", class extends Component() {
     </head>
     <body data-color-mode="${theme}" data-light-theme="light" data-dark-theme="dark">
       <div class="LiveCode-frame-content">
-        <div class="pt-2 px-2 d-flex flex-justify-end">
+        <div class="pt-2 px-2 d-flex flex-justify-end" style="z-index: 100; position: relative;">
           <button class="btn" theme-toggler type="button" onclick="toggle_theme();">${window.toggler_icons[theme]}</button>
         </div>
         <div id="frame-content" class="p-3">${this.state().source}</div>

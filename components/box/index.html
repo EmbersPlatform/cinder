@@ -36,10 +36,12 @@
     </script>
   </nav>
   <div class="d-flex flex-wrap">
-    <div class="p-2 col-12 col-md-4 col-lg-3 hide-md hide-sm">
+    <div class="p-2 col-12 col-md-3 col-lg-3 hide-md hide-sm">
       <nav class="menu position-sticky" style="top: 72px;">
         <a href="/cinder/" class="menu-item" >Home</a>
-    <div class="menu-heading">Components</div><a href="/cinder/components/box/" class="menu-item"
+    <div class="menu-heading">Components</div><a href="/cinder/components/alerts/" class="menu-item"
+        
+      >Alerts</a><a href="/cinder/components/box/" class="menu-item"
          aria-current="page"
       >Box</a><a href="/cinder/components/buttons/" class="menu-item"
         
@@ -47,7 +49,9 @@
         
       >Forms</a><a href="/cinder/components/navigation/" class="menu-item"
         
-      >Navigation</a><a href="/cinder/components/subheads/" class="menu-item"
+      >Navigation</a><a href="/cinder/components/select-menu/" class="menu-item"
+        
+      >Select menu</a><a href="/cinder/components/subheads/" class="menu-item"
         
       >Subheads</a>
     <div class="menu-heading">Misc</div><a href="/cinder/misc/markdown_test/" class="menu-item"
@@ -62,10 +66,12 @@
       >Typography</a>
       </nav>
     </div>
-    <div class="col-12 col-md-8 col-lg-6 flex-1 p-4 container-lg">
+    <div class="col-12 col-md-9 col-lg-9 flex-1 p-4 container-lg">
       <nav class="menu d-md-none">
         <a href="/cinder/" class="menu-item" >Home</a>
-    <div class="menu-heading">Components</div><a href="/cinder/components/box/" class="menu-item"
+    <div class="menu-heading">Components</div><a href="/cinder/components/alerts/" class="menu-item"
+        
+      >Alerts</a><a href="/cinder/components/box/" class="menu-item"
          aria-current="page"
       >Box</a><a href="/cinder/components/buttons/" class="menu-item"
         
@@ -73,7 +79,9 @@
         
       >Forms</a><a href="/cinder/components/navigation/" class="menu-item"
         
-      >Navigation</a><a href="/cinder/components/subheads/" class="menu-item"
+      >Navigation</a><a href="/cinder/components/select-menu/" class="menu-item"
+        
+      >Select menu</a><a href="/cinder/components/subheads/" class="menu-item"
         
       >Subheads</a>
     <div class="menu-heading">Misc</div><a href="/cinder/misc/markdown_test/" class="menu-item"
@@ -87,9 +95,10 @@
         
       >Typography</a>
       </nav>
-      <div class="Prose">
-  <h1>Box</h1>
-  <p>A <code>.Box</code> is a container with a background, a border, and rounded corners. By default there are no additional styles such as padding, these can be added as needed with utility classes. Other styles and layouts can be achieved with box elements and modifiers shown in the documentation below.</p>
+      <div class="d-flex flex-wrap">
+  <div class="Prose flex-1 col-12 col-md-8">
+    <h1>Box</h1>
+    <p>A <code>.Box</code> is a container with a background, a border, and rounded corners. By default there are no additional styles such as padding, these can be added as needed with utility classes. Other styles and layouts can be achieved with box elements and modifiers shown in the documentation below.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
@@ -788,14 +797,28 @@
         Check it
       &lt;/label&gt;
     &lt;/form&gt;
-    &lt;button class=&quot;btn-link select-menu-button muted-link&quot;&gt;
-      Select menu
-    &lt;/button&gt;
+    &lt;details class=&quot;details-reset details-overlay&quot; open&gt;
+      &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
+        Select menu
+      &lt;/summary&gt;
+      &lt;div class=&quot;SelectMenu right-0&quot;&gt;
+        &lt;div class=&quot;SelectMenu-modal&quot;&gt;
+          &lt;div class=&quot;SelectMenu-list&quot;&gt;
+            &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 1&lt;/button&gt;
+            &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 2&lt;/button&gt;
+            &lt;button class=&quot;SelectMenu-item&quot; role=&quot;menuitem&quot;&gt;Item 3&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/details&gt;
   &lt;/div&gt;
   &lt;div class=&quot;Box-body&quot;&gt;
     Box body
   &lt;/div&gt;
-&lt;/div&gt;</textarea>
+&lt;/div&gt;
+
+&lt;div class=&quot;d-sm-none&quot; style=&quot;height: 600px&quot;&gt;&lt;!-- min height for &lt; sm --&gt;&lt;/div&gt;
+&lt;div class=&quot;d-none d-sm-block&quot; style=&quot;height: 120px&quot;&gt;&lt;!-- min height for &gt; sm --&gt;&lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
@@ -875,9 +898,10 @@
       </cinder-live-html>
       
 
+  </div>
+  <div class="col-4 p-3 hide-sm hide-md hide-lg">a</div>
 </div>
     </div>
   </div>
 </body>
-
 </html>
