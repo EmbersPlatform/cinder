@@ -500,14 +500,28 @@ Using flexbox along with form, button, and link styles, you can create more comp
         Check it
       </label>
     </form>
-    <button class="btn-link select-menu-button muted-link">
-      Select menu
-    </button>
+    <details class="details-reset details-overlay" open>
+      <summary class="btn" aria-haspopup="true">
+        Select menu
+      </summary>
+      <div class="SelectMenu right-0">
+        <div class="SelectMenu-modal">
+          <div class="SelectMenu-list">
+            <button class="SelectMenu-item" role="menuitem">Item 1</button>
+            <button class="SelectMenu-item" role="menuitem">Item 2</button>
+            <button class="SelectMenu-item" role="menuitem">Item 3</button>
+          </div>
+        </div>
+      </div>
+    </details>
   </div>
   <div class="Box-body">
     Box body
   </div>
 </div>
+
+<div class="d-sm-none" style="height: 600px"><!-- min height for < sm --></div>
+<div class="d-none d-sm-block" style="height: 120px"><!-- min height for > sm --></div>
 ```
 
 You can put forms in boxes. Often form submission buttons are aligned to the bottom right of the form which you can do with `text-right` instead of using floats.

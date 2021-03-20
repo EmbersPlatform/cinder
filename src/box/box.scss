@@ -1,4 +1,5 @@
 // Box
+// Intended to replace simple-box, boxed-group, and table-list
 
 .Box {
   background-color: var(--color-bg-primary);
@@ -24,6 +25,14 @@
     padding: $spacer-2 $spacer-3;
   }
 
+  .Box-btn-svgicon {
+    &.btn-svgicon {
+      padding: $spacer-2 $spacer-3;
+      margin: (-$spacer-2) (-$spacer-3);
+      line-height: $lh-condensed;
+    }
+  }
+
   .Box-row {
     padding: $spacer-2 $spacer-3;
   }
@@ -45,6 +54,13 @@
 
   .Box-footer {
     padding: $spacer-4;
+  }
+
+  .Box-btn-svgicon {
+    &.btn-svgicon {
+      padding: $spacer-4;
+      margin: (-$spacer-4) (-$spacer-4);
+    }
   }
 
   .Box-row {
@@ -102,6 +118,10 @@
   // Adds a blue vertical line to the left of the row
   // For indicating a row item is unread
   &.Box-row--unread,
+  // .unread to be deprecated with .Box-row-unread
+  &.unread {
+    box-shadow: inset 2px 0 0 var(--color-border-info);
+  }
 
   &.navigation-focus {
     // Focus styles for when drag icon
@@ -251,4 +271,14 @@
 
 .Box-row--gray {
   background-color: var(--color-bg-tertiary);
+}
+
+//Box with btn-svgicon
+.Box-btn-svgicon {
+  // Increase specificity when btn-svgicon is used because comes after .Box in the cascade
+  &.btn-svgicon {
+    padding: $spacer-3 $spacer-3;
+    margin: (-$spacer-3) (-$spacer-3);
+    line-height: $lh-default; // override btn-svgicon line-height
+  }
 }

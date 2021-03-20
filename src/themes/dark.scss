@@ -42,8 +42,8 @@
       canvas-inset: #06090F,
       primary: $gray-7,
       secondary: $gray-8,
-      tertiary: $gray-6,
-      overlay: $gray-5,
+      tertiary: $gray-8,
+      overlay: $gray-7,
       backdrop: rgba($black, 0.8),
       accent: rgba($orange-5, 0.1),
       accent-inverse: $orange-5,
@@ -55,6 +55,89 @@
       success-inverse: $green-4,
       warning: rgba($yellow-4, 0.1),
       warning-inverse: $yellow-4,
+    ),
+
+    shadow: (
+      small: 0 0 transparent,
+      medium: 0 3px 6px $black,
+      large: 0 8px 24px $black,
+      extra-large: 0 12px 48px $black,
+
+      highlight: 0 0 transparent, // top highlight
+      inset: 0 0 transparent, // top inner shadow
+    ),
+
+    state: (
+      hover: (
+        primary-bg: $blue-5,
+        primary-border: $blue-4,
+        primary-text: $gray-0,
+        primary-icon: $gray-0,
+        secondary-bg: $gray-8,
+        secondary-border: $gray-8,
+      ),
+
+      selected: (
+        primary-bg: $blue-5,
+        primary-border: $blue-4,
+        primary-text: $gray-0,
+        primary-icon: $gray-0,
+      ),
+
+      focus: (
+        border: $blue-4, // blue focus border
+        shadow: 0 0 0 3px $blue-8, // blue focus ring
+      ),
+    ),
+
+    fade: (
+      fg-15: $white-fade-1,
+      fg-30: $white-fade-3,
+      fg-50: $white-fade-5,
+      fg-70: $white-fade-7,
+      fg-85: $white-fade-8,
+
+      black-10: $black-fade-1,
+      black-30: $black-fade-3,
+      black-50: $black-fade-5,
+      black-70: $black-fade-7,
+      black-85: $black-fade-8,
+
+      white-15: $white-fade-1,
+      white-30: $white-fade-3,
+      white-50: $white-fade-5,
+      white-70: $white-fade-7,
+      white-85: $white-fade-8,
+    ),
+
+    alert: (
+      info: (
+        text: $blue-2,
+        icon: $blue-2,
+        bg: rgba($blue-4, 0.1),
+        border: rgba($blue-4, 0.4),
+      ),
+
+      warn: (
+        text: $yellow-2,
+        icon: $yellow-2,
+        bg: rgba($yellow-4, 0.1),
+        border: rgba($yellow-4, 0.4),
+      ),
+
+      error: (
+        text: $red-3,
+        icon: $red-3,
+        bg: rgba($red-4, 0.1),
+        border: rgba($red-4, 0.4),
+      ),
+
+      success: (
+        text: $green-2,
+        icon: $green-2,
+        bg: rgba($green-4, 0.1),
+        border: rgba($green-4, 0.4),
+      ),
     ),
 
     btn: (
@@ -302,6 +385,15 @@
       logline-warning-bg: var(--color-bg-warning),
       logline-command-text: $blue-3,
       logline-section-text: var(--color-text-success),
+    ),
+
+    select-menu: (
+      border-secondary: $gray-9,
+      shadow: 0 0 18px rgba($black, 0.4),
+      backdrop-bg: $black-fade-5,
+      backdrop-border: $gray-5,
+      tap-highlight: rgba($gray-6, 0.5),
+      tap-focus-bg: $orange-8,
     ),
 
     highlight: (
