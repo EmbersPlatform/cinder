@@ -1,7 +1,7 @@
 <a href="{{ "/" | url }}" class="menu-item" {% if "/" == page.url %} aria-current="page"{% endif %}>Home</a>
 
 {%- for collectionName, collection in collections -%}
-  {% if collectionName !== "all" %}
+  {% if (collectionName !== "all") and (collection.length > 0) %}
     <div class="menu-heading">{{ collectionName | capitalize }}</div>
     {%- for entry in collection | sortBy("title") -%}
       <a href="{{ entry.url | url }}" class="menu-item"

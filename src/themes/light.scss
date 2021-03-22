@@ -450,6 +450,14 @@
       logline-section-text: $green-3,
     ),
 
+    timeline: (
+      text: $gray-7,
+      badge-bg: $gray-2,
+      badge-success-border: transparent,
+      target-badge-border: $blue-4,
+      target-badge-shadow: $blue-2,
+    ),
+
     select-menu: (
       border-secondary: lighten($gray-2, 3%),
       shadow: 0 0 18px rgba($black, 0.4),

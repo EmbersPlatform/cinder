@@ -52,7 +52,7 @@
       danger: rgba($red-4, 0.1),
       danger-inverse: $red-5,
       success: rgba($green-4, 0.1),
-      success-inverse: $green-4,
+      success-inverse: $green-6,
       warning: rgba($yellow-4, 0.1),
       warning-inverse: $yellow-4,
     ),
@@ -447,6 +447,64 @@
       logline-warning-bg: var(--color-bg-warning),
       logline-command-text: $blue-3,
       logline-section-text: var(--color-text-success),
+    ),
+
+    toast: (
+      text: var(--color-text-primary),
+      bg: $black,
+      border: var(--color-border-primary),
+      shadow: var(--color-shadow-large),
+      icon: var(--color-text-primary),
+      icon-bg: var(--color-bg-tertiary),
+      icon-border: var(--color-border-primary),
+
+      info: (
+        text: $blue-2,
+        border: #214981,
+        icon: $blue-2,
+        icon-bg: #121D2E,
+        icon-border: #214981,
+      ),
+
+      success: (
+        text: $green-2,
+        border: #1C532C,
+        icon: $green-2,
+        icon-bg: #111F1C,
+        icon-border: #1C532C,
+      ),
+
+      warning: (
+        text: $yellow-2,
+        border: #5E4411,
+        icon: $yellow-2,
+        icon-bg: #1F1C16,
+        icon-border: #5E4411,
+      ),
+
+      danger: (
+        text: $red-3,
+        border: #792E2E,
+        icon: $red-3,
+        icon-bg: #25171C,
+        icon-border: #792E2E,
+      ),
+
+      loading: (
+        text: var(--color-text-primary),
+        border: var(--color-border-primary),
+        icon: $white,
+        icon-bg: $gray-6,
+        icon-border: var(--color-border-primary),
+      ),
+    ),
+
+    timeline: (
+      text: $gray-2,
+      badge-bg: $gray-9,
+      badge-success-border: $green-4,
+      target-badge-border: $blue-5,
+      target-badge-shadow: $blue-7,
     ),
 
     select-menu: (

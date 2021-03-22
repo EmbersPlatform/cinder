@@ -14,6 +14,7 @@ module.exports = function(eleventyConfig) {
   })
   .use(require('markdown-it-anchor'), {
     permalink: true,
+    level: 2,
     permalinkBefore: true,
     permalinkSpace: false,
     permalinkClass: "anchor",

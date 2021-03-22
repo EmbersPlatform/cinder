@@ -21,6 +21,7 @@
 
   .LiveCode-editor {
     display: grid;
+    overflow-x: auto;
   }
   .LiveCode-editor::after {
     content: attr(data-replicated-value) " ";
