@@ -450,6 +450,56 @@
       logline-section-text: $green-3,
     ),
 
+    toast: (
+      text: var(--color-text-primary),
+      bg: var(--color-bg-canvas),
+      border: var(--color-border-primary),
+      shadow: var(--color-shadow-large),
+      icon: $black,
+      icon-bg: var(--color-bg-tertiary),
+      icon-border: var(--color-border-primary),
+
+      info: (
+        text: var(--color-text-primary),
+        border: var(--color-border-primary),
+        icon: $white,
+        icon-bg: var(--color-bg-info-inverse),
+        icon-border: transparent,
+      ),
+
+      success: (
+        text: var(--color-text-primary),
+        border: var(--color-border-primary),
+        icon: $white,
+        icon-bg: var(--color-bg-success-inverse),
+        icon-border: transparent,
+      ),
+
+      warning: (
+        text: var(--color-text-primary),
+        border: var(--color-border-primary),
+        icon: var(--color-text-primary),
+        icon-bg: var(--color-bg-warning-inverse),
+        icon-border: transparent,
+      ),
+
+      danger: (
+        text: var(--color-text-primary),
+        border: var(--color-border-primary),
+        icon: $white,
+        icon-bg: var(--color-bg-danger-inverse),
+        icon-border: transparent,
+      ),
+
+      loading: (
+        text: var(--color-text-primary),
+        border: var(--color-border-primary),
+        icon: $white,
+        icon-bg: $gray-6,
+        icon-border: transparent,
+      ),
+    ),
+
     timeline: (
       text: $gray-7,
       badge-bg: $gray-2,
