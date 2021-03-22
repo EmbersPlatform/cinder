@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Dropdown - Cinder CSS</title>
+  <title>Toasts - Cinder CSS</title>
   
 
   <link rel="stylesheet" href="/cinder/dist/index.css">
@@ -48,7 +48,7 @@
       >Box</a><a href="/cinder/components/buttons/" class="menu-item"
         
       >Buttons</a><a href="/cinder/components/dropdown/" class="menu-item"
-         aria-current="page"
+        
       >Dropdown</a><a href="/cinder/components/forms/" class="menu-item"
         
       >Forms</a><a href="/cinder/components/labels/" class="menu-item"
@@ -66,7 +66,7 @@
       >Subheads</a><a href="/cinder/components/timeline/" class="menu-item"
         
       >Timeline</a><a href="/cinder/components/toasts/" class="menu-item"
-        
+         aria-current="page"
       >Toasts</a>
     <div class="menu-heading">Utilities</div><a href="/cinder/utilities/details/" class="menu-item"
         
@@ -91,7 +91,7 @@
       >Box</a><a href="/cinder/components/buttons/" class="menu-item"
         
       >Buttons</a><a href="/cinder/components/dropdown/" class="menu-item"
-         aria-current="page"
+        
       >Dropdown</a><a href="/cinder/components/forms/" class="menu-item"
         
       >Forms</a><a href="/cinder/components/labels/" class="menu-item"
@@ -109,7 +109,7 @@
       >Subheads</a><a href="/cinder/components/timeline/" class="menu-item"
         
       >Timeline</a><a href="/cinder/components/toasts/" class="menu-item"
-        
+         aria-current="page"
       >Toasts</a>
     <div class="menu-heading">Utilities</div><a href="/cinder/utilities/details/" class="menu-item"
         
@@ -123,11 +123,10 @@
       </nav>
       <div class="d-flex flex-wrap">
   <section class="Prose flex-1 col-12 col-md-8">
-    <h1>Dropdown</h1>
-    <p>Dropdowns are lightweight context menus for housing navigation and actions. They're great for instances where you don't need the full power (and code) of the select menu.</p>
-<h2 id="basic-examples"><a class="anchor" href="#basic-examples"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Basic examples</h2>
-<p>Dropdowns should be triggered by a <code>&lt;button&gt;</code>. <strong><a href="#alignment">Each dropdown menu requires a directional class</a></strong>, much like our tooltips.</p>
-<p>Using a button:</p>
+    <h1>Toasts</h1>
+    <p>Toasts are used to show live, time-sensitive feedback to users.</p>
+<h2 id="default"><a class="anchor" href="#default"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Default</h2>
+<p>To create a default toast, use <code>.Toast</code>. Always use the <code>info</code> icon for default messages.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
@@ -136,26 +135,26 @@
             <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
           </button>
           <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;div style=&quot;margin-bottom: 100px&quot;&gt;
-  &lt;details class=&quot;dropdown details-reset details-overlay d-inline-block&quot;&gt;
-    &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
-      Dropdown
-      &lt;div class=&quot;dropdown-caret&quot;&gt;&lt;/div&gt;
-    &lt;/summary&gt;
-
-    &lt;ul class=&quot;dropdown-menu dropdown-menu-se&quot;&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/details&gt;
+            <textarea live-code-source>&lt;div class=&quot;p-1&quot;&gt;
+  &lt;div class=&quot;Toast&quot;&gt;
+    &lt;span class=&quot;Toast-icon&quot;&gt;
+      &lt;!-- &lt;%= svgicon &quot;info&quot; %&gt;--&gt;
+      &lt;svg width=&quot;14&quot; height=&quot;16&quot; viewBox=&quot;0 0 14 16&quot; class=&quot;svgicon svgicon-info&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;path
+          fill-rule=&quot;evenodd&quot;
+          d=&quot;M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z&quot;
+        /&gt;
+      &lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;Toast-content&quot;&gt;Toast message goes here&lt;/span&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<p>Using a button customized with additional utilities:</p>
+<p>The Toast content is formattable. We recommend keeping your message under 140 characters.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
@@ -164,28 +163,31 @@
             <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
           </button>
           <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;div style=&quot;margin-bottom: 100px&quot;&gt;
-  &lt;details class=&quot;dropdown details-reset details-overlay d-inline-block&quot;&gt;
-    &lt;summary class=&quot;text-gray p-2 d-inline&quot; aria-haspopup=&quot;true&quot;&gt;
-      Dropdown
-      &lt;div class=&quot;dropdown-caret&quot;&gt;&lt;/div&gt;
-    &lt;/summary&gt;
-
-    &lt;ul class=&quot;dropdown-menu dropdown-menu-se&quot;&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/details&gt;
+            <textarea live-code-source>&lt;div class=&quot;p-1&quot;&gt;
+  &lt;div class=&quot;Toast&quot;&gt;
+    &lt;span class=&quot;Toast-icon&quot;&gt;
+      &lt;!-- &lt;%= svgicon &quot;info&quot; %&gt; --&gt;
+      &lt;svg width=&quot;14&quot; height=&quot;16&quot; viewBox=&quot;0 0 14 16&quot; class=&quot;svgicon svgicon-info&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;path
+          fill-rule=&quot;evenodd&quot;
+          d=&quot;M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z&quot;
+        /&gt;
+      &lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;Toast-content&quot;&gt;
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+      &lt;strong&gt;Aenean commodo ligula eget dolor.&lt;/strong&gt; Aenean massa. Cum sociis &lt;em&gt;natoque&lt;/em&gt; penatibus et ma
+    &lt;/span&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h2 id="options"><a class="anchor" href="#options"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Options</h2>
-<h3 id="alignment"><a class="anchor" href="#alignment"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Alignment</h3>
-<p>Align the direction of dropdown menus and their arrows with modifier classes.</p>
+<h2 id="variations"><a class="anchor" href="#variations"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Variations</h2>
+<p>Use the success, warning, and error modifiers to communicate different states.</p>
+<p>Always use the <code>check</code> svgicon for success states.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
@@ -194,25 +196,23 @@
             <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
           </button>
           <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;div style=&quot;margin-top: 100px&quot;&gt;
-  &lt;details class=&quot;dropdown details-reset details-overlay d-inline-block&quot;&gt;
-    &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
-      .dropdown-ne
-      &lt;div class=&quot;dropdown-caret&quot;&gt;&lt;/div&gt;
-    &lt;/summary&gt;
-
-    &lt;ul class=&quot;dropdown-menu dropdown-menu-ne&quot;&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/details&gt;
+            <textarea live-code-source>&lt;div class=&quot;p-1&quot;&gt;
+  &lt;div class=&quot;Toast Toast--success&quot;&gt;
+    &lt;span class=&quot;Toast-icon&quot;&gt;
+      &lt;!-- &lt;%= svgicon &quot;check&quot; %&gt; --&gt;
+      &lt;svg width=&quot;12&quot; height=&quot;16&quot; viewBox=&quot;0 0 12 16&quot; class=&quot;svgicon svgicon-check&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z&quot; /&gt;
+      &lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;Toast-content&quot;&gt;Success message goes here.&lt;/span&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
+<p>Always use the <code>alert</code> svgicon for warning states.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
@@ -221,25 +221,26 @@
             <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
           </button>
           <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;div style=&quot;margin-bottom: 100px&quot;&gt;
-  &lt;details class=&quot;dropdown details-reset details-overlay d-inline-block&quot;&gt;
-    &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
-      .dropdown-e
-      &lt;div class=&quot;dropdown-caret&quot;&gt;&lt;/div&gt;
-    &lt;/summary&gt;
-
-    &lt;ul class=&quot;dropdown-menu dropdown-menu-e&quot;&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/details&gt;
+            <textarea live-code-source>&lt;div class=&quot;p-1&quot;&gt;
+  &lt;div class=&quot;Toast Toast--warning&quot;&gt;
+    &lt;span class=&quot;Toast-icon&quot;&gt;
+      &lt;!-- &lt;%= svgicon &quot;alert&quot; %&gt; --&gt;
+      &lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; class=&quot;svgicon svgicon-alert&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;path
+          fill-rule=&quot;evenodd&quot;
+          d=&quot;M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z&quot;
+        /&gt;
+      &lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;Toast-content&quot;&gt;Warning message goes here.&lt;/span&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
+<p>Always use the <code>stop</code> svgicon for error states.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
@@ -248,25 +249,27 @@
             <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
           </button>
           <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;div style=&quot;margin-bottom: 100px&quot;&gt;
-  &lt;details class=&quot;dropdown details-reset details-overlay d-inline-block&quot;&gt;
-    &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
-      .dropdown-se
-      &lt;div class=&quot;dropdown-caret&quot;&gt;&lt;/div&gt;
-    &lt;/summary&gt;
-
-    &lt;ul class=&quot;dropdown-menu dropdown-menu-se&quot;&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/details&gt;
+            <textarea live-code-source>&lt;div class=&quot;p-1&quot;&gt;
+  &lt;div class=&quot;Toast Toast--error&quot;&gt;
+    &lt;span class=&quot;Toast-icon&quot;&gt;
+      &lt;!-- &lt;%= svgicon &quot;stop&quot; %&gt; --&gt;
+      &lt;svg width=&quot;14&quot; height=&quot;16&quot; viewBox=&quot;0 0 14 16&quot; class=&quot;svgicon svgicon-stop&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;path
+          fill-rule=&quot;evenodd&quot;
+          d=&quot;M10 1H4L0 5v6l4 4h6l4-4V5l-4-4zm3 9.5L9.5 14h-5L1 10.5v-5L4.5 2h5L13 5.5v5zM6 4h2v5H6V4zm0 6h2v2H6v-2z&quot;
+        /&gt;
+      &lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;Toast-content&quot;&gt;Error message goes here&lt;/span&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
+<h2 id="toast-with-dismiss"><a class="anchor" href="#toast-with-dismiss"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Toast with dismiss</h2>
+<p>Use <code>.Toast-dismissButton</code> to allow a user to explicitly dismiss a Toast.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
@@ -275,25 +278,36 @@
             <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
           </button>
           <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;div style=&quot;margin-bottom: 100px&quot; class=&quot;d-flex flex-justify-center&quot;&gt;
-  &lt;details class=&quot;dropdown details-reset details-overlay d-inline-block&quot;&gt;
-    &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
-      .dropdown-s
-      &lt;div class=&quot;dropdown-caret&quot;&gt;&lt;/div&gt;
-    &lt;/summary&gt;
-
-    &lt;ul class=&quot;dropdown-menu dropdown-menu-s&quot;&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/details&gt;
+            <textarea live-code-source>&lt;div class=&quot;p-1&quot;&gt;
+  &lt;div class=&quot;Toast&quot;&gt;
+    &lt;span class=&quot;Toast-icon&quot;&gt;
+      &lt;!-- &lt;%= svgicon &quot;info&quot; %&gt; --&gt;
+      &lt;svg width=&quot;14&quot; height=&quot;16&quot; viewBox=&quot;0 0 14 16&quot; class=&quot;svgicon svgicon-info&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;path
+          fill-rule=&quot;evenodd&quot;
+          d=&quot;M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z&quot;
+        /&gt;
+      &lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;Toast-content&quot;&gt;This toast is dismissable.&lt;/span&gt;
+    &lt;button class=&quot;Toast-dismissButton&quot;&gt;
+      &lt;!-- &lt;%= svgicon &quot;x&quot; %&gt; --&gt;
+      &lt;svg width=&quot;12&quot; height=&quot;16&quot; viewBox=&quot;0 0 12 16&quot; class=&quot;svgicon svgicon-x&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;path
+          fill-rule=&quot;evenodd&quot;
+          d=&quot;M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z&quot;
+        /&gt;
+      &lt;/svg&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
+<h2 id="toast-with-link"><a class="anchor" href="#toast-with-link"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Toast with link</h2>
+<p>Include a link to allow users to take actions within a Toast.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
@@ -302,25 +316,27 @@
             <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
           </button>
           <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;div style=&quot;margin-bottom: 100px&quot; class=&quot;d-flex flex-justify-end&quot;&gt;
-  &lt;details class=&quot;dropdown details-reset details-overlay d-inline-block&quot;&gt;
-    &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
-      .dropdown-sw
-      &lt;div class=&quot;dropdown-caret&quot;&gt;&lt;/div&gt;
-    &lt;/summary&gt;
-
-    &lt;ul class=&quot;dropdown-menu dropdown-menu-sw&quot;&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/details&gt;
+            <textarea live-code-source>&lt;div class=&quot;p-1&quot;&gt;
+  &lt;div class=&quot;Toast&quot;&gt;
+    &lt;span class=&quot;Toast-icon&quot;&gt;
+     &lt;!-- &lt;%= svgicon &quot;info&quot; %&gt; --&gt;
+      &lt;svg width=&quot;14&quot; height=&quot;16&quot; viewBox=&quot;0 0 14 16&quot; class=&quot;svgicon svgicon-info&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;path
+          fill-rule=&quot;evenodd&quot;
+          d=&quot;M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z&quot;
+        /&gt;
+      &lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;Toast-content&quot;&gt;Toast message goes here &lt;a href=&quot;#&quot;&gt;Action.&lt;/a&gt;&lt;/span&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
+<h2 id="toast-animation-in"><a class="anchor" href="#toast-animation-in"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Toast animation in</h2>
+<p>The <code>Toast--animateIn</code> and <code>Toast--animateOut</code> modifier classes can be used to animate the toast in and out from the bottom.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
@@ -329,26 +345,27 @@
             <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
           </button>
           <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;div style=&quot;margin-bottom: 100px&quot; class=&quot;d-flex flex-justify-end&quot;&gt;
-  &lt;details class=&quot;dropdown details-reset details-overlay d-inline-block&quot;&gt;
-    &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
-      .dropdown-w
-      &lt;div class=&quot;dropdown-caret&quot;&gt;&lt;/div&gt;
-    &lt;/summary&gt;
-
-    &lt;ul class=&quot;dropdown-menu dropdown-menu-w&quot;&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/details&gt;
+            <textarea live-code-source>&lt;div class=&quot;p-1&quot;&gt;
+  &lt;div class=&quot;Toast Toast--animateIn&quot;&gt;
+    &lt;span class=&quot;Toast-icon&quot;&gt;
+      &lt;!-- &lt;%= svgicon &quot;info&quot; %&gt; --&gt;
+      &lt;svg width=&quot;14&quot; height=&quot;16&quot; viewBox=&quot;0 0 14 16&quot; class=&quot;svgicon svgicon-info&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;path
+          fill-rule=&quot;evenodd&quot;
+          d=&quot;M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z&quot;
+        /&gt;
+      &lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;Toast-content&quot;&gt;Toast message goes here.&lt;/span&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h3 id="dividers"><a class="anchor" href="#dividers"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Dividers</h3>
+<h2 id="toast-with-loading-animation"><a class="anchor" href="#toast-with-loading-animation"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Toast with loading animation</h2>
+<p>Add the <code>Toast--spinner</code> modifier class on the <code>Toast-icon</code> <code>svg</code> to communicate a loading state.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
@@ -357,29 +374,27 @@
             <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
           </button>
           <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;div style=&quot;margin-bottom: 170px&quot;&gt;
-  &lt;details class=&quot;dropdown details-reset details-overlay d-inline-block&quot;&gt;
-    &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
-      Dropdown
-      &lt;div class=&quot;dropdown-caret&quot;&gt;&lt;/div&gt;
-    &lt;/summary&gt;
-
-    &lt;ul class=&quot;dropdown-menu dropdown-menu-se&quot;&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;dropdown-divider&quot; role=&quot;separator&quot;&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Another item&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;One more&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/details&gt;
+            <textarea live-code-source>&lt;div class=&quot;p-1&quot;&gt;
+  &lt;div class=&quot;Toast Toast--loading&quot;&gt;
+    &lt;span class=&quot;Toast-icon&quot;&gt;
+      &lt;svg class=&quot;Toast--spinner&quot; viewBox=&quot;0 0 32 32&quot; width=&quot;18&quot; height=&quot;18&quot;&gt;
+        &lt;path
+          fill=&quot;#959da5&quot;
+          d=&quot;M16 0 A16 16 0 0 0 16 32 A16 16 0 0 0 16 0 M16 4 A12 12 0 0 1 16 28 A12 12 0 0 1 16 4&quot;
+        /&gt;
+        &lt;path fill=&quot;#ffffff&quot; d=&quot;M16 0 A16 16 0 0 1 32 16 L28 16 A12 12 0 0 0 16 4z&quot;&gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;Toast-content&quot;&gt;Toast message goes here.&lt;/span&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>
         </form>
       </cinder-live-html>
       
-<h3 id="headers"><a class="anchor" href="#headers"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Headers</h3>
+<h2 id="toast-position"><a class="anchor" href="#toast-position"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Toast position</h2>
+<p>Use the <code>position-fixed bottom-0 left-0</code> utility classes on a wrapper element to position Toasts at the <strong>bottom left</strong> of the viewport.</p>
 <pre style="display: none!important;"></pre>
       <cinder-live-html class="Box LiveCode mb-2">
         <iframe class="LiveCode-frame" height="100"></iframe>
@@ -388,24 +403,21 @@
             <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
           </button>
           <div class="LiveCode-editor">
-            <textarea live-code-source>&lt;div style=&quot;margin-bottom: 126px&quot;&gt;
-  &lt;details class=&quot;dropdown details-reset details-overlay d-inline-block&quot;&gt;
-    &lt;summary class=&quot;btn&quot; aria-haspopup=&quot;true&quot;&gt;
-      Dropdown
-      &lt;div class=&quot;dropdown-caret&quot;&gt;&lt;/div&gt;
-    &lt;/summary&gt;
-
-    &lt;div class=&quot;dropdown-menu dropdown-menu-se&quot;&gt;
-      &lt;div class=&quot;dropdown-header&quot;&gt;
-        Dropdown header
-      &lt;/div&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
+            <textarea live-code-source>&lt;div style=&quot;height:150px&quot;&gt;
+  &lt;div class=&quot;position-fixed bottom-0 left-0 mb-3 ml-3&quot;&gt;
+    &lt;div class=&quot;Toast&quot;&gt;
+      &lt;span class=&quot;Toast-icon&quot;&gt;
+        &lt;!-- &lt;%= svgicon &quot;info&quot; %&gt; --&gt;
+        &lt;svg width=&quot;14&quot; height=&quot;16&quot; viewBox=&quot;0 0 14 16&quot; class=&quot;svgicon svgicon-info&quot; aria-hidden=&quot;true&quot;&gt;
+          &lt;path
+            fill-rule=&quot;evenodd&quot;
+            d=&quot;M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z&quot;
+          /&gt;
+        &lt;/svg&gt;
+      &lt;/span&gt;
+      &lt;span class=&quot;Toast-content&quot;&gt;Toast message goes here.&lt;/span&gt;
     &lt;/div&gt;
-  &lt;/details&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</textarea>
             <pre><code></code></pre>
           </div>

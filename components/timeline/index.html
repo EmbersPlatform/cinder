@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Timeline - Cinder CSS</title>
+  
+
+  <link rel="stylesheet" href="/cinder/dist/index.css">
+  <link rel="stylesheet" href="/cinder/assets/css/index.css">
+
+  <script>
+  window.toggler_icons = {
+    light: `<svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display: inline-block; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z"></path></svg>`,
+    dark: `<svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display: inline-block; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z"></path></svg>`
+  }
+
+  const theme = localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ? "dark"
+      : "light"
+
+  document.documentElement.dataset.colorMode = theme;
+  </script>
+  <script type="module" src="/cinder/assets/js/index.js"></script>
+</head>
+
+<body>
+  <nav class="Header" style="position: sticky; top: 0;">
+    <h1 class="Header-item h3 mr-3">Cinder</h1>
+    <button class="Header-item  btn" id="color-mode-toggler">Toggle dark theme</button>
+    <script>
+    document.getElementById("color-mode-toggler").innerHTML = toggler_icons[theme];
+    </script>
+  </nav>
+  <div class="d-flex flex-wrap">
+    <div class="py-2 col-12 col-md-3 col-lg-3 hide-md hide-sm color-bg-primary border-right" style="max-width: 261px;">
+      <nav>
+        <a href="/cinder/" class="menu-item" >Home</a>
+    <div class="menu-heading">Components</div><a href="/cinder/components/alerts/" class="menu-item"
+        
+      >Alerts</a><a href="/cinder/components/avatars/" class="menu-item"
+        
+      >Avatars</a><a href="/cinder/components/box/" class="menu-item"
+        
+      >Box</a><a href="/cinder/components/buttons/" class="menu-item"
+        
+      >Buttons</a><a href="/cinder/components/dropdown/" class="menu-item"
+        
+      >Dropdown</a><a href="/cinder/components/forms/" class="menu-item"
+        
+      >Forms</a><a href="/cinder/components/labels/" class="menu-item"
+        
+      >Labels</a><a href="/cinder/components/links/" class="menu-item"
+        
+      >Links</a><a href="/cinder/components/navigation/" class="menu-item"
+        
+      >Navigation</a><a href="/cinder/components/prose/" class="menu-item"
+        
+      >Prose</a><a href="/cinder/components/select-menu/" class="menu-item"
+        
+      >Select menu</a><a href="/cinder/components/subheads/" class="menu-item"
+        
+      >Subheads</a><a href="/cinder/components/timeline/" class="menu-item"
+         aria-current="page"
+      >Timeline</a><a href="/cinder/components/toasts/" class="menu-item"
+        
+      >Toasts</a>
+    <div class="menu-heading">Utilities</div><a href="/cinder/utilities/details/" class="menu-item"
+        
+      >Details</a><a href="/cinder/utilities/margin/" class="menu-item"
+        
+      >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
+        
+      >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
+        
+      >Typography</a>
+      </nav>
+    </div>
+    <div class="col-12 col-md-9 col-lg-9 flex-1 p-4 container-lg">
+      <nav class="menu d-md-none">
+        <a href="/cinder/" class="menu-item" >Home</a>
+    <div class="menu-heading">Components</div><a href="/cinder/components/alerts/" class="menu-item"
+        
+      >Alerts</a><a href="/cinder/components/avatars/" class="menu-item"
+        
+      >Avatars</a><a href="/cinder/components/box/" class="menu-item"
+        
+      >Box</a><a href="/cinder/components/buttons/" class="menu-item"
+        
+      >Buttons</a><a href="/cinder/components/dropdown/" class="menu-item"
+        
+      >Dropdown</a><a href="/cinder/components/forms/" class="menu-item"
+        
+      >Forms</a><a href="/cinder/components/labels/" class="menu-item"
+        
+      >Labels</a><a href="/cinder/components/links/" class="menu-item"
+        
+      >Links</a><a href="/cinder/components/navigation/" class="menu-item"
+        
+      >Navigation</a><a href="/cinder/components/prose/" class="menu-item"
+        
+      >Prose</a><a href="/cinder/components/select-menu/" class="menu-item"
+        
+      >Select menu</a><a href="/cinder/components/subheads/" class="menu-item"
+        
+      >Subheads</a><a href="/cinder/components/timeline/" class="menu-item"
+         aria-current="page"
+      >Timeline</a><a href="/cinder/components/toasts/" class="menu-item"
+        
+      >Toasts</a>
+    <div class="menu-heading">Utilities</div><a href="/cinder/utilities/details/" class="menu-item"
+        
+      >Details</a><a href="/cinder/utilities/margin/" class="menu-item"
+        
+      >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
+        
+      >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
+        
+      >Typography</a>
+      </nav>
+      <div class="d-flex flex-wrap">
+  <section class="Prose flex-1 col-12 col-md-8">
+    <h1>Timeline</h1>
+    <p>The <code>TimelineItem</code> component is used to display items on a vertical timeline, connected by <code>TimelineItem-badge</code> elements.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;div class=&quot;TimelineItem&quot;&gt;
+  &lt;div class=&quot;TimelineItem-badge&quot;&gt;
+    &lt;!-- svgicon(&quot;flame&quot;) --&gt;
+    &lt;svg class=&quot;svgicon svgicon-flame&quot; viewBox=&quot;0 0 12 16&quot; version=&quot;1.1&quot; width=&quot;12&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;TimelineItem-body&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;text-bold link-gray-dark mr-1&quot;&gt;Monalisa&lt;/a&gt; created one
+    &lt;a href=&quot;#&quot; class=&quot;text-bold link-gray-dark&quot;&gt;hot potato&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;link-gray&quot;&gt;Just now&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="timelineitem-badge"><a class="anchor" href="#timelineitem-badge"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>TimelineItem-badge</h2>
+<p>The default TimelineItem-badge color is dark text on a light gray background.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;!-- Default TimelineItem Badge --&gt;
+&lt;div class=&quot;TimelineItem&quot;&gt;
+  &lt;div class=&quot;TimelineItem-badge&quot;&gt;
+    &lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; fill=&quot;currentColor&quot; class=&quot;svgicon&quot;&gt;
+      &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009a1.82 1.82 0 00.35.31c.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371a1.82 1.82 0 00.35-.31l.007-.008a.75.75 0 011.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.989 1.989 0 01-.184.213 3.32 3.32 0 01-.53.445A3.766 3.766 0 018 12c-.946 0-1.652-.308-2.126-.63a3.323 3.323 0 01-.673-.604 1.975 1.975 0 01-.042-.053l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044z&quot;&gt;&lt;/path&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;TimelineItem-body&quot;&gt;
+    Default badge color
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h3 id="adding-color-to-timelineitem-badge"><a class="anchor" href="#adding-color-to-timelineitem-badge"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Adding color to TimelineItem-badge</h3>
+<p>To have color variants, use the <a href="/utilities/colors">color utilities</a> on the badge. Be cautious with color choices. We typically use them in the timeline to give meaning to the event in context of the timeline.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;!-- Colorful TimelineItem Badge --&gt;
+&lt;div class=&quot;TimelineItem&quot;&gt;
+  &lt;div class=&quot;TimelineItem-badge color-bg-danger-inverse text-white&quot;&gt;
+    &lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; fill=&quot;currentColor&quot; class=&quot;svgicon&quot;&gt;
+      &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009a1.82 1.82 0 00.35.31c.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371a1.82 1.82 0 00.35-.31l.007-.008a.75.75 0 011.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.989 1.989 0 01-.184.213 3.32 3.32 0 01-.53.445A3.766 3.766 0 018 12c-.946 0-1.652-.308-2.126-.63a3.323 3.323 0 01-.673-.604 1.975 1.975 0 01-.042-.053l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044z&quot;&gt;&lt;/path&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;TimelineItem-body&quot;&gt;
+    Red background used when closed events occur
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;TimelineItem&quot;&gt;
+  &lt;div class=&quot;TimelineItem-badge color-bg-success-inverse text-white&quot;&gt;
+    &lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; fill=&quot;currentColor&quot; class=&quot;svgicon&quot;&gt;
+      &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009a1.82 1.82 0 00.35.31c.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371a1.82 1.82 0 00.35-.31l.007-.008a.75.75 0 011.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.989 1.989 0 01-.184.213 3.32 3.32 0 01-.53.445A3.766 3.766 0 018 12c-.946 0-1.652-.308-2.126-.63a3.323 3.323 0 01-.673-.604 1.975 1.975 0 01-.042-.053l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044z&quot;&gt;&lt;/path&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;TimelineItem-body&quot;&gt;
+    Green background when opened or passed events occur
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;TimelineItem&quot;&gt;
+  &lt;div class=&quot;TimelineItem-badge bg-purple text-white&quot;&gt;
+    &lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; fill=&quot;currentColor&quot; class=&quot;svgicon&quot;&gt;
+      &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009a1.82 1.82 0 00.35.31c.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371a1.82 1.82 0 00.35-.31l.007-.008a.75.75 0 011.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.989 1.989 0 01-.184.213 3.32 3.32 0 01-.53.445A3.766 3.766 0 018 12c-.946 0-1.652-.308-2.126-.63a3.323 3.323 0 01-.673-.604 1.975 1.975 0 01-.042-.053l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044z&quot;&gt;&lt;/path&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;TimelineItem-body&quot;&gt;
+    Purple background used when pull requests are merged
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;TimelineItem&quot;&gt;
+  &lt;div class=&quot;TimelineItem-badge bg-blue text-white&quot;&gt;
+    &lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; fill=&quot;currentColor&quot; class=&quot;svgicon&quot;&gt;
+      &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009a1.82 1.82 0 00.35.31c.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371a1.82 1.82 0 00.35-.31l.007-.008a.75.75 0 011.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.989 1.989 0 01-.184.213 3.32 3.32 0 01-.53.445A3.766 3.766 0 018 12c-.946 0-1.652-.308-2.126-.63a3.323 3.323 0 01-.673-.604 1.975 1.975 0 01-.042-.053l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044z&quot;&gt;&lt;/path&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;TimelineItem-body&quot;&gt;
+    Blue background to indicate new events below
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="timelineitem--condensed"><a class="anchor" href="#timelineitem--condensed"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>TimelineItem--condensed</h2>
+<p>TimelineItem has a condensed variant that will reduce the vertical padding and remove the background from the badge item. These are most commonly used in commits.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;div class=&quot;TimelineItem TimelineItem--condensed&quot;&gt;
+  &lt;div class=&quot;TimelineItem-badge&quot;&gt;
+    &lt;svg class=&quot;svgicon svgicon-git-commit&quot; viewBox=&quot;0 0 14 16&quot; version=&quot;1.1&quot; width=&quot;14&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;
+      &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;TimelineItem-body&quot;&gt;
+    This is the message of a condensed TimelineItem
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;TimelineItem TimelineItem--condensed&quot;&gt;
+  &lt;div class=&quot;TimelineItem-badge&quot;&gt;
+    &lt;svg class=&quot;svgicon svgicon-git-commit&quot; viewBox=&quot;0 0 14 16&quot; version=&quot;1.1&quot; width=&quot;14&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;
+      &lt;path fill-rule=&quot;evenodd&quot; d=&quot;M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H14V7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z&quot;&gt;&lt;/path&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;TimelineItem-body&quot;&gt;
+    This is the message of a condensed TimelineItem
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="timelineitem-avatar"><a class="anchor" href="#timelineitem-avatar"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>TimelineItem-avatar</h2>
+<p>Sometimes you want to give ownership to an event by displaying an <a href="">Avatar</a> of the author. To do this, you'll need to wrap the TimelineItem in a <code>&lt;div&gt;</code> and give it space for the avatar. <code>ml-6 pl-3</code> This is <code>40px</code>, the size of the image, and <code>16px</code> space for the gutter.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;div class=&quot;ml-6 pl-3&quot;&gt;
+  &lt;div class=&quot;TimelineItem&quot;&gt;
+    &lt;div class=&quot;TimelineItem-avatar&quot;&gt;
+      &lt;img class=&quot;avatar&quot; height=&quot;40&quot; width=&quot;40&quot; alt=&quot;@octocat&quot;
+        src=&quot;https://user-images.githubusercontent.com/334891/29999089-2837c968-9009-11e7-92c1-6a7540a594d5.png&quot; /&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;TimelineItem-badge&quot;&gt;
+      &lt;!-- svgicon(&quot;flame&quot;) --&gt;
+      &lt;svg class=&quot;svgicon svgicon-flame&quot; viewBox=&quot;0 0 12 16&quot; version=&quot;1.1&quot; width=&quot;12&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;TimelineItem-body&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;text-bold link-gray-dark mr-1&quot;&gt;Monalisa&lt;/a&gt; created one
+      &lt;a href=&quot;#&quot; class=&quot;text-bold link-gray-dark&quot;&gt;hot potato&lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;link-gray&quot;&gt;Just now&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="timelineitem-break"><a class="anchor" href="#timelineitem-break"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>TimelineItem-break</h2>
+<p>To create a visual break in the timeline, use <code>TimelineItem-break</code>. This adds a horizontal bar across the timeline to show that something has disrupted it. Usually this happens when a close or merged event occurs.</p>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;div class=&quot;TimelineItem&quot;&gt;
+  &lt;div class=&quot;TimelineItem-badge bg-red text-white&quot;&gt;
+    &lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; fill=&quot;currentColor&quot; class=&quot;svgicon&quot;&gt;
+      &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009a1.82 1.82 0 00.35.31c.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371a1.82 1.82 0 00.35-.31l.007-.008a.75.75 0 011.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.989 1.989 0 01-.184.213 3.32 3.32 0 01-.53.445A3.766 3.766 0 018 12c-.946 0-1.652-.308-2.126-.63a3.323 3.323 0 01-.673-.604 1.975 1.975 0 01-.042-.053l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044z&quot;&gt;&lt;/path&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;TimelineItem-body&quot;&gt;
+    Red background used when closed events occur
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;TimelineItem-break ml-0&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;TimelineItem&quot;&gt;
+  &lt;div class=&quot;TimelineItem-badge bg-green text-white&quot;&gt;
+    &lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; fill=&quot;currentColor&quot; class=&quot;svgicon&quot;&gt;
+      &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009a1.82 1.82 0 00.35.31c.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371a1.82 1.82 0 00.35-.31l.007-.008a.75.75 0 011.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.989 1.989 0 01-.184.213 3.32 3.32 0 01-.53.445A3.766 3.766 0 018 12c-.946 0-1.652-.308-2.126-.63a3.323 3.323 0 01-.673-.604 1.975 1.975 0 01-.042-.053l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044z&quot;&gt;&lt;/path&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;TimelineItem-body&quot;&gt;
+    Green background when opened or passed events occur
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<h2 id="target-timelineitem"><a class="anchor" href="#target-timelineitem"><svg class="svgicon svgicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Target TimelineItem</h2>
+<pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;div class=&quot;TimelineItem&quot; id=&quot;1&quot;&gt;
+  &lt;a href=&quot;#1&quot; class=&quot;TimelineItem-badge&quot;&gt;
+    &lt;!-- svgicon(&quot;flame&quot;) --&gt;
+    &lt;svg class=&quot;svgicon svgicon-flame&quot; viewBox=&quot;0 0 12 16&quot; version=&quot;1.1&quot; width=&quot;12&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+  &lt;/a&gt;
+
+  &lt;div class=&quot;TimelineItem-body&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;text-bold link-gray-dark mr-1&quot;&gt;Monalisa&lt;/a&gt; created one
+    &lt;a href=&quot;#&quot; class=&quot;text-bold link-gray-dark&quot;&gt;hot potato&lt;/a&gt;
+    &lt;a href=&quot;#1&quot; class=&quot;link-gray&quot;&gt;Just now&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+
+  </section>
+  <aside class="col-4 p-3 hide-sm hide-md hide-lg">
+    Contents
+  </aside>
+</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Prose - Cinder CSS</title>
+  
+
+  <link rel="stylesheet" href="/cinder/dist/index.css">
+  <link rel="stylesheet" href="/cinder/assets/css/index.css">
+
+  <script>
+  window.toggler_icons = {
+    light: `<svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display: inline-block; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z"></path></svg>`,
+    dark: `<svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display: inline-block; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z"></path></svg>`
+  }
+
+  const theme = localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ? "dark"
+      : "light"
+
+  document.documentElement.dataset.colorMode = theme;
+  </script>
+  <script type="module" src="/cinder/assets/js/index.js"></script>
+</head>
+
+<body>
+  <nav class="Header" style="position: sticky; top: 0;">
+    <h1 class="Header-item h3 mr-3">Cinder</h1>
+    <button class="Header-item  btn" id="color-mode-toggler">Toggle dark theme</button>
+    <script>
+    document.getElementById("color-mode-toggler").innerHTML = toggler_icons[theme];
+    </script>
+  </nav>
+  <div class="d-flex flex-wrap">
+    <div class="py-2 col-12 col-md-3 col-lg-3 hide-md hide-sm color-bg-primary border-right" style="max-width: 261px;">
+      <nav>
+        <a href="/cinder/" class="menu-item" >Home</a>
+    <div class="menu-heading">Components</div><a href="/cinder/components/alerts/" class="menu-item"
+        
+      >Alerts</a><a href="/cinder/components/avatars/" class="menu-item"
+        
+      >Avatars</a><a href="/cinder/components/box/" class="menu-item"
+        
+      >Box</a><a href="/cinder/components/buttons/" class="menu-item"
+        
+      >Buttons</a><a href="/cinder/components/dropdown/" class="menu-item"
+        
+      >Dropdown</a><a href="/cinder/components/forms/" class="menu-item"
+        
+      >Forms</a><a href="/cinder/components/labels/" class="menu-item"
+        
+      >Labels</a><a href="/cinder/components/links/" class="menu-item"
+        
+      >Links</a><a href="/cinder/components/navigation/" class="menu-item"
+        
+      >Navigation</a><a href="/cinder/components/prose/" class="menu-item"
+         aria-current="page"
+      >Prose</a><a href="/cinder/components/select-menu/" class="menu-item"
+        
+      >Select menu</a><a href="/cinder/components/subheads/" class="menu-item"
+        
+      >Subheads</a><a href="/cinder/components/timeline/" class="menu-item"
+        
+      >Timeline</a><a href="/cinder/components/toasts/" class="menu-item"
+        
+      >Toasts</a>
+    <div class="menu-heading">Utilities</div><a href="/cinder/utilities/details/" class="menu-item"
+        
+      >Details</a><a href="/cinder/utilities/margin/" class="menu-item"
+        
+      >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
+        
+      >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
+        
+      >Typography</a>
+      </nav>
+    </div>
+    <div class="col-12 col-md-9 col-lg-9 flex-1 p-4 container-lg">
+      <nav class="menu d-md-none">
+        <a href="/cinder/" class="menu-item" >Home</a>
+    <div class="menu-heading">Components</div><a href="/cinder/components/alerts/" class="menu-item"
+        
+      >Alerts</a><a href="/cinder/components/avatars/" class="menu-item"
+        
+      >Avatars</a><a href="/cinder/components/box/" class="menu-item"
+        
+      >Box</a><a href="/cinder/components/buttons/" class="menu-item"
+        
+      >Buttons</a><a href="/cinder/components/dropdown/" class="menu-item"
+        
+      >Dropdown</a><a href="/cinder/components/forms/" class="menu-item"
+        
+      >Forms</a><a href="/cinder/components/labels/" class="menu-item"
+        
+      >Labels</a><a href="/cinder/components/links/" class="menu-item"
+        
+      >Links</a><a href="/cinder/components/navigation/" class="menu-item"
+        
+      >Navigation</a><a href="/cinder/components/prose/" class="menu-item"
+         aria-current="page"
+      >Prose</a><a href="/cinder/components/select-menu/" class="menu-item"
+        
+      >Select menu</a><a href="/cinder/components/subheads/" class="menu-item"
+        
+      >Subheads</a><a href="/cinder/components/timeline/" class="menu-item"
+        
+      >Timeline</a><a href="/cinder/components/toasts/" class="menu-item"
+        
+      >Toasts</a>
+    <div class="menu-heading">Utilities</div><a href="/cinder/utilities/details/" class="menu-item"
+        
+      >Details</a><a href="/cinder/utilities/margin/" class="menu-item"
+        
+      >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
+        
+      >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
+        
+      >Typography</a>
+      </nav>
+      <div class="d-flex flex-wrap">
+  <section class="Prose flex-1 col-12 col-md-8">
+    <h1>Prose</h1>
+    <pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;div class=&quot;Prose&quot;&gt;
+  &lt;p&gt;Text can be &lt;b&gt;bold&lt;/b&gt;, &lt;i&gt;italic&lt;/i&gt;, or &lt;s&gt;strikethrough&lt;/s&gt;. &lt;a href=&quot;https://github.com&quot;&gt;Links &lt;/a&gt; should be blue with no underlines (unless hovered over).&lt;/p&gt;
+
+  &lt;p&gt;There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.&lt;/p&gt;
+
+  &lt;p&gt;There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.&lt;/p&gt;
+
+  &lt;blockquote&gt;
+    &lt;p&gt;There should be no margin above this first sentence.&lt;/p&gt;
+    &lt;p&gt;Blockquotes should be a lighter gray with a gray border along the left side.&lt;/p&gt;
+    &lt;p&gt;There should be no margin below this final sentence.&lt;/p&gt;
+  &lt;/blockquote&gt;
+
+  &lt;h1&gt;Header 1&lt;/h1&gt;
+
+  &lt;p&gt;This is a normal paragraph following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/p&gt;
+
+  &lt;h2&gt;Header 2&lt;/h2&gt;
+
+  &lt;blockquote&gt;This is a blockquote following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.&lt;/blockquote&gt;
+
+  &lt;h3&gt;Header 3&lt;/h3&gt;
+
+  &lt;pre&gt;&lt;code&gt;This is a code block following a header.&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;h4&gt;Header 4&lt;/h4&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;This is an unordered list following a header.&lt;/li&gt;
+    &lt;li&gt;This is an unordered list following a header.&lt;/li&gt;
+    &lt;li&gt;This is an unordered list following a header.&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h5&gt;Header 5&lt;/h5&gt;
+
+  &lt;ol&gt;
+    &lt;li&gt;This is an ordered list following a header.&lt;/li&gt;
+    &lt;li&gt;This is an ordered list following a header.&lt;/li&gt;
+    &lt;li&gt;This is an ordered list following a header.&lt;/li&gt;
+  &lt;/ol&gt;
+
+  &lt;h6&gt;Header 6&lt;/h6&gt;
+
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;What&lt;/th&gt;
+        &lt;th&gt;Follows&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;A table&lt;/td&gt;
+        &lt;td&gt;A header&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;A table&lt;/td&gt;
+        &lt;td&gt;A header&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;A table&lt;/td&gt;
+        &lt;td&gt;A header&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+
+  &lt;hr /&gt;
+
+  &lt;p&gt;There's a horizontal rule above and below this.&lt;/p&gt;
+
+  &lt;hr /&gt;
+
+  &lt;p&gt;Here is an unordered list:&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Salt-n-Pepa&lt;/li&gt;
+    &lt;li&gt;Bel Biv DeVoe&lt;/li&gt;
+    &lt;li&gt;Kid 'N Play&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;p&gt;And an ordered list:&lt;/p&gt;
+
+  &lt;ol&gt;
+    &lt;li&gt;Michael Jackson&lt;/li&gt;
+    &lt;li&gt;Michael Bolton&lt;/li&gt;
+    &lt;li&gt;Michael Bublé&lt;/li&gt;
+  &lt;/ol&gt;
+
+  &lt;p&gt;And an unordered task list:&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;&lt;input type=&quot;checkbox&quot; checked&gt; Create a sample markdown document&lt;/li&gt;
+    &lt;li&gt;&lt;input type=&quot;checkbox&quot;&gt; Add task lists to it&lt;/li&gt;
+    &lt;li&gt;&lt;input type=&quot;checkbox&quot;&gt; Take a vacation&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;p&gt;And a &quot;mixed&quot; task list:&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;&lt;input type=&quot;checkbox&quot;&gt; Steal underpants&lt;/li&gt;
+    &lt;li&gt;?&lt;/li&gt;
+    &lt;li&gt;&lt;input type=&quot;checkbox&quot;&gt; Profit!&lt;/li&gt;
+  &lt;/ul&gt;
+
+  And a nested list:
+
+  &lt;ul&gt;
+    &lt;li&gt;Jackson 5
+      &lt;ul&gt;
+        &lt;li&gt;Michael&lt;/li&gt;
+        &lt;li&gt;Tito&lt;/li&gt;
+        &lt;li&gt;Jackie&lt;/li&gt;
+        &lt;li&gt;Marlon&lt;/li&gt;
+        &lt;li&gt;Jermaine&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;TMNT
+      &lt;ul&gt;
+        &lt;li&gt;Leonardo&lt;/li&gt;
+        &lt;li&gt;Michelangelo&lt;/li&gt;
+        &lt;li&gt;Donatello&lt;/li&gt;
+        &lt;li&gt;Raphael&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;p&gt;Definition lists can be used with HTML syntax. Definition terms are bold and italic.&lt;/p&gt;
+
+  &lt;dl&gt;
+      &lt;dt&gt;Name&lt;/dt&gt;
+      &lt;dd&gt;Godzilla&lt;/dd&gt;
+      &lt;dt&gt;Born&lt;/dt&gt;
+      &lt;dd&gt;1952&lt;/dd&gt;
+      &lt;dt&gt;Birthplace&lt;/dt&gt;
+      &lt;dd&gt;Japan&lt;/dd&gt;
+      &lt;dt&gt;Color&lt;/dt&gt;
+      &lt;dd&gt;Green&lt;/dd&gt;
+  &lt;/dl&gt;
+
+  &lt;hr /&gt;
+
+  &lt;p&gt;Tables should have bold headings and alternating shaded rows.&lt;/p&gt;
+
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Artist&lt;/th&gt;
+        &lt;th&gt;Album&lt;/th&gt;
+        &lt;th&gt;Year&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;David Bowie&lt;/td&gt;
+        &lt;td&gt;Scary Monsters&lt;/td&gt;
+        &lt;td&gt;1980&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Prince&lt;/td&gt;
+        &lt;td&gt;Purple Rain&lt;/td&gt;
+        &lt;td&gt;1982&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Beastie Boys&lt;/td&gt;
+        &lt;td&gt;License to Ill&lt;/td&gt;
+        &lt;td&gt;1986&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Janet Jackson&lt;/td&gt;
+        &lt;td&gt;Rhythm Nation 1814&lt;/td&gt;
+        &lt;td&gt;1989&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+
+  &lt;p&gt;If a table is too wide, it should condense down and/or scroll horizontally.&lt;/p&gt;
+
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Artist&lt;/th&gt;
+        &lt;th&gt;Album&lt;/th&gt;
+        &lt;th&gt;Year&lt;/th&gt;
+        &lt;th&gt;Label&lt;/th&gt;
+        &lt;th&gt;Songs&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;David Bowie&lt;/td&gt;
+        &lt;td&gt;Scary Monsters&lt;/td&gt;
+        &lt;td&gt;1980&lt;/td&gt;
+        &lt;td&gt;RCA Records&lt;/td&gt;
+        &lt;td&gt;It's No Game (No. 1), Up the Hill Backwards, Scary Monsters (And Super Creeps), Ashes to Ashes, Fashion, Teenage Wildlife, Scream Like a Baby, Kingdom Come, Because You're Young, It's No Game (No. 2)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Prince&lt;/td&gt;
+        &lt;td&gt;Purple Rain&lt;/td&gt;
+        &lt;td&gt;1982&lt;/td&gt;
+        &lt;td&gt;Warner Brothers Records&lt;/td&gt;
+        &lt;td&gt;Let's Go Crazy, Take Me With U, The Beautiful Ones, Computer Blue, Darling Nikki, When Doves Cry, I Would Die 4 U, Baby I'm a Star, Purple Rain&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Beastie Boys&lt;/td&gt;
+        &lt;td&gt;License to Ill&lt;/td&gt;
+        &lt;td&gt;1986&lt;/td&gt;
+        &lt;td&gt;Def Jam&lt;/td&gt;
+        &lt;td&gt;Rhymin &amp;amp; Stealin, The New Style, She's Crafty, Posse in Effect, Slow Ride, Girls, Fight for Your Right, No Sleep till Brooklyn, Paul Revere, &quot;Hold It Now, Hit It&quot;, Brass Monkey, Slow and Low, Time to Get Ill&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Janet Jackson&lt;/td&gt;
+        &lt;td&gt;Rhythm Nation 1814&lt;/td&gt;
+        &lt;td&gt;1989&lt;/td&gt;
+        &lt;td&gt;A&amp;amp;M&lt;/td&gt;
+        &lt;td&gt;Interlude: Pledge, Rhythm Nation, Interlude: T.V., State of the World, Interlude: Race, The Knowledge, Interlude: Let's Dance, Miss You Much, Interlude: Come Back, Love Will Never Do (Without You), Livin' in a World (They Didn't Make), Alright, Interlude: Hey Baby, Escapade, Interlude: No Acid, Black Cat, Lonely, Come Back to Me, Someday Is Tonight, Interlude: Livin'...In Complete Darkness&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+
+  &lt;hr /&gt;
+
+  &lt;p&gt;Code snippets like &lt;code&gt;var foo = &quot;bar&quot;;&lt;/code&gt; can be shown inline.&lt;/p&gt;
+
+  &lt;p&gt;Also, &lt;code&gt;this should vertically align&lt;/code&gt; &lt;s&gt;&lt;code&gt;with this&lt;/code&gt;&lt;/s&gt; &lt;s&gt;and this&lt;/s&gt;.&lt;/p&gt;
+
+  &lt;p&gt;Code can also be shown in a block element.&lt;/p&gt;
+
+  &lt;pre&gt;&lt;code&gt;var foo = &quot;bar&quot;;&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;p&gt;Code can also use syntax highlighting.&lt;/p&gt;
+
+  &lt;pre&gt;&lt;code class=&quot;prism-code language-javascript&quot;&gt;var foo = &quot;bar&quot;;&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;pre&gt;&lt;code&gt;Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;pre&gt;&lt;code class=&quot;prism-code language-javascript&quot;&gt;var foo = &quot;The same thing is true for code with syntax highlighting. A single line of code should horizontally scroll if it is really long.&quot;;&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;p&gt;Inline code inside table cells should still be distinguishable.&lt;/p&gt;
+
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Language&lt;/th&gt;
+        &lt;th&gt;Code&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;JavasScript&lt;/td&gt;
+        &lt;td&gt;&lt;code&gt;var foo = &quot;bar&quot;;&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Ruby&lt;/td&gt;
+        &lt;td&gt;&lt;code&gt;foo = &quot;bar&quot;&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+
+  &lt;hr /&gt;
+
+  &lt;p&gt;Small images should be shown at their actual size.&lt;/p&gt;
+
+  &lt;p&gt;&lt;img src=&quot;http://placekitten.com/g/300/200/&quot;&gt;&lt;/p&gt;
+
+  &lt;p&gt;Large images should always scale down and fit in the content container.&lt;/p&gt;
+
+  &lt;p&gt;&lt;img src=&quot;http://placekitten.com/g/1200/800/&quot;&gt;&lt;/p&gt;
+
+  &lt;pre&gt;&lt;code&gt;This is the final element on the page and there should be no margin below this.&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+<!-- Source MD (update when making changes to the HTML) -->
+<!--
+
+Text can be **bold**, _italic_, or ~~strikethrough~~. [Links](https://github.com) should be blue with no underlines (unless hovered over).
+
+There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.
+
+There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.
+
+> There should be no margin above this first sentence.
+>
+> Blockquotes should be a lighter gray with a gray border along the left side.
+>
+> There should be no margin below this final sentence.
+
+# Header 1
+
+This is a normal paragraph following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
+
+## Header 2
+
+> This is a blockquote following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
+
+### Header 3
+
+```
+This is a code block following a header.
+```
+
+#### Header 4
+
+* This is an unordered list following a header.
+* This is an unordered list following a header.
+* This is an unordered list following a header.
+
+##### Header 5
+
+1. This is an ordered list following a header.
+2. This is an ordered list following a header.
+3. This is an ordered list following a header.
+
+###### Header 6
+
+| What      | Follows         |
+|-----------|-----------------|
+| A table   | A header        |
+| A table   | A header        |
+| A table   | A header        |
+
+----------------
+
+There's a horizontal rule above and below this.
+
+----------------
+
+Here is an unordered list:
+
+* Salt-n-Pepa
+* Bel Biv DeVoe
+* Kid 'N Play
+
+And an ordered list:
+
+1. Michael Jackson
+2. Michael Bolton
+3. Michael Bublé
+
+And an unordered task list:
+
+- [x] Create a sample markdown document
+- [x] Add task lists to it
+- [ ] Take a vacation
+
+And a "mixed" task list:
+
+- [ ] Steal underpants
+- ?
+- [ ] Profit!
+
+And a nested list:
+
+* Jackson 5
+  * Michael
+  * Tito
+  * Jackie
+  * Marlon
+  * Jermaine
+* TMNT
+  * Leonardo
+  * Michelangelo
+  * Donatello
+  * Raphael
+
+Definition lists can be used with HTML syntax. Definition terms are bold and italic.
+
+<dl>
+    <dt>Name</dt>
+    <dd>Godzilla</dd>
+    <dt>Born</dt>
+    <dd>1952</dd>
+    <dt>Birthplace</dt>
+    <dd>Japan</dd>
+    <dt>Color</dt>
+    <dd>Green</dd>
+</dl>
+
+----------------
+
+Tables should have bold headings and alternating shaded rows.
+
+| Artist            | Album           | Year |
+|-------------------|-----------------|------|
+| Michael Jackson   | Thriller        | 1982 |
+| Prince            | Purple Rain     | 1984 |
+| Beastie Boys      | License to Ill  | 1986 |
+
+If a table is too wide, it should condense down and/or scroll horizontally.
+
+| Artist            | Album           | Year | Label       | Awards   | Songs     |
+|-------------------|-----------------|------|-------------|----------|-----------|
+| Michael Jackson   | Thriller        | 1982 | Epic Records | Grammy Award for Album of the Year, American Music Award for Favorite Pop/Rock Album, American Music Award for Favorite Soul/R&B Album, Brit Award for Best Selling Album, Grammy Award for Best Engineered Album, Non-Classical | Wanna Be Startin' Somethin', Baby Be Mine, The Girl Is Mine, Thriller, Beat It, Billie Jean, Human Nature, P.Y.T. (Pretty Young Thing), The Lady in My Life |
+| Prince            | Purple Rain     | 1984 | Warner Brothers Records | Grammy Award for Best Score Soundtrack for Visual Media, American Music Award for Favorite Pop/Rock Album, American Music Award for Favorite Soul/R&B Album, Brit Award for Best Soundtrack/Cast Recording, Grammy Award for Best Rock Performance by a Duo or Group with Vocal | Let's Go Crazy, Take Me With U, The Beautiful Ones, Computer Blue, Darling Nikki, When Doves Cry, I Would Die 4 U, Baby I'm a Star, Purple Rain |
+| Beastie Boys      | License to Ill  | 1986 | Mercury Records | noawardsbutthistablecelliswide | Rhymin & Stealin, The New Style, She's Crafty, Posse in Effect, Slow Ride, Girls, (You Gotta) Fight for Your Right, No Sleep Till Brooklyn, Paul Revere, Hold It Now, Hit It, Brass Monkey, Slow and Low, Time to Get Ill |
+
+----------------
+
+Code snippets like `var foo = "bar";` can be shown inline.
+
+Also, `this should vertically align` ~~`with this`~~ ~~and this~~.
+
+Code can also be shown in a block element.
+```
+var foo = "bar";
+```
+
+Code can also use syntax highlighting.
+```javascript
+var foo = "bar";
+```
+
+```
+Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
+```
+
+```javascript
+var foo = "The same thing is true for code with syntax highlighting. A single line of code should horizontally scroll if it is really long.";
+```
+
+Inline code inside table cells should still be distinguishable.
+
+| Language    | Code               |
+|-------------|--------------------|
+| Javascript  | `var foo = "bar";` |
+| Ruby        | `foo = "bar"`      |
+
+----------------
+
+Small images should be shown at their actual size.
+
+![](http://placekitten.com/g/300/200/)
+
+Large images should always scale down and fit in the content container.
+
+![](http://placekitten.com/g/1200/800/)
+
+```
+This is the final element on the page and there should be no margin below this.
+```
+
+-->
+
+  </section>
+  <aside class="col-4 p-3 hide-sm hide-md hide-lg">
+    Contents
+  </aside>
+</div>
+    </div>
+  </div>
+</body>
+</html>

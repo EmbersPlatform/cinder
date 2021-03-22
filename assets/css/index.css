@@ -69,6 +69,7 @@
 }
 .LiveCode .LiveCode-source .LiveCode-editor {
   display: grid;
+  overflow-x: auto;
 }
 .LiveCode .LiveCode-source .LiveCode-editor::after {
   content: attr(data-replicated-value) " ";
