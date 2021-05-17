@@ -67,24 +67,24 @@
 
     state: (
       hover: (
-        primary-bg: $blue-5,// `$bg-blue` in Primer CSS
-        primary-border: $blue-5,
-        primary-text: $white,
-        primary-icon: $white,
+        primary-bg: $gray-1,// `$bg-blue` in Primer CSS
+        primary-border: $gray-5,
+        primary-text: $black,
+        primary-icon: $black,
         secondary-bg: $gray-1,
         secondary-border: $gray-1,
       ),
 
       selected: (
-        primary-bg: $blue-5,// `$bg-blue` in Primer CSS
-        primary-border: $blue-5,
-        primary-text: $white,
-        primary-icon: $white,
+        primary-bg: $gray-1,// `$bg-blue` in Primer CSS
+        primary-border: $gray-5,
+        primary-text: $black,
+        primary-icon: $black,
       ),
 
       focus: (
-        border: $blue-5, // blue focus border
-        shadow: 0 0 0 3px rgba($blue-5, 0.3), // blue focus ring
+        border: $orange-5, // blue focus border
+        shadow: 0 0 0 3px rgba($orange-5, 0.3), // blue focus ring
       ),
     ),
 

@@ -33,11 +33,8 @@ define("cinder-live-html", class extends Component() {
     this.state = this.useStore(store({
       source: this.textarea.value
     }))
-    
-    this.textarea.addEventListener("input", (event) => {
-      this.state.update({source: event.currentTarget.value});
-      this.highlight();
-    })
+
+    this.textarea.addEventListener("input", this.update_highlight)
     this.highlight();
 
     this.frame = this.querySelector(".LiveCode-frame");
@@ -82,6 +79,7 @@ define("cinder-live-html", class extends Component() {
     })
 
     this.addEventListener("click", this);
+    this.textarea.addEventListener("keydown", this);
   }
 
   update() {
@@ -103,6 +101,13 @@ define("cinder-live-html", class extends Component() {
   handle_click = (event) => {
     const action = event.target.dataset.action;
     if(action) this[action]();
+  }
+
+  handle_keydown = (event) => {
+    if(event.currentTarget === this.textarea && event.key === "Tab") {
+      event.preventDefault();
+      this.insert_tab();
+    }
   }
 
   toggle_theme = () => {
@@ -128,5 +133,26 @@ define("cinder-live-html", class extends Component() {
         nextElementSibling.firstElementChild.innerHTML = value;
         this.highlight_state.t = 0;
       });
+  }
+
+  update_highlight = () => {
+    this.state.update({source: this.textarea.value});
+    this.highlight();
+  }
+
+  insert_tab = () => {
+    const { textarea } = this;
+    if (textarea.selectionStart || textarea.selectionStart == '0') {
+      let selection_start = textarea.selectionStart;
+      let selection_end = textarea.selectionEnd;
+      textarea.value = textarea.value.substring(0, selection_start)
+        + "  "
+        + textarea.value.substring(selection_end, textarea.value.length);
+      textarea.selectionStart = selection_start + 2;
+      textarea.selectionEnd = selection_start + 2;
+    } else {
+      textarea.value += "  ";
+    }
+    this.update_highlight();
   }
 })
