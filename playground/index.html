@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Playground - Cinder CSS</title>
+  
+
+  <link rel="stylesheet" href="/cinder/dist/index.css">
+  <link rel="stylesheet" href="/cinder/assets/css/index.css">
+
+  <script>
+  window.toggler_icons = {
+    light: `<svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display: inline-block; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z"></path></svg>`,
+    dark: `<svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display: inline-block; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z"></path></svg>`
+  }
+
+  const theme = localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ? "dark"
+      : "light"
+
+  document.documentElement.dataset.colorMode = theme;
+  </script>
+  <script type="module" src="/cinder/assets/js/index.js"></script>
+</head>
+
+<body>
+  <nav class="Header" style="position: sticky; top: 0;">
+    <h1 class="Header-item h3 mr-3">Cinder</h1>
+    <button class="Header-item  btn" id="color-mode-toggler">Toggle dark theme</button>
+    <script>
+    document.getElementById("color-mode-toggler").innerHTML = toggler_icons[theme];
+    </script>
+  </nav>
+  <div class="d-flex flex-wrap">
+    <div class="py-2 col-12 col-md-3 col-lg-3 hide-md hide-sm color-bg-primary border-right" style="max-width: 261px;">
+      <nav>
+        <a href="/cinder/" class="menu-item" >Home</a>
+    <div class="menu-heading">Components</div><a href="/cinder/components/alerts/" class="menu-item"
+        
+      >Alerts</a><a href="/cinder/components/avatars/" class="menu-item"
+        
+      >Avatars</a><a href="/cinder/components/box/" class="menu-item"
+        
+      >Box</a><a href="/cinder/components/buttons/" class="menu-item"
+        
+      >Buttons</a><a href="/cinder/components/dropdown/" class="menu-item"
+        
+      >Dropdown</a><a href="/cinder/components/forms/" class="menu-item"
+        
+      >Forms</a><a href="/cinder/components/labels/" class="menu-item"
+        
+      >Labels</a><a href="/cinder/components/links/" class="menu-item"
+        
+      >Links</a><a href="/cinder/components/navigation/" class="menu-item"
+        
+      >Navigation</a><a href="/cinder/components/prose/" class="menu-item"
+        
+      >Prose</a><a href="/cinder/components/select-menu/" class="menu-item"
+        
+      >Select menu</a><a href="/cinder/components/subheads/" class="menu-item"
+        
+      >Subheads</a><a href="/cinder/components/timeline/" class="menu-item"
+        
+      >Timeline</a><a href="/cinder/components/toasts/" class="menu-item"
+        
+      >Toasts</a>
+    <div class="menu-heading">Utilities</div><a href="/cinder/utilities/details/" class="menu-item"
+        
+      >Details</a><a href="/cinder/utilities/margin/" class="menu-item"
+        
+      >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
+        
+      >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
+        
+      >Typography</a>
+      </nav>
+    </div>
+    <div class="col-12 col-md-9 col-lg-9 flex-1 p-4 container-lg">
+      <nav class="menu d-md-none">
+        <a href="/cinder/" class="menu-item" >Home</a>
+    <div class="menu-heading">Components</div><a href="/cinder/components/alerts/" class="menu-item"
+        
+      >Alerts</a><a href="/cinder/components/avatars/" class="menu-item"
+        
+      >Avatars</a><a href="/cinder/components/box/" class="menu-item"
+        
+      >Box</a><a href="/cinder/components/buttons/" class="menu-item"
+        
+      >Buttons</a><a href="/cinder/components/dropdown/" class="menu-item"
+        
+      >Dropdown</a><a href="/cinder/components/forms/" class="menu-item"
+        
+      >Forms</a><a href="/cinder/components/labels/" class="menu-item"
+        
+      >Labels</a><a href="/cinder/components/links/" class="menu-item"
+        
+      >Links</a><a href="/cinder/components/navigation/" class="menu-item"
+        
+      >Navigation</a><a href="/cinder/components/prose/" class="menu-item"
+        
+      >Prose</a><a href="/cinder/components/select-menu/" class="menu-item"
+        
+      >Select menu</a><a href="/cinder/components/subheads/" class="menu-item"
+        
+      >Subheads</a><a href="/cinder/components/timeline/" class="menu-item"
+        
+      >Timeline</a><a href="/cinder/components/toasts/" class="menu-item"
+        
+      >Toasts</a>
+    <div class="menu-heading">Utilities</div><a href="/cinder/utilities/details/" class="menu-item"
+        
+      >Details</a><a href="/cinder/utilities/margin/" class="menu-item"
+        
+      >Margin</a><a href="/cinder/utilities/padding/" class="menu-item"
+        
+      >Padding</a><a href="/cinder/utilities/typography/" class="menu-item"
+        
+      >Typography</a>
+      </nav>
+      <div class="d-flex flex-wrap">
+  <section class="Prose flex-1 col-12 col-md-8">
+    <h1>Playground</h1>
+    <pre style="display: none!important;"></pre>
+      <cinder-live-html class="Box LiveCode mb-2">
+        <iframe class="LiveCode-frame" height="100"></iframe>
+        <form action="#0" class="LiveCode-source">
+          <button class="LiveCode-copy-btn btn" type="button" data-action="copy_source">
+            <svg aria-hidden="true" role="img" class="svgicon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom"><path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path></svg>
+          </button>
+          <div class="LiveCode-editor">
+            <textarea live-code-source>&lt;article class=&quot;Post Box&quot;&gt;
+  &lt;header class=&quot;d-flex flex-items-center pl-3 pr-2 pt-2&quot;&gt;
+    &lt;div class=&quot;avatar-parent-child | d-inline-flex mr-2&quot;&gt;
+      &lt;img class=&quot;avatar | circle&quot; alt=&quot;dorgan&quot; src=&quot;https://avatars.githubusercontent.com/u/6147776?s=60&amp;v=4&quot; width=&quot;32&quot; height=&quot;32&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;d-flex flex-column flex-1&quot;&gt;
+      &lt;address&gt;
+        &lt;a class=&quot;Link Link--primary | text-bold no-underline&quot;&gt;Dorgan&lt;/a&gt;
+        &lt;a class=&quot;Link Link--secondary&quot;&gt;@dorgan&lt;/a&gt;
+      &lt;/address&gt;
+      &lt;time&gt;
+        &lt;a class=&quot;Link Link--secondary | no-underline&quot;&gt;5 minutes ago&lt;/a&gt;
+      &lt;/time&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;d-flex flex-self-start&quot;&gt;
+      &lt;button class=&quot;btn-link Link--secondary | px-2 py-1 no-underline&quot;&gt;
+        &lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot; style=&quot;display:inline-block;vertical-align:text-bottom&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M12 .25a.75.75 0 01.673.418l3.058 6.197 6.839.994a.75.75 0 01.415 1.279l-4.948 4.823 1.168 6.811a.75.75 0 01-1.088.791L12 18.347l-6.117 3.216a.75.75 0 01-1.088-.79l1.168-6.812-4.948-4.823a.75.75 0 01.416-1.28l6.838-.993L11.328.668A.75.75 0 0112 .25zm0 2.445L9.44 7.882a.75.75 0 01-.565.41l-5.725.832 4.143 4.038a.75.75 0 01.215.664l-.978 5.702 5.121-2.692a.75.75 0 01.698 0l5.12 2.692-.977-5.702a.75.75 0 01.215-.664l4.143-4.038-5.725-.831a.75.75 0 01-.565-.41L12 2.694z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+      &lt;/button&gt;
+      &lt;details class=&quot;dropdown details-reset details-overlay d-inline-block&quot;&gt;
+        &lt;summary class=&quot;btn-link Link--secondary | px-2 py-1 no-underline&quot; aria-haspopup=&quot;true&quot;&gt;
+          &lt;svg class=&quot;svgicon&quot; width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot; style=&quot;display:inline-block;vertical-align:text-bottom&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M6 12a2 2 0 11-4 0 2 2 0 014 0zm8 0a2 2 0 11-4 0 2 2 0 014 0zm6 2a2 2 0 100-4 2 2 0 000 4z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+        &lt;/summary&gt;
+
+        &lt;ul class=&quot;dropdown-menu dropdown-menu-sw&quot;&gt;
+          &lt;li&gt;&lt;a class=&quot;dropdown-item btn-link&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a class=&quot;dropdown-item btn-link&quot; href=&quot;#url&quot;&gt;Dropdown item&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;
+            &lt;details class=&quot;details-reset details-overlay details-overlay-dark&quot; href=&quot;#url&quot;&gt;
+              &lt;summary class=&quot;dropdown-item btn-link color-text-danger&quot;&gt;Delete post&lt;/summary&gt;
+              &lt;article class=&quot;Box Box--overlay anim-fade-in fast&quot;&gt;
+                &lt;div class=&quot;Box-header text-bold&quot;&gt;Delete post&lt;/div&gt;
+                &lt;div class=&quot;Box-body&quot;&gt;Are you sure you want to delete this post?&lt;/div&gt;
+                &lt;div class=&quot;Box-footer d-flex flex-row-reverse&quot;&gt;
+                  &lt;button class=&quot;btn btn-danger&quot;&gt;Delete post&lt;/button&gt;
+                &lt;/div&gt;
+              &lt;/article&gt;
+            &lt;/details&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/details&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;section class=&quot;Prose | p-3&quot;&gt;Hello world&lt;/section&gt;
+
+  &lt;section class=&quot;Gallery mb-2&quot;&gt;
+    &lt;div class=&quot;Gallery-items Gallery--3&quot;&gt;
+      &lt;div class=&quot;Gallery-item&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;Gallery-item&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;Gallery-item&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;aside class=&quot;d-flex flex-items-center color-text-secondary px-3 pb-2&quot;&gt;
+    &lt;button class=&quot;btn btn-sm | mr-2&quot;&gt;🍆 5&lt;/button&gt;
+    &lt;button class=&quot;btn btn-sm | mr-2&quot;&gt;😂 2&lt;/button&gt;
+    &lt;button class=&quot;btn btn-sm | mr-2&quot;&gt;🔥 10&lt;/button&gt;
+    &lt;div class=&quot;flex-1&quot;&gt;&lt;/div&gt;
+    &lt;span&gt;3 comments, 1 time shared&lt;/span&gt;
+  &lt;/aside&gt;
+  &lt;div class=&quot;d-flex px-2 pb-2&quot;&gt;
+    &lt;button class=&quot;btn-link Link--secondary | px-2 py-1 no-underline&quot;&gt;
+      &lt;svg width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot; style=&quot;display:inline-block;vertical-align:text-bottom&quot;&gt;&lt;path d=&quot;M8.456 14.494a.75.75 0 011.068.17 3.08 3.08 0 00.572.492A3.381 3.381 0 0012 15.72c.855 0 1.487-.283 1.904-.562a3.081 3.081 0 00.572-.492l.021-.026a.75.75 0 011.197.905l-.027.034c-.013.016-.03.038-.052.063-.044.05-.105.119-.184.198a4.569 4.569 0 01-.695.566A4.88 4.88 0 0112 17.22a4.88 4.88 0 01-2.736-.814 4.57 4.57 0 01-.695-.566 3.253 3.253 0 01-.236-.261c-.259-.332-.223-.824.123-1.084z&quot;&gt;&lt;/path&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M9 10.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0zM16.25 12a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/button&gt;
+    &lt;div class=&quot;flex-1&quot;&gt;&lt;/div&gt;
+    &lt;button class=&quot;btn-link Link--secondary | px-2 py-1 no-underline&quot;&gt;
+      &lt;svg width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot; style=&quot;display:inline-block;vertical-align:text-bottom&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M3.25 4a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 01.75.75v3.19l3.72-3.72a.75.75 0 01.53-.22h10a.25.25 0 00.25-.25V4.25a.25.25 0 00-.25-.25H3.25zm-1.75.25c0-.966.784-1.75 1.75-1.75h17.5c.966 0 1.75.784 1.75 1.75v12.5a1.75 1.75 0 01-1.75 1.75h-9.69l-3.573 3.573A1.457 1.457 0 015 21.043V18.5H3.25a1.75 1.75 0 01-1.75-1.75V4.25z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/button&gt;
+    &lt;button class=&quot;btn-link Link--secondary | px-2 py-1 no-underline&quot;&gt;
+        &lt;svg width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot; style=&quot;display:inline-block;vertical-align:text-bottom&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M20 5.5a3.5 3.5 0 01-6.062 2.385l-5.112 3.021a3.497 3.497 0 010 2.188l5.112 3.021a3.5 3.5 0 11-.764 1.29l-5.112-3.02a3.5 3.5 0 110-4.77l5.112-3.021v.001A3.5 3.5 0 1120 5.5zm-1.5 0a2 2 0 11-4 0 2 2 0 014 0zM5.5 14a2 2 0 100-4 2 2 0 000 4zm13 4.5a2 2 0 11-4 0 2 2 0 014 0z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;border-top color-bg-tertiary py-2 px-3 d-flex flex-items-center&quot;&gt;
+    &lt;div class=&quot;avatar-parent-child | d-inline-flex mr-2&quot;&gt;
+      &lt;img class=&quot;avatar avatar-4 | circle&quot; alt=&quot;dorgan&quot; src=&quot;https://avatars.githubusercontent.com/u/6147776?s=60&amp;v=4&quot; width=&quot;32&quot; height=&quot;32&quot; /&gt;
+    &lt;/div&gt;
+    &lt;button type=&quot;button&quot; class=&quot;form-control width-full color-text-secondary text-left text-normal&quot;&gt;Write a reply&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+
+&lt;style&gt;
+details &gt; .Box--overlay {
+  position: fixed;
+  margin: 10vh auto;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  max-height: 80vh;
+  max-width: 90vw;
+  width: 448px;
+}
+&lt;/style&gt;</textarea>
+            <pre><code></code></pre>
+          </div>
+        </form>
+      </cinder-live-html>
+      
+
+  </section>
+  <aside class="col-4 p-3 hide-sm hide-md hide-lg">
+    Contents
+  </aside>
+</div>
+    </div>
+  </div>
+</body>
+</html>
